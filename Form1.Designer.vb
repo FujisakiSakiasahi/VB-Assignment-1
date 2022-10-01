@@ -25,13 +25,15 @@ Partial Class fkyoubtn
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(49, 23)
+        Me.Button1.Location = New System.Drawing.Point(56, 31)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(86, 31)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
@@ -39,29 +41,42 @@ Partial Class fkyoubtn
         'Button2
         '
         Me.Button2.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.Button2.Location = New System.Drawing.Point(209, 33)
+        Me.Button2.Location = New System.Drawing.Point(239, 44)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(220, 128)
+        Me.Button2.Size = New System.Drawing.Size(251, 171)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Fuck You"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(49, 114)
+        Me.TextBox1.Location = New System.Drawing.Point(56, 152)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 23)
+        Me.TextBox1.Size = New System.Drawing.Size(114, 27)
         Me.TextBox1.TabIndex = 2
         Me.TextBox1.Text = "60fadf"
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(506, 329)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(94, 29)
+        Me.Button3.TabIndex = 3
+        Me.Button3.Text = "Button3"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'fkyoubtn
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(914, 600)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "fkyoubtn"
         Me.Text = "Fuck You"
         Me.ResumeLayout(False)
@@ -72,4 +87,5 @@ Partial Class fkyoubtn
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Button3 As Button
 End Class
