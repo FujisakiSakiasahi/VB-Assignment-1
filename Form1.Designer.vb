@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class fkyoubtn
+Partial Class login_page
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,70 +22,87 @@ Partial Class fkyoubtn
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.username_input_textfield = New System.Windows.Forms.TextBox()
+        Me.password_input_textfield = New System.Windows.Forms.TextBox()
+        Me.login_button = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'Button1
+        'Label1
         '
-        Me.Button1.Location = New System.Drawing.Point(56, 31)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(86, 31)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Location = New System.Drawing.Point(50, 36)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(235, 32)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "SCHOOL DATABASE"
         '
-        'Button2
+        'Label2
         '
-        Me.Button2.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.Button2.Location = New System.Drawing.Point(239, 44)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(251, 171)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Fuck You"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(78, 97)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(66, 15)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Username: "
         '
-        'TextBox1
+        'Label3
         '
-        Me.TextBox1.Location = New System.Drawing.Point(56, 152)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(114, 27)
-        Me.TextBox1.TabIndex = 2
-        Me.TextBox1.Text = "60fadf"
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(78, 141)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(63, 15)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Password: "
         '
-        'Button3
+        'username_input_textfield
         '
-        Me.Button3.Location = New System.Drawing.Point(506, 329)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(94, 29)
-        Me.Button3.TabIndex = 3
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.username_input_textfield.Location = New System.Drawing.Point(159, 94)
+        Me.username_input_textfield.Name = "username_input_textfield"
+        Me.username_input_textfield.Size = New System.Drawing.Size(100, 23)
+        Me.username_input_textfield.TabIndex = 3
         '
-        'fkyoubtn
+        'password_input_textfield
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.password_input_textfield.Location = New System.Drawing.Point(159, 138)
+        Me.password_input_textfield.Name = "password_input_textfield"
+        Me.password_input_textfield.Size = New System.Drawing.Size(100, 23)
+        Me.password_input_textfield.TabIndex = 4
+        '
+        'login_button
+        '
+        Me.login_button.Location = New System.Drawing.Point(121, 196)
+        Me.login_button.Name = "login_button"
+        Me.login_button.Size = New System.Drawing.Size(75, 23)
+        Me.login_button.TabIndex = 5
+        Me.login_button.Text = "Login"
+        Me.login_button.UseVisualStyleBackColor = True
+        '
+        'login_page
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(914, 600)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Name = "fkyoubtn"
-        Me.Text = "Fuck You"
+        Me.ClientSize = New System.Drawing.Size(338, 290)
+        Me.Controls.Add(Me.login_button)
+        Me.Controls.Add(Me.password_input_textfield)
+        Me.Controls.Add(Me.username_input_textfield)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Name = "login_page"
+        Me.Text = "School Databse"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button3 As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents username_input_textfield As TextBox
+    Friend WithEvents password_input_textfield As TextBox
+    Friend WithEvents login_button As Button
 End Class

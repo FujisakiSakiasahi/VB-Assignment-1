@@ -1,0 +1,9 @@
+﻿Form 1 (login page)
+	login_page							form 1 name
+
+	username_input_textfield			username input
+	password_input_textfield			password input
+	login_button						login button
+
+Form 2
+	
