@@ -71,6 +71,7 @@ Partial Class login_page
         Me.password_input_textfield.Name = "password_input_textfield"
         Me.password_input_textfield.Size = New System.Drawing.Size(100, 23)
         Me.password_input_textfield.TabIndex = 4
+        Me.password_input_textfield.UseSystemPasswordChar = True
         '
         'login_button
         '
