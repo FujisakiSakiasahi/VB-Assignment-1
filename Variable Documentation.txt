@@ -7,3 +7,12 @@
 
 Form 2
 	
+
+
+
+
+insert
+update
+delete
+show all
+search
