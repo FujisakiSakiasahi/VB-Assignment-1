@@ -6,7 +6,33 @@
 	login_button						login button
 
 Form 2
-	
+	student_tab							in student tab
+		student_add_button					add new button
+		student_update_button				update button
+		student_delete_button				delete button
+		student_search_button				search button
+		student_table						table that show student detail
+
+	teacher_tab							in teacher tab
+		teacher_add_button					add new button
+		teacher_update_button				update button
+		teacher_delete_button				delete button
+		teacher_search_button				search button
+		teacher_table						table that show teacher detail
+
+	class_tab							in class tab
+		class_add_button					add new button
+		class_update_button				update button
+		class_delete_button				delete button
+		class_search_button				search button
+		class_table						table that show class detail
+
+	subject_tab							in subject tab
+		subject_add_button					add new button
+		subject_update_button				update button
+		subject_delete_button				delete button
+		subject_search_button				search button
+		subject_table						table that show subject detail
 
 
 
