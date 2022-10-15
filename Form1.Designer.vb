@@ -28,23 +28,25 @@ Partial Class login_page
         Me.username_input_textfield = New System.Windows.Forms.TextBox()
         Me.password_input_textfield = New System.Windows.Forms.TextBox()
         Me.login_button = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(304, 58)
+        Me.Label1.Location = New System.Drawing.Point(477, 51)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(350, 48)
+        Me.Label1.Size = New System.Drawing.Size(411, 48)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "SCHOOL DATABASE"
+        Me.Label1.Text = "SMJK Lee Tak Database"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(274, 159)
+        Me.Label2.Location = New System.Drawing.Point(477, 179)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(100, 25)
@@ -54,7 +56,7 @@ Partial Class login_page
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(278, 203)
+        Me.Label3.Location = New System.Drawing.Point(481, 223)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(96, 25)
@@ -63,7 +65,7 @@ Partial Class login_page
         '
         'username_input_textfield
         '
-        Me.username_input_textfield.Location = New System.Drawing.Point(382, 156)
+        Me.username_input_textfield.Location = New System.Drawing.Point(585, 176)
         Me.username_input_textfield.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.username_input_textfield.Name = "username_input_textfield"
         Me.username_input_textfield.Size = New System.Drawing.Size(285, 31)
@@ -71,7 +73,7 @@ Partial Class login_page
         '
         'password_input_textfield
         '
-        Me.password_input_textfield.Location = New System.Drawing.Point(382, 200)
+        Me.password_input_textfield.Location = New System.Drawing.Point(585, 220)
         Me.password_input_textfield.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.password_input_textfield.Name = "password_input_textfield"
         Me.password_input_textfield.Size = New System.Drawing.Size(285, 31)
@@ -80,7 +82,7 @@ Partial Class login_page
         '
         'login_button
         '
-        Me.login_button.Location = New System.Drawing.Point(382, 302)
+        Me.login_button.Location = New System.Drawing.Point(611, 368)
         Me.login_button.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.login_button.Name = "login_button"
         Me.login_button.Size = New System.Drawing.Size(150, 52)
@@ -88,11 +90,23 @@ Partial Class login_page
         Me.login_button.Text = "Login"
         Me.login_button.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.VB_Assignment.My.Resources.Resources.logo
+        Me.PictureBox1.Location = New System.Drawing.Point(24, 51)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(371, 369)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 6
+        Me.PictureBox1.TabStop = False
+        '
         'login_page
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(953, 483)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.login_button)
         Me.Controls.Add(Me.password_input_textfield)
         Me.Controls.Add(Me.username_input_textfield)
@@ -102,6 +116,7 @@ Partial Class login_page
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "login_page"
         Me.Text = "School Databse"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -113,4 +128,5 @@ Partial Class login_page
     Friend WithEvents username_input_textfield As TextBox
     Friend WithEvents password_input_textfield As TextBox
     Friend WithEvents login_button As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
