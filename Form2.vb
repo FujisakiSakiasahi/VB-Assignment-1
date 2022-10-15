@@ -1,7 +1,9 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
 Public Class Form2
-    Dim connection As New SqlConnection("Server=localhost\SQLEXPRESS ; Database=SchoolDb ; Integrated Security = TRUE")
+    Dim connection As New SqlConnection("Server=BRUH-LAPTOP\SQLEXPRESS04 ; Database=SchoolDb ; Integrated Security = TRUE")
+    'Dim connection As New SqlConnection("Server=localhost\SQLEXPRESS ; Database=SchoolDb ; Integrated Security = TRUE")
+
     Private Sub run_query(query As String)
         Dim command As New SqlCommand(query, connection)
         connection.Open()
