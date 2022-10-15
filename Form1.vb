@@ -6,13 +6,13 @@
         Static count As Integer = 1
 
         'Username and Password Checking
-        If username_input = "AdminUser" And password_input = "AdminPassword" Then 'the username and password need to be set
+        If username_input = "" And password_input = "" Then 'the username and password need to be set 
             'Showing main page form
             Form2.Show()
 
             'Hiding login page form
             'Need to be test out later
-            'Me.Hide()
+            Me.Hide()
         ElseIf count = 3 Then
             'MessageBox.Show(Message, Title, MessageBoxButtons.<button of choice>, MessageBoxIcon.<Icon of choice>)
             MessageBox.Show("Incorrect for 3 times, exiting app", "Exiting App", MessageBoxButtons.OK, MessageBoxIcon.Error)

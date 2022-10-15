@@ -34,65 +34,72 @@ Partial Class login_page
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(50, 36)
+        Me.Label1.Location = New System.Drawing.Point(304, 58)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(235, 32)
+        Me.Label1.Size = New System.Drawing.Size(350, 48)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "SCHOOL DATABASE"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(78, 97)
+        Me.Label2.Location = New System.Drawing.Point(274, 159)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(66, 15)
+        Me.Label2.Size = New System.Drawing.Size(100, 25)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Username: "
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(78, 141)
+        Me.Label3.Location = New System.Drawing.Point(278, 203)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(63, 15)
+        Me.Label3.Size = New System.Drawing.Size(96, 25)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Password: "
         '
         'username_input_textfield
         '
-        Me.username_input_textfield.Location = New System.Drawing.Point(159, 94)
+        Me.username_input_textfield.Location = New System.Drawing.Point(382, 156)
+        Me.username_input_textfield.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.username_input_textfield.Name = "username_input_textfield"
-        Me.username_input_textfield.Size = New System.Drawing.Size(100, 23)
+        Me.username_input_textfield.Size = New System.Drawing.Size(285, 31)
         Me.username_input_textfield.TabIndex = 3
         '
         'password_input_textfield
         '
-        Me.password_input_textfield.Location = New System.Drawing.Point(159, 138)
+        Me.password_input_textfield.Location = New System.Drawing.Point(382, 200)
+        Me.password_input_textfield.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.password_input_textfield.Name = "password_input_textfield"
-        Me.password_input_textfield.Size = New System.Drawing.Size(100, 23)
+        Me.password_input_textfield.Size = New System.Drawing.Size(285, 31)
         Me.password_input_textfield.TabIndex = 4
         Me.password_input_textfield.UseSystemPasswordChar = True
         '
         'login_button
         '
-        Me.login_button.Location = New System.Drawing.Point(121, 196)
+        Me.login_button.Location = New System.Drawing.Point(382, 302)
+        Me.login_button.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.login_button.Name = "login_button"
-        Me.login_button.Size = New System.Drawing.Size(75, 23)
+        Me.login_button.Size = New System.Drawing.Size(150, 52)
         Me.login_button.TabIndex = 5
         Me.login_button.Text = "Login"
         Me.login_button.UseVisualStyleBackColor = True
         '
         'login_page
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(338, 290)
+        Me.ClientSize = New System.Drawing.Size(953, 483)
         Me.Controls.Add(Me.login_button)
         Me.Controls.Add(Me.password_input_textfield)
         Me.Controls.Add(Me.username_input_textfield)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "login_page"
         Me.Text = "School Databse"
         Me.ResumeLayout(False)
