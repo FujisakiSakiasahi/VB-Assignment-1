@@ -113,4 +113,10 @@ Public Class Form2
     Private Sub subject_search_button_Click(sender As Object, e As EventArgs)
 
     End Sub
+
+    Private Sub student_add_button_Click_1(sender As Object, e As EventArgs) Handles student_add_button.Click
+        Dim formStudent As New StudentAddForm
+
+        formStudent.Show()
+    End Sub
 End Class
