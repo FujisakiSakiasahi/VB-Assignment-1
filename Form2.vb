@@ -119,4 +119,14 @@ Public Class Form2
 
         formStudent.Show()
     End Sub
+
+    Private Sub teacher_add_button_Click_1(sender As Object, e As EventArgs) Handles teacher_add_button.Click
+        Dim formTeacher As New AddTeacher
+        formTeacher.Show()
+    End Sub
+
+    Private Sub subject_add_button_Click(sender As Object, e As EventArgs) Handles subject_add_button.Click
+        Dim formSubject As New AddSubject
+        formSubject.Show()
+    End Sub
 End Class

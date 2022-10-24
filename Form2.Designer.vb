@@ -24,6 +24,7 @@ Partial Class Form2
     Private Sub InitializeComponent()
         Me.tab_control = New System.Windows.Forms.TabControl()
         Me.student_tab = New System.Windows.Forms.TabPage()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.student_add_button = New System.Windows.Forms.Button()
         Me.student_table = New System.Windows.Forms.DataGridView()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -77,6 +78,7 @@ Partial Class Form2
         '
         'student_tab
         '
+        Me.student_tab.Controls.Add(Me.TextBox1)
         Me.student_tab.Controls.Add(Me.student_add_button)
         Me.student_tab.Controls.Add(Me.student_table)
         Me.student_tab.Controls.Add(Me.Button2)
@@ -92,6 +94,13 @@ Partial Class Form2
         Me.student_tab.Text = "Student"
         Me.student_tab.UseVisualStyleBackColor = True
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(173, 18)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(1043, 31)
+        Me.TextBox1.TabIndex = 16
+        '
         'student_add_button
         '
         Me.student_add_button.Location = New System.Drawing.Point(33, 35)
@@ -105,12 +114,12 @@ Partial Class Form2
         'student_table
         '
         Me.student_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.student_table.Location = New System.Drawing.Point(173, 15)
+        Me.student_table.Location = New System.Drawing.Point(173, 66)
         Me.student_table.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.student_table.Name = "student_table"
         Me.student_table.RowHeadersWidth = 51
         Me.student_table.RowTemplate.Height = 25
-        Me.student_table.Size = New System.Drawing.Size(1043, 633)
+        Me.student_table.Size = New System.Drawing.Size(1043, 582)
         Me.student_table.TabIndex = 10
         '
         'Button2
@@ -396,6 +405,7 @@ Partial Class Form2
         Me.Text = "School Database"
         Me.tab_control.ResumeLayout(False)
         Me.student_tab.ResumeLayout(False)
+        Me.student_tab.PerformLayout()
         CType(Me.student_table, System.ComponentModel.ISupportInitialize).EndInit()
         Me.teacher_tab.ResumeLayout(False)
         CType(Me.teacher_table, System.ComponentModel.ISupportInitialize).EndInit()
@@ -435,4 +445,5 @@ Partial Class Form2
     Friend WithEvents teacher_search_button As Button
     Friend WithEvents teacher_delete_button As Button
     Friend WithEvents teacher_table As DataGridView
+    Friend WithEvents TextBox1 As TextBox
 End Class
