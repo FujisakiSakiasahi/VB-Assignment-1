@@ -4,18 +4,22 @@ Public Class Form2
     Dim connection As New SqlConnection("Server=BRUH-LAPTOP\SQLEXPRESS04 ; Database=SchoolDb ; Integrated Security = TRUE")
     'Dim connection As New SqlConnection("Server=localhost\SQLEXPRESS ; Database=SchoolDb ; Integrated Security = TRUE")
 
-    Private Sub run_query(query As String)
+    Public Sub run_query(query As String)
         Dim command As New SqlCommand(query, connection)
         connection.Open()
         command.ExecuteNonQuery()
         connection.Close()
     End Sub
 
+    Public Sub fnA(a As String)
+        MessageBox.Show(a)
+    End Sub
+
     Private Sub app_close() Handles Me.Closed
         Application.Exit()
     End Sub
 
-    Private Sub table_load(table As String)
+    Public Sub table_load(table As String)
         Dim da As New SqlDataAdapter(New SqlCommand("select * from " & table & " ;", connection))
         Dim datatable As New DataTable()
         da.Fill(datatable)
@@ -129,4 +133,5 @@ Public Class Form2
         Dim formSubject As New AddSubject
         formSubject.Show()
     End Sub
+
 End Class

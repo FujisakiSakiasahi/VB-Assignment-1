@@ -31,12 +31,12 @@ Partial Class StudentAddForm
         Me.radMale = New System.Windows.Forms.RadioButton()
         Me.radFemale = New System.Windows.Forms.RadioButton()
         Me.btnCancel = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ComYear = New System.Windows.Forms.ComboBox()
         Me.txtStudentId = New System.Windows.Forms.TextBox()
         Me.txtStuName = New System.Windows.Forms.TextBox()
         Me.txtAge = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.comTeam = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'lblStudentId
@@ -124,14 +124,14 @@ Partial Class StudentAddForm
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
-        'ComboBox1
+        'ComYear
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
-        Me.ComboBox1.Location = New System.Drawing.Point(234, 154)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(319, 33)
-        Me.ComboBox1.TabIndex = 9
+        Me.ComYear.FormattingEnabled = True
+        Me.ComYear.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
+        Me.ComYear.Location = New System.Drawing.Point(234, 154)
+        Me.ComYear.Name = "ComYear"
+        Me.ComYear.Size = New System.Drawing.Size(319, 33)
+        Me.ComYear.TabIndex = 9
         '
         'txtStudentId
         '
@@ -163,26 +163,26 @@ Partial Class StudentAddForm
         Me.Label6.TabIndex = 13
         Me.Label6.Text = "Team Colour:"
         '
-        'ComboBox2
+        'comTeam
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"Red", "Yellow", "Blue", "Green", "Purple"})
-        Me.ComboBox2.Location = New System.Drawing.Point(234, 228)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(319, 33)
-        Me.ComboBox2.TabIndex = 14
+        Me.comTeam.FormattingEnabled = True
+        Me.comTeam.Items.AddRange(New Object() {"Red", "Yellow", "Blue", "Green"})
+        Me.comTeam.Location = New System.Drawing.Point(234, 228)
+        Me.comTeam.Name = "comTeam"
+        Me.comTeam.Size = New System.Drawing.Size(319, 33)
+        Me.comTeam.TabIndex = 14
         '
         'StudentAddForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(640, 450)
-        Me.Controls.Add(Me.ComboBox2)
+        Me.Controls.Add(Me.comTeam)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txtAge)
         Me.Controls.Add(Me.txtStuName)
         Me.Controls.Add(Me.txtStudentId)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.ComYear)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.radFemale)
         Me.Controls.Add(Me.radMale)
@@ -208,10 +208,10 @@ Partial Class StudentAddForm
     Friend WithEvents radMale As RadioButton
     Friend WithEvents radFemale As RadioButton
     Friend WithEvents btnCancel As Button
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents ComYear As ComboBox
     Friend WithEvents txtStudentId As TextBox
     Friend WithEvents txtStuName As TextBox
     Friend WithEvents txtAge As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents comTeam As ComboBox
 End Class
