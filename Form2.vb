@@ -1,8 +1,8 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
 Public Class Form2
-    Dim connection As New SqlConnection("Server=BRUH-LAPTOP\SQLEXPRESS04 ; Database=SchoolDb ; Integrated Security = TRUE")
-    'Dim connection As New SqlConnection("Server=localhost\SQLEXPRESS ; Database=SchoolDb ; Integrated Security = TRUE")
+    'Dim connection As New SqlConnection("Server=BRUH-LAPTOP\SQLEXPRESS04 ; Database=SchoolDb ; Integrated Security = TRUE")
+    Dim connection As New SqlConnection("Server=localhost\SQLEXPRESS ; Database=SchoolDb ; Integrated Security = TRUE")
 
     Public Sub run_query(query As String)
         Dim command As New SqlCommand(query, connection)
@@ -58,65 +58,6 @@ Public Class Form2
                 table_load("subject")
         End Select
     End Sub
-    Private Sub student_add_button_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-
-    Private Sub student_update_button_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-
-    Private Sub student_delete_button_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub student_search_button_Click(sender As Object, e As EventArgs)
-
-    End Sub
-    Private Sub teacher_add_button_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub teacher_delete_button_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub teacher_update_button_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub teacher_search_button_Click(sender As Object, e As EventArgs)
-
-    End Sub
-    Private Sub class_add_button_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub class_update_button_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub class_delete_button_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub class_search_button_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub subject_update_button_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub subject_delete_button_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub subject_search_button_Click(sender As Object, e As EventArgs)
-
-    End Sub
 
     Private Sub student_add_button_Click_1(sender As Object, e As EventArgs) Handles student_add_button.Click
         Dim formStudent As New StudentAddForm
@@ -134,4 +75,18 @@ Public Class Form2
         formSubject.Show()
     End Sub
 
+    Private Sub class_delete_button_Click(sender As Object, e As EventArgs) Handles class_delete_button.Click
+        Dim loopStatus As Boolean = True
+        Dim debugVar As Integer = 0
+        Do
+            Dim studentName = InputBox(" Please enter the student name: ", "Delete student info")
+
+            If debugVar <> 0 Then
+                loopStatus = False
+            Else
+                MessageBox.Show("Student not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        Loop Until loopStatus '= False
+
+    End Sub
 End Class
