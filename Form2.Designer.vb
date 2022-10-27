@@ -24,6 +24,8 @@ Partial Class Form2
     Private Sub InitializeComponent()
         Me.tab_control = New System.Windows.Forms.TabControl()
         Me.student_tab = New System.Windows.Forms.TabPage()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.student_add_button = New System.Windows.Forms.Button()
@@ -51,10 +53,30 @@ Partial Class Form2
         Me.subject_update_button = New System.Windows.Forms.Button()
         Me.subject_delete_button = New System.Windows.Forms.Button()
         Me.subject_table = New System.Windows.Forms.DataGridView()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.period_table = New System.Windows.Forms.DataGridView()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.marks_table = New System.Windows.Forms.DataGridView()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
         Me.tab_control.SuspendLayout()
         Me.student_tab.SuspendLayout()
         CType(Me.student_table, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,6 +86,10 @@ Partial Class Form2
         CType(Me.class_table, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.subject_tab.SuspendLayout()
         CType(Me.subject_table, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
+        CType(Me.period_table, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.marks_table, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tab_control
@@ -98,6 +124,24 @@ Partial Class Form2
         Me.student_tab.Text = "Student"
         Me.student_tab.UseVisualStyleBackColor = True
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label4.Location = New System.Drawing.Point(590, 6)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(88, 21)
+        Me.Label4.TabIndex = 19
+        Me.Label4.Text = "Search for: "
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(683, 6)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(165, 23)
+        Me.ComboBox1.TabIndex = 18
+        '
         'Label
         '
         Me.Label.AutoSize = True
@@ -110,7 +154,7 @@ Partial Class Form2
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(161, 5)
+        Me.TextBox1.Location = New System.Drawing.Point(157, 6)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(424, 23)
@@ -155,6 +199,8 @@ Partial Class Form2
         '
         'teacher_tab
         '
+        Me.teacher_tab.Controls.Add(Me.ComboBox4)
+        Me.teacher_tab.Controls.Add(Me.Label9)
         Me.teacher_tab.Controls.Add(Me.Label1)
         Me.teacher_tab.Controls.Add(Me.TextBox2)
         Me.teacher_tab.Controls.Add(Me.teacher_add_button)
@@ -183,7 +229,7 @@ Partial Class Form2
         '
         Me.TextBox2.Location = New System.Drawing.Point(157, 6)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(691, 23)
+        Me.TextBox2.Size = New System.Drawing.Size(424, 23)
         Me.TextBox2.TabIndex = 10
         '
         'teacher_add_button
@@ -216,15 +262,17 @@ Partial Class Form2
         'teacher_table
         '
         Me.teacher_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.teacher_table.Location = New System.Drawing.Point(87, 35)
+        Me.teacher_table.Location = New System.Drawing.Point(87, 34)
         Me.teacher_table.Name = "teacher_table"
         Me.teacher_table.RowHeadersWidth = 51
         Me.teacher_table.RowTemplate.Height = 25
-        Me.teacher_table.Size = New System.Drawing.Size(764, 360)
+        Me.teacher_table.Size = New System.Drawing.Size(761, 358)
         Me.teacher_table.TabIndex = 1
         '
         'class_tab
         '
+        Me.class_tab.Controls.Add(Me.Label10)
+        Me.class_tab.Controls.Add(Me.ComboBox5)
         Me.class_tab.Controls.Add(Me.TextBox3)
         Me.class_tab.Controls.Add(Me.Label2)
         Me.class_tab.Controls.Add(Me.class_add_button)
@@ -242,7 +290,7 @@ Partial Class Form2
         '
         Me.TextBox3.Location = New System.Drawing.Point(157, 6)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(694, 23)
+        Me.TextBox3.Size = New System.Drawing.Size(424, 23)
         Me.TextBox3.TabIndex = 11
         '
         'Label2
@@ -285,15 +333,17 @@ Partial Class Form2
         'class_table
         '
         Me.class_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.class_table.Location = New System.Drawing.Point(87, 35)
+        Me.class_table.Location = New System.Drawing.Point(87, 34)
         Me.class_table.Name = "class_table"
         Me.class_table.RowHeadersWidth = 51
         Me.class_table.RowTemplate.Height = 25
-        Me.class_table.Size = New System.Drawing.Size(764, 354)
+        Me.class_table.Size = New System.Drawing.Size(761, 358)
         Me.class_table.TabIndex = 1
         '
         'subject_tab
         '
+        Me.subject_tab.Controls.Add(Me.ComboBox6)
+        Me.subject_tab.Controls.Add(Me.Label11)
         Me.subject_tab.Controls.Add(Me.TextBox4)
         Me.subject_tab.Controls.Add(Me.Label3)
         Me.subject_tab.Controls.Add(Me.subject_add_button)
@@ -309,9 +359,9 @@ Partial Class Form2
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(153, 6)
+        Me.TextBox4.Location = New System.Drawing.Point(157, 6)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(698, 23)
+        Me.TextBox4.Size = New System.Drawing.Size(424, 23)
         Me.TextBox4.TabIndex = 11
         '
         'Label3
@@ -354,33 +404,23 @@ Partial Class Form2
         'subject_table
         '
         Me.subject_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.subject_table.Location = New System.Drawing.Point(87, 35)
+        Me.subject_table.Location = New System.Drawing.Point(87, 34)
         Me.subject_table.Name = "subject_table"
         Me.subject_table.RowHeadersWidth = 51
         Me.subject_table.RowTemplate.Height = 25
-        Me.subject_table.Size = New System.Drawing.Size(764, 354)
+        Me.subject_table.Size = New System.Drawing.Size(761, 358)
         Me.subject_table.TabIndex = 1
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(683, 6)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(165, 23)
-        Me.ComboBox1.TabIndex = 18
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(590, 6)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(88, 21)
-        Me.Label4.TabIndex = 19
-        Me.Label4.Text = "Search for: "
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Label8)
+        Me.TabPage1.Controls.Add(Me.Label7)
+        Me.TabPage1.Controls.Add(Me.marks_table)
+        Me.TabPage1.Controls.Add(Me.ComboBox3)
+        Me.TabPage1.Controls.Add(Me.TextBox6)
+        Me.TabPage1.Controls.Add(Me.Button3)
+        Me.TabPage1.Controls.Add(Me.Button2)
+        Me.TabPage1.Controls.Add(Me.Button1)
         Me.TabPage1.Location = New System.Drawing.Point(4, 24)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
@@ -391,13 +431,217 @@ Partial Class Form2
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.TextBox5)
+        Me.TabPage2.Controls.Add(Me.period_table)
+        Me.TabPage2.Controls.Add(Me.ComboBox2)
+        Me.TabPage2.Controls.Add(Me.Label6)
+        Me.TabPage2.Controls.Add(Me.Label5)
+        Me.TabPage2.Controls.Add(Me.Button6)
+        Me.TabPage2.Controls.Add(Me.Button5)
+        Me.TabPage2.Controls.Add(Me.Button4)
         Me.TabPage2.Location = New System.Drawing.Point(4, 24)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(854, 398)
         Me.TabPage2.TabIndex = 5
-        Me.TabPage2.Text = "Timetable"
+        Me.TabPage2.Text = "Period"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(6, 6)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "Add New"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(6, 35)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 1
+        Me.Button2.Text = "Update"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(6, 64)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 2
+        Me.Button3.Text = "Delete"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(6, 6)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 0
+        Me.Button4.Text = "Add New"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(6, 35)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 1
+        Me.Button5.Text = "Update"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(6, 64)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(75, 23)
+        Me.Button6.TabIndex = 2
+        Me.Button6.Text = "Delete"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label5.Location = New System.Drawing.Point(87, 6)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(64, 21)
+        Me.Label5.TabIndex = 3
+        Me.Label5.Text = "Search: "
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label6.Location = New System.Drawing.Point(590, 6)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(88, 21)
+        Me.Label6.TabIndex = 4
+        Me.Label6.Text = "Search for: "
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(683, 6)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(165, 23)
+        Me.ComboBox2.TabIndex = 5
+        '
+        'period_table
+        '
+        Me.period_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.period_table.Location = New System.Drawing.Point(87, 34)
+        Me.period_table.Name = "period_table"
+        Me.period_table.RowTemplate.Height = 25
+        Me.period_table.Size = New System.Drawing.Size(761, 358)
+        Me.period_table.TabIndex = 6
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(157, 6)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(424, 23)
+        Me.TextBox5.TabIndex = 7
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Location = New System.Drawing.Point(157, 6)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(424, 23)
+        Me.TextBox6.TabIndex = 3
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Location = New System.Drawing.Point(683, 6)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(165, 23)
+        Me.ComboBox3.TabIndex = 4
+        '
+        'marks_table
+        '
+        Me.marks_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.marks_table.Location = New System.Drawing.Point(87, 34)
+        Me.marks_table.Name = "marks_table"
+        Me.marks_table.RowTemplate.Height = 25
+        Me.marks_table.Size = New System.Drawing.Size(761, 358)
+        Me.marks_table.TabIndex = 5
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label7.Location = New System.Drawing.Point(87, 6)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(64, 21)
+        Me.Label7.TabIndex = 6
+        Me.Label7.Text = "Search: "
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label8.Location = New System.Drawing.Point(590, 6)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(88, 21)
+        Me.Label8.TabIndex = 7
+        Me.Label8.Text = "Search for: "
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label9.Location = New System.Drawing.Point(590, 6)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(88, 21)
+        Me.Label9.TabIndex = 12
+        Me.Label9.Text = "Search for: "
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Location = New System.Drawing.Point(683, 6)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(165, 23)
+        Me.ComboBox4.TabIndex = 13
+        '
+        'ComboBox5
+        '
+        Me.ComboBox5.FormattingEnabled = True
+        Me.ComboBox5.Location = New System.Drawing.Point(683, 6)
+        Me.ComboBox5.Name = "ComboBox5"
+        Me.ComboBox5.Size = New System.Drawing.Size(165, 23)
+        Me.ComboBox5.TabIndex = 12
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label10.Location = New System.Drawing.Point(590, 6)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(88, 21)
+        Me.Label10.TabIndex = 13
+        Me.Label10.Text = "Search for: "
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label11.Location = New System.Drawing.Point(590, 6)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(88, 21)
+        Me.Label11.TabIndex = 12
+        Me.Label11.Text = "Search for: "
+        '
+        'ComboBox6
+        '
+        Me.ComboBox6.FormattingEnabled = True
+        Me.ComboBox6.Location = New System.Drawing.Point(683, 6)
+        Me.ComboBox6.Name = "ComboBox6"
+        Me.ComboBox6.Size = New System.Drawing.Size(165, 23)
+        Me.ComboBox6.TabIndex = 13
         '
         'Form2
         '
@@ -420,6 +664,12 @@ Partial Class Form2
         Me.subject_tab.ResumeLayout(False)
         Me.subject_tab.PerformLayout()
         CType(Me.subject_table, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
+        Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
+        CType(Me.period_table, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.marks_table, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -456,4 +706,26 @@ Partial Class Form2
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents ComboBox4 As ComboBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents ComboBox5 As ComboBox
+    Friend WithEvents ComboBox6 As ComboBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents marks_table As DataGridView
+    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents period_table As DataGridView
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Button6 As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button4 As Button
 End Class
