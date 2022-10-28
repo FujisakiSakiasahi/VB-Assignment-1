@@ -22,31 +22,24 @@ Partial Class AddSubject
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.txtStuName = New System.Windows.Forms.TextBox()
-        Me.txtStudentId = New System.Windows.Forms.TextBox()
+        Me.txtSName = New System.Windows.Forms.TextBox()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.lblSName = New System.Windows.Forms.Label()
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.lblSubjectId = New System.Windows.Forms.Label()
+        Me.comSubjectId = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
-        'txtStuName
+        'txtSName
         '
-        Me.txtStuName.Location = New System.Drawing.Point(202, 69)
-        Me.txtStuName.Name = "txtStuName"
-        Me.txtStuName.Size = New System.Drawing.Size(319, 31)
-        Me.txtStuName.TabIndex = 32
-        '
-        'txtStudentId
-        '
-        Me.txtStudentId.Location = New System.Drawing.Point(202, 31)
-        Me.txtStudentId.Name = "txtStudentId"
-        Me.txtStudentId.Size = New System.Drawing.Size(319, 31)
-        Me.txtStudentId.TabIndex = 31
+        Me.txtSName.Location = New System.Drawing.Point(202, 69)
+        Me.txtSName.Name = "txtSName"
+        Me.txtSName.Size = New System.Drawing.Size(319, 31)
+        Me.txtSName.TabIndex = 32
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(353, 149)
+        Me.btnCancel.Location = New System.Drawing.Point(327, 148)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(112, 34)
         Me.btnCancel.TabIndex = 30
@@ -64,7 +57,7 @@ Partial Class AddSubject
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(121, 149)
+        Me.btnAdd.Location = New System.Drawing.Point(95, 148)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(112, 34)
         Me.btnAdd.TabIndex = 28
@@ -80,13 +73,22 @@ Partial Class AddSubject
         Me.lblSubjectId.TabIndex = 27
         Me.lblSubjectId.Text = "Subject ID:"
         '
+        'comSubjectId
+        '
+        Me.comSubjectId.FormattingEnabled = True
+        Me.comSubjectId.Items.AddRange(New Object() {"MM", "BM", "BI", "SCI", "PJ", "KIM", "FIZ", "BIO", "MT", "SEJ", "PER", "EKO", "AK"})
+        Me.comSubjectId.Location = New System.Drawing.Point(202, 31)
+        Me.comSubjectId.Name = "comSubjectId"
+        Me.comSubjectId.Size = New System.Drawing.Size(319, 33)
+        Me.comSubjectId.TabIndex = 33
+        '
         'AddSubject
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(550, 226)
-        Me.Controls.Add(Me.txtStuName)
-        Me.Controls.Add(Me.txtStudentId)
+        Me.Controls.Add(Me.comSubjectId)
+        Me.Controls.Add(Me.txtSName)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.lblSName)
         Me.Controls.Add(Me.btnAdd)
@@ -98,10 +100,10 @@ Partial Class AddSubject
 
     End Sub
 
-    Friend WithEvents txtStuName As TextBox
-    Friend WithEvents txtStudentId As TextBox
+    Friend WithEvents txtSName As TextBox
     Friend WithEvents btnCancel As Button
     Friend WithEvents lblSName As Label
     Friend WithEvents btnAdd As Button
     Friend WithEvents lblSubjectId As Label
+    Friend WithEvents comSubjectId As ComboBox
 End Class

@@ -31,12 +31,12 @@ Partial Class StudentAddForm
         Me.radMale = New System.Windows.Forms.RadioButton()
         Me.radFemale = New System.Windows.Forms.RadioButton()
         Me.btnCancel = New System.Windows.Forms.Button()
-        Me.ComYear = New System.Windows.Forms.ComboBox()
         Me.txtStudentId = New System.Windows.Forms.TextBox()
         Me.txtStuName = New System.Windows.Forms.TextBox()
         Me.txtAge = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.comTeam = New System.Windows.Forms.ComboBox()
+        Me.txtYearEnrolled = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'lblStudentId
@@ -124,16 +124,6 @@ Partial Class StudentAddForm
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
-        'ComYear
-        '
-        Me.ComYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComYear.FormattingEnabled = True
-        Me.ComYear.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
-        Me.ComYear.Location = New System.Drawing.Point(234, 154)
-        Me.ComYear.Name = "ComYear"
-        Me.ComYear.Size = New System.Drawing.Size(319, 33)
-        Me.ComYear.TabIndex = 9
-        '
         'txtStudentId
         '
         Me.txtStudentId.Location = New System.Drawing.Point(234, 42)
@@ -174,17 +164,24 @@ Partial Class StudentAddForm
         Me.comTeam.Size = New System.Drawing.Size(319, 33)
         Me.comTeam.TabIndex = 14
         '
+        'txtYearEnrolled
+        '
+        Me.txtYearEnrolled.Location = New System.Drawing.Point(234, 154)
+        Me.txtYearEnrolled.Name = "txtYearEnrolled"
+        Me.txtYearEnrolled.Size = New System.Drawing.Size(319, 31)
+        Me.txtYearEnrolled.TabIndex = 15
+        '
         'StudentAddForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(640, 450)
+        Me.Controls.Add(Me.txtYearEnrolled)
         Me.Controls.Add(Me.comTeam)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txtAge)
         Me.Controls.Add(Me.txtStuName)
         Me.Controls.Add(Me.txtStudentId)
-        Me.Controls.Add(Me.ComYear)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.radFemale)
         Me.Controls.Add(Me.radMale)
@@ -216,4 +213,5 @@ Partial Class StudentAddForm
     Friend WithEvents txtAge As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents comTeam As ComboBox
+    Friend WithEvents txtYearEnrolled As TextBox
 End Class

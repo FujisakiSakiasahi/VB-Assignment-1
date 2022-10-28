@@ -22,8 +22,8 @@ Partial Class AddTeacher
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.txtStuName = New System.Windows.Forms.TextBox()
-        Me.txtStudentId = New System.Windows.Forms.TextBox()
+        Me.txtTeacherName = New System.Windows.Forms.TextBox()
+        Me.txtTeacherId = New System.Windows.Forms.TextBox()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.lblTeacherName = New System.Windows.Forms.Label()
         Me.btnAdd = New System.Windows.Forms.Button()
@@ -33,19 +33,19 @@ Partial Class AddTeacher
         Me.Label2 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'txtStuName
+        'txtTeacherName
         '
-        Me.txtStuName.Location = New System.Drawing.Point(186, 70)
-        Me.txtStuName.Name = "txtStuName"
-        Me.txtStuName.Size = New System.Drawing.Size(319, 31)
-        Me.txtStuName.TabIndex = 26
+        Me.txtTeacherName.Location = New System.Drawing.Point(186, 70)
+        Me.txtTeacherName.Name = "txtTeacherName"
+        Me.txtTeacherName.Size = New System.Drawing.Size(319, 31)
+        Me.txtTeacherName.TabIndex = 26
         '
-        'txtStudentId
+        'txtTeacherId
         '
-        Me.txtStudentId.Location = New System.Drawing.Point(186, 32)
-        Me.txtStudentId.Name = "txtStudentId"
-        Me.txtStudentId.Size = New System.Drawing.Size(319, 31)
-        Me.txtStudentId.TabIndex = 25
+        Me.txtTeacherId.Location = New System.Drawing.Point(186, 32)
+        Me.txtTeacherId.Name = "txtTeacherId"
+        Me.txtTeacherId.Size = New System.Drawing.Size(319, 31)
+        Me.txtTeacherId.TabIndex = 25
         '
         'btnCancel
         '
@@ -122,8 +122,8 @@ Partial Class AddTeacher
         Me.Controls.Add(Me.radFemale)
         Me.Controls.Add(Me.radMale)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.txtStuName)
-        Me.Controls.Add(Me.txtStudentId)
+        Me.Controls.Add(Me.txtTeacherName)
+        Me.Controls.Add(Me.txtTeacherId)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.lblTeacherName)
         Me.Controls.Add(Me.btnAdd)
@@ -138,8 +138,8 @@ Partial Class AddTeacher
     Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents Label6 As Label
     Friend WithEvents txtAge As TextBox
-    Friend WithEvents txtStuName As TextBox
-    Friend WithEvents txtStudentId As TextBox
+    Friend WithEvents txtTeacherName As TextBox
+    Friend WithEvents txtTeacherId As TextBox
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents btnCancel As Button
     Friend WithEvents radFemale As RadioButton

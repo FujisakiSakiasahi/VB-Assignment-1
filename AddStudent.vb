@@ -1,7 +1,6 @@
 ﻿Public Class StudentAddForm
     Private Sub StudentAddForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         radMale.Checked = True
-        ComYear.SelectedIndex = 0
         comTeam.SelectedIndex = 0
     End Sub
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
@@ -9,36 +8,64 @@
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        Dim studentId As Integer = txtStudentId.Text
-        Dim stuName As String = "'" & txtStuName.Text & "'"
-        Dim age As Integer = txtAge.Text
-        Dim yearEnrolled As Integer = ComYear.SelectedItem.ToString
-        Dim gender As String = "m"
-        If radMale.Checked = True Then
-            gender = "'m'"
-        ElseIf radFemale.Checked = True Then
-            gender = "'f'"
+
+        If String.IsNullOrEmpty(txtStudentId.Text) Or String.IsNullOrEmpty(txtStuName.Text) Or String.IsNullOrEmpty(txtAge.Text) Or String.IsNullOrEmpty(txtYearEnrolled.Text) Then
+            MessageBox.Show("One or more fields are empty. Please provide information for these fields.", "Empty Fields", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        Else
+            If IsNumeric(txtStudentId.Text) = False Then
+                MessageBox.Show("Student ID should not include characters or symbols. Please enter number in range of 10000 - 99999.", "Invalid Student ID", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Else
+                Dim studentId As Integer = txtStudentId.Text
+                If Not (studentId >= 10000 And studentId <= 99999) Then
+                    MessageBox.Show("Student ID out of range. Please enter a number in the range of 10000 - 99999", "Invalid Student ID", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Else
+                    If IsNumeric(txtAge.Text) = False Then
+                        MessageBox.Show("Age should not include characters or symbols. Please enter number in range of 1 - 90.", "Invalid Age", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    Else
+                        Dim age As Integer = txtAge.Text
+                        If Not (age >= 1 And age <= 99) Then
+                            MessageBox.Show("Age out of range. Please enter number in range of 1 - 99.", "Invalid Age", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                        Else
+                            If IsNumeric(txtYearEnrolled.Text) = False Then
+                                MessageBox.Show("Year should not include characters or symbols. Please enter number in range of 2000 - 3000.", "Invalid Age", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                            Else
+                                Dim yearEnrolled As Integer = txtYearEnrolled.Text
+                                If Not (yearEnrolled >= 2000 And yearEnrolled <= 3000) Then
+                                    MessageBox.Show("Year out of range. Please enter number in range of 2000 - 3000.", "Invalid Age", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                                Else
+                                    Dim stuName As String = "'" & txtStuName.Text & "'"
+                                    Dim gender As String = "m"
+                                    If radMale.Checked = True Then
+                                        gender = "'m'"
+                                    ElseIf radFemale.Checked = True Then
+                                        gender = "'f'"
+                                    End If
+                                    Dim teamColour As String = "'" & comTeam.SelectedItem.ToString & "'"
+
+
+
+                                    Dim insertQuery As String = "INSERT INTO student values (" & studentId & "," & stuName & "," & age & "," & yearEnrolled & "," & gender & "," & teamColour & ");"
+                                    Form2.run_query(insertQuery)
+                                    Form2.table_load("student")
+
+                                    MessageBox.Show("Added New Student " & stuName & ".", "New Student Added", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                    clear()
+                                End If
+                            End If
+                        End If
+                    End If
+                End If
+            End If
         End If
-        Dim teamColour As String = "'" & comTeam.SelectedItem.ToString & "'"
-
-
-
-        Dim insertQuery As String = "INSERT INTO student values (" & studentId & "," & stuName & "," & age & "," & yearEnrolled & "," & gender & "," & teamColour & ");"
-        Form2.run_query(insertQuery)
-        Form2.table_load("student")
-
-        MessageBox.Show("Added Student")
-        clear()
-
     End Sub
 
     Private Sub clear()
         txtStuName.Text = ""
         txtStudentId.Text = ""
         txtAge.Text = ""
+        txtYearEnrolled.Text = ""
         radFemale.Checked = False
         radMale.Checked = True
-        ComYear.SelectedIndex = 0
         comTeam.SelectedIndex = 0
     End Sub
 
