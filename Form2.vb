@@ -81,9 +81,64 @@ Public Class Form2
     'load things on start
     Private Sub window_onload() Handles Me.Load
         table_load("student")
+        table_load("teacher")
+        table_load("enrolled")
+        table_load("subject")
+        table_load("marks")
+        table_load("period")
+
+        'load combobox for each tab
+        'for student tab
+        With studentSearch_comboBox
+            .Items.Add(student_table.Columns(0).HeaderText)
+            .Items.Add(student_table.Columns(1).HeaderText)
+            .Items.Add(student_table.Columns(2).HeaderText)
+            .Items.Add(student_table.Columns(3).HeaderText)
+            .Items.Add(student_table.Columns(4).HeaderText)
+            .Items.Add(student_table.Columns(5).HeaderText)
+        End With
+        'for teacher tab
+        With teacherSearch_comboBox
+            .Items.Add(teacher_table.Columns(0).HeaderText)
+            .Items.Add(teacher_table.Columns(1).HeaderText)
+            .Items.Add(teacher_table.Columns(2).HeaderText)
+        End With
+        'for class tab
+        With classSearch_comboBox
+            .Items.Add(class_table.Columns(0).HeaderText)
+            .Items.Add(class_table.Columns(1).HeaderText)
+        End With
+        'for subject tab
+        With subjectSearch_comboBox
+            .Items.Add(subject_table.Columns(0).HeaderText)
+            .Items.Add(subject_table.Columns(1).HeaderText)
+        End With
+        'for marks tab
+        With marksSearch_comboBox
+            .Items.Add(marks_table.Columns(0).HeaderText)
+            .Items.Add(marks_table.Columns(1).HeaderText)
+            .Items.Add(marks_table.Columns(2).HeaderText)
+            .Items.Add(marks_table.Columns(3).HeaderText)
+        End With
+        'for period tab
+        With periodSearch_comboBox
+            .Items.Add(period_table.Columns(0).HeaderText)
+            .Items.Add(period_table.Columns(1).HeaderText)
+            .Items.Add(period_table.Columns(2).HeaderText)
+            .Items.Add(period_table.Columns(3).HeaderText)
+            .Items.Add(period_table.Columns(4).HeaderText)
+        End With
+
+        'set combobox initial selected item
+        studentSearch_comboBox.SelectedIndex = 0
+        teacherSearch_comboBox.SelectedIndex = 0
+        classSearch_comboBox.SelectedIndex = 0
+        subjectSearch_comboBox.SelectedIndex = 0
+        marksSearch_comboBox.SelectedIndex = 0
+        periodSearch_comboBox.SelectedIndex = 0
     End Sub
 
-    'load the table when a tab is open / refresh table when tab changes
+    'load / refresh controls / tables when tab changes
     Private Sub tab_load() Handles tab_control.SelectedIndexChanged
         'get selected tab index
         Dim tab_index As Integer = tab_control.SelectedIndex
@@ -106,6 +161,74 @@ Public Class Form2
             Case 5
                 table_load("period")
         End Select
+    End Sub
+
+    'Search function
+    'based on combo box selection
+    'for student
+    Private Sub studentSearch_TextChanged(sender As Object, e As EventArgs) Handles studentSearch_textBox.TextChanged, studentSearch_comboBox.SelectedIndexChanged
+        Dim column() As String = {"stuId", "stuName", "age", "enrollyear", "stugender", "team"}
+
+        Dim da As New SqlDataAdapter(New SqlCommand("select * from student where " & column(studentSearch_comboBox.SelectedIndex) & " like '%" & studentSearch_textBox.Text & "%' ;", connection))
+        Dim datatable As New DataTable()
+        da.Fill(datatable)
+
+        student_table.DataSource = datatable
+    End Sub
+
+    'for teacher
+    Private Sub teacherSearch_TextChanged(sender As Object, e As EventArgs) Handles teacherSearch_textBox.TextChanged, teacherSearch_comboBox.SelectedIndexChanged
+        Dim column() As String = {"teacherId", "teacherName", "teacherGender"}
+
+        Dim da As New SqlDataAdapter(New SqlCommand("select * from teacher where " & column(teacherSearch_comboBox.SelectedIndex) & " like '%" & teacherSearch_textBox.Text & "%' ;", connection))
+        Dim datatable As New DataTable()
+        da.Fill(datatable)
+
+        teacher_table.DataSource = datatable
+    End Sub
+
+    'for class
+    Private Sub classSearch_TextChanged(sender As Object, e As EventArgs) Handles classSearch_textBox.TextChanged, classSearch_comboBox.SelectedIndexChanged
+        Dim column() As String = {"studentId", "classId"}
+
+        Dim da As New SqlDataAdapter(New SqlCommand("select * from enrolled where " & column(classSearch_comboBox.SelectedIndex) & " like '%" & classSearch_textBox.Text & "%' ;", connection))
+        Dim datatable As New DataTable()
+        da.Fill(datatable)
+
+        class_table.DataSource = datatable
+    End Sub
+
+    'for subject
+    Private Sub subjectSearch_TextChanged(sender As Object, e As EventArgs) Handles subjectSearch_textBox.TextChanged, subjectSearch_comboBox.SelectedIndexChanged
+        Dim column() As String = {"subjectId", "sname"}
+
+        Dim da As New SqlDataAdapter(New SqlCommand("select * from subject where " & column(subjectSearch_comboBox.SelectedIndex) & " like '%" & subjectSearch_textBox.Text & "%' ;", connection))
+        Dim datatable As New DataTable()
+        da.Fill(datatable)
+
+        subject_table.DataSource = datatable
+    End Sub
+
+    'for marks
+    Private Sub marksSearch_TextChanged(sender As Object, e As EventArgs) Handles marksSearch_textBox.TextChanged, marksSearch_comboBox.SelectedIndexChanged
+        Dim column() As String = {"studentId", "subjectId", "examyear", "mark"}
+
+        Dim da As New SqlDataAdapter(New SqlCommand("select * from marks where " & column(marksSearch_comboBox.SelectedIndex) & " like '%" & marksSearch_textBox.Text & "%' ;", connection))
+        Dim datatable As New DataTable()
+        da.Fill(datatable)
+
+        marks_table.DataSource = datatable
+    End Sub
+
+    'for period
+    Private Sub periodSearch_TextChanged(sender As Object, e As EventArgs) Handles periodSearch_textBox.TextChanged, periodSearch_comboBox.SelectedIndexChanged
+        Dim column() As String = {"periodId", "periodDay", "periodTime", "classId", "subjectId"}
+
+        Dim da As New SqlDataAdapter(New SqlCommand("select * from period where " & column(periodSearch_comboBox.SelectedIndex) & " like '%" & periodSearch_textBox.Text & "%' ;", connection))
+        Dim datatable As New DataTable()
+        da.Fill(datatable)
+
+        period_table.DataSource = datatable
     End Sub
 
     'FOR ADD FUNCTION: summon add win form
