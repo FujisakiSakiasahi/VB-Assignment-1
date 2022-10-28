@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class AddTeacher
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class AddTeacher
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.txtStuName = New System.Windows.Forms.TextBox()
         Me.txtStudentId = New System.Windows.Forms.TextBox()
@@ -28,6 +28,9 @@ Partial Class AddTeacher
         Me.lblTeacherName = New System.Windows.Forms.Label()
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.lblTeacherId = New System.Windows.Forms.Label()
+        Me.radFemale = New System.Windows.Forms.RadioButton()
+        Me.radMale = New System.Windows.Forms.RadioButton()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'txtStuName
@@ -46,7 +49,7 @@ Partial Class AddTeacher
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(337, 150)
+        Me.btnCancel.Location = New System.Drawing.Point(310, 180)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(112, 34)
         Me.btnCancel.TabIndex = 23
@@ -64,7 +67,7 @@ Partial Class AddTeacher
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(105, 150)
+        Me.btnAdd.Location = New System.Drawing.Point(78, 180)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(112, 34)
         Me.btnAdd.TabIndex = 16
@@ -80,11 +83,45 @@ Partial Class AddTeacher
         Me.lblTeacherId.TabIndex = 15
         Me.lblTeacherId.Text = "Teacher ID:"
         '
+        'radFemale
+        '
+        Me.radFemale.AutoSize = True
+        Me.radFemale.Location = New System.Drawing.Point(269, 108)
+        Me.radFemale.Name = "radFemale"
+        Me.radFemale.Size = New System.Drawing.Size(93, 29)
+        Me.radFemale.TabIndex = 29
+        Me.radFemale.TabStop = True
+        Me.radFemale.Text = "Female"
+        Me.radFemale.UseVisualStyleBackColor = True
+        '
+        'radMale
+        '
+        Me.radMale.AutoSize = True
+        Me.radMale.Location = New System.Drawing.Point(188, 108)
+        Me.radMale.Name = "radMale"
+        Me.radMale.Size = New System.Drawing.Size(75, 29)
+        Me.radMale.TabIndex = 28
+        Me.radMale.TabStop = True
+        Me.radMale.Text = "Male"
+        Me.radMale.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(83, 110)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(73, 25)
+        Me.Label2.TabIndex = 27
+        Me.Label2.Text = "Gender:"
+        '
         'AddTeacher
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(536, 239)
+        Me.ClientSize = New System.Drawing.Size(536, 255)
+        Me.Controls.Add(Me.radFemale)
+        Me.Controls.Add(Me.radMale)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtStuName)
         Me.Controls.Add(Me.txtStudentId)
         Me.Controls.Add(Me.btnCancel)

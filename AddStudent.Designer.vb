@@ -126,6 +126,7 @@ Partial Class StudentAddForm
         '
         'ComYear
         '
+        Me.ComYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComYear.FormattingEnabled = True
         Me.ComYear.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
         Me.ComYear.Location = New System.Drawing.Point(234, 154)
@@ -165,6 +166,7 @@ Partial Class StudentAddForm
         '
         'comTeam
         '
+        Me.comTeam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.comTeam.FormattingEnabled = True
         Me.comTeam.Items.AddRange(New Object() {"Red", "Yellow", "Blue", "Green"})
         Me.comTeam.Location = New System.Drawing.Point(234, 228)

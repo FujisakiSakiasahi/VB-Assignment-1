@@ -2,8 +2,8 @@
 Imports System.Data.SqlClient
 Public Class Form2
     'Establish connection with the database server
-    'Dim connection As New SqlConnection("Server=BRUH-LAPTOP\SQLEXPRESS04 ; Database=SchoolDb ; Integrated Security = TRUE")
-    Dim connection As New SqlConnection("Server=localhost\SQLEXPRESS ; Database=SchoolDb ; Integrated Security = TRUE")
+    Dim connection As New SqlConnection("Server=BRUH-LAPTOP\SQLEXPRESS04 ; Database=SchoolDb ; Integrated Security = TRUE")
+    'Dim connection As New SqlConnection("Server=localhost\SQLEXPRESS ; Database=SchoolDb ; Integrated Security = TRUE")
 
     'function use to run sql query
     Public Sub run_query(query As String)
@@ -250,7 +250,23 @@ Public Class Form2
         formSubject.Show()
     End Sub
 
+    'for class tab / table
+    Private Sub classAdd_button_Click(sender As Object, e As EventArgs) Handles classAdd_button.Click
+        Dim formClass As New AddClass
+        formClass.Show()
+    End Sub
 
+    'for marks tab / table
+    Private Sub marksAdd_button_Click(sender As Object, e As EventArgs) Handles marksAdd_button.Click
+        Dim formMarks As New AddMarks
+        formMarks.Show()
+    End Sub
+
+    'for period tab / table
+    Private Sub periodAdd_button_Click(sender As Object, e As EventArgs) Handles periodAdd_button.Click
+        Dim formPeriod As New AddPeriod
+        formPeriod.Show()
+    End Sub
 
     Private Sub class_delete_button_Click(sender As Object, e As EventArgs) Handles classDelete_button.Click
         Dim loopStatus As Boolean = True
@@ -266,5 +282,6 @@ Public Class Form2
         Loop Until loopStatus '= False
 
     End Sub
+
 
 End Class

@@ -1,4 +1,9 @@
 ﻿Public Class StudentAddForm
+    Private Sub StudentAddForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        radMale.Checked = True
+        ComYear.SelectedIndex = 0
+        comTeam.SelectedIndex = 0
+    End Sub
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
     End Sub
@@ -32,9 +37,10 @@
         txtStudentId.Text = ""
         txtAge.Text = ""
         radFemale.Checked = False
-        radMale.Checked = False
-        ComYear.Text = ""
-        comTeam.Text = ""
+        radMale.Checked = True
+        ComYear.SelectedIndex = 0
+        comTeam.SelectedIndex = 0
     End Sub
 
+    'remember to add class using dropdown
 End Class
