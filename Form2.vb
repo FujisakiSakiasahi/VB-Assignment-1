@@ -2,8 +2,8 @@
 Imports System.Data.SqlClient
 Public Class Form2
     'Establish connection with the database server
-    Public connection As New SqlConnection("Server=BRUH-LAPTOP\SQLEXPRESS04 ; Database=SchoolDb ; Integrated Security = TRUE")
-    'Public connection As New SqlConnection("Server=localhost\SQLEXPRESS ; Database=SchoolDb ; Integrated Security = TRUE")
+    'Public connection As New SqlConnection("Server=BRUH-LAPTOP\SQLEXPRESS04 ; Database=SchoolDb ; Integrated Security = TRUE")
+    Public connection As New SqlConnection("Server=localhost\SQLEXPRESS ; Database=SchoolDb ; Integrated Security = TRUE")
 
     'function use to run sql query
     Public Sub run_query(query As String)
@@ -234,12 +234,18 @@ Public Class Form2
     'FOR ADD, UPDATE, DELETE FUNCTION: summon add win form
     'for student tab / table
     Private Sub studentAdd_button_Click(sender As Object, e As EventArgs) Handles studentAdd_button.Click
-        Dim formStudent As New StudentAddForm
+        Dim formStudent As New AddStudent
         formStudent.Show()
     End Sub
 
     Private Sub studentUpdate_button_Click(sender As Object, e As EventArgs) Handles studentUpdate_button.Click
+        Dim formStudent As New UpdateStudent
+        formStudent.Show()
+    End Sub
 
+    Private Sub studentDelete_button_Click(sender As Object, e As EventArgs) Handles studentDelete_button.Click
+        Dim formStudent As New DeleteStudent
+        formStudent.Show()
     End Sub
 
     'for teacher tab / table
@@ -248,7 +254,13 @@ Public Class Form2
         formTeacher.Show()
     End Sub
     Private Sub teacherUpdate_button_Click(sender As Object, e As EventArgs) Handles teacherUpdate_button.Click
+        Dim formTeacher As New UpdateTeacher
+        formTeacher.Show()
+    End Sub
 
+    Private Sub teacherDelete_button_Click(sender As Object, e As EventArgs) Handles teacherDelete_button.Click
+        Dim formTeacher As New DeleteTeacher
+        formTeacher.Show()
     End Sub
 
     'for subject tab / table
@@ -257,30 +269,55 @@ Public Class Form2
         formSubject.Show()
     End Sub
     Private Sub subjectUpdate_button_Click(sender As Object, e As EventArgs) Handles subjectUpdate_button.Click
-
+        Dim formSubject As New UpdateSubject
+        formSubject.Show()
     End Sub
 
-    'for allocate student in class tab / table
+    Private Sub subjectDelete_button_Click(sender As Object, e As EventArgs) Handles subjectDelete_button.Click
+        Dim formSubject As New DeleteSubject
+        formSubject.Show()
+    End Sub
+
+    'for allocate student / create class in class tab / table
     Private Sub classAddClass_button_Click(sender As Object, e As EventArgs) Handles classAddClass_button.Click
         Dim formNewClass As New AddClass
         formNewClass.Show()
     End Sub
+
+    Private Sub classDeleteClass_button_Click(sender As Object, e As EventArgs) Handles classDeleteClass_button.Click
+        Dim formNewClass As New DeleteClass
+        formNewClass.Show()
+    End Sub
+
     Private Sub classAllocStudent_button_Click(sender As Object, e As EventArgs) Handles classAllocStudent_button.Click
         Dim formClass As New AllocStudentToClass
         formClass.Show()
     End Sub
-    Private Sub classUpdate_button_Click(sender As Object, e As EventArgs) Handles classUpdate_button.Click
 
+    Private Sub classUpdate_button_Click(sender As Object, e As EventArgs) Handles classUpdate_button.Click
+        Dim formClass As New UpdateClass
+        formClass.Show()
     End Sub
 
+    Private Sub classRemoveStudent_button_Click(sender As Object, e As EventArgs) Handles classRemoveStudent_button.Click
+        Dim formClass As New RemoveStudentFromClass
+        formClass.Show()
+    End Sub
 
     'for marks tab / table
     Private Sub marksAdd_button_Click(sender As Object, e As EventArgs) Handles marksAdd_button.Click
         Dim formMarks As New AddMarks
         formMarks.Show()
     End Sub
-    Private Sub marksUpdate_button_Click(sender As Object, e As EventArgs) Handles marksUpdate_button.Click
 
+    Private Sub marksUpdate_button_Click(sender As Object, e As EventArgs) Handles marksUpdate_button.Click
+        Dim formMarks As New UpdateMarks
+        formMarks.Show()
+    End Sub
+
+    Private Sub marksDelete_button_Click(sender As Object, e As EventArgs) Handles marksDelete_button.Click
+        Dim formMarks As New DeleteMarks
+        formMarks.Show()
     End Sub
 
     'for period tab / table
@@ -289,21 +326,12 @@ Public Class Form2
         formPeriod.Show()
     End Sub
     Private Sub periodUpdate_button_Click(sender As Object, e As EventArgs) Handles periodUpdate_button.Click
-
+        Dim formPeriod As New UpdatePeriod
+        formPeriod.Show()
     End Sub
 
-    Private Sub classDelete_button_Click(sender As Object, e As EventArgs) Handles classRemoveStudent_button.Click
-        Dim loopStatus As Boolean = True
-        Dim debugVar As Integer = 0
-        Do
-            Dim studentName = InputBox(" Please enter the student name: ", "Delete student info")
-
-            If debugVar <> 0 Then
-                loopStatus = False
-            Else
-                MessageBox.Show("Student not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
-        Loop Until loopStatus '= False
-
+    Private Sub periodDelete_button_Click(sender As Object, e As EventArgs) Handles periodDelete_button.Click
+        Dim formPeriod As New DeletePeriod
+        formPeriod.Show()
     End Sub
 End Class

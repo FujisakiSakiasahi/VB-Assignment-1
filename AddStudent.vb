@@ -1,4 +1,4 @@
-﻿Public Class StudentAddForm
+﻿Public Class AddStudent
     Private Sub StudentAddForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         radMale.Checked = True
         comTeam.SelectedIndex = 0
