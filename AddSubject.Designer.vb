@@ -32,16 +32,18 @@ Partial Class AddSubject
         '
         'txtSName
         '
-        Me.txtSName.Location = New System.Drawing.Point(202, 69)
+        Me.txtSName.Location = New System.Drawing.Point(141, 46)
+        Me.txtSName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtSName.Name = "txtSName"
-        Me.txtSName.Size = New System.Drawing.Size(319, 31)
+        Me.txtSName.Size = New System.Drawing.Size(224, 23)
         Me.txtSName.TabIndex = 32
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(327, 148)
+        Me.btnCancel.Location = New System.Drawing.Point(229, 89)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(112, 34)
+        Me.btnCancel.Size = New System.Drawing.Size(78, 20)
         Me.btnCancel.TabIndex = 30
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
@@ -49,17 +51,19 @@ Partial Class AddSubject
         'lblSName
         '
         Me.lblSName.AutoSize = True
-        Me.lblSName.Location = New System.Drawing.Point(46, 72)
+        Me.lblSName.Location = New System.Drawing.Point(32, 48)
+        Me.lblSName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblSName.Name = "lblSName"
-        Me.lblSName.Size = New System.Drawing.Size(126, 25)
+        Me.lblSName.Size = New System.Drawing.Size(84, 15)
         Me.lblSName.TabIndex = 29
         Me.lblSName.Text = "Subject Name:"
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(95, 148)
+        Me.btnAdd.Location = New System.Drawing.Point(66, 89)
+        Me.btnAdd.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(112, 34)
+        Me.btnAdd.Size = New System.Drawing.Size(78, 20)
         Me.btnAdd.TabIndex = 28
         Me.btnAdd.Text = "Add"
         Me.btnAdd.UseVisualStyleBackColor = True
@@ -67,30 +71,33 @@ Partial Class AddSubject
         'lblSubjectId
         '
         Me.lblSubjectId.AutoSize = True
-        Me.lblSubjectId.Location = New System.Drawing.Point(75, 34)
+        Me.lblSubjectId.Location = New System.Drawing.Point(52, 20)
+        Me.lblSubjectId.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblSubjectId.Name = "lblSubjectId"
-        Me.lblSubjectId.Size = New System.Drawing.Size(97, 25)
+        Me.lblSubjectId.Size = New System.Drawing.Size(63, 15)
         Me.lblSubjectId.TabIndex = 27
         Me.lblSubjectId.Text = "Subject ID:"
         '
         'txtSubjectId
         '
-        Me.txtSubjectId.Location = New System.Drawing.Point(202, 31)
+        Me.txtSubjectId.Location = New System.Drawing.Point(141, 19)
+        Me.txtSubjectId.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtSubjectId.Name = "txtSubjectId"
-        Me.txtSubjectId.Size = New System.Drawing.Size(319, 31)
+        Me.txtSubjectId.Size = New System.Drawing.Size(224, 23)
         Me.txtSubjectId.TabIndex = 33
         '
         'AddSubject
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(550, 226)
+        Me.ClientSize = New System.Drawing.Size(385, 136)
         Me.Controls.Add(Me.txtSubjectId)
         Me.Controls.Add(Me.txtSName)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.lblSName)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.lblSubjectId)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "AddSubject"
         Me.Text = "Add New Subject"
         Me.ResumeLayout(False)

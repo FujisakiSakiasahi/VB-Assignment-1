@@ -98,7 +98,7 @@ Partial Class UpdateTeacher
         Me.btnCancel.Location = New System.Drawing.Point(217, 108)
         Me.btnCancel.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(78, 20)
+        Me.btnCancel.Size = New System.Drawing.Size(75, 23)
         Me.btnCancel.TabIndex = 43
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
@@ -118,9 +118,9 @@ Partial Class UpdateTeacher
         Me.btnAdd.Location = New System.Drawing.Point(55, 108)
         Me.btnAdd.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(78, 20)
+        Me.btnAdd.Size = New System.Drawing.Size(75, 23)
         Me.btnAdd.TabIndex = 41
-        Me.btnAdd.Text = "Add"
+        Me.btnAdd.Text = "Update"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
         'lblTeacherId
