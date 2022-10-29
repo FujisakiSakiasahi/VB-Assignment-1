@@ -22,27 +22,13 @@ Partial Class AllocStudentToClass
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.txtStuName = New System.Windows.Forms.TextBox()
-        Me.txtStudentId = New System.Windows.Forms.TextBox()
         Me.lblClassId = New System.Windows.Forms.Label()
         Me.lblStudentId = New System.Windows.Forms.Label()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnAdd = New System.Windows.Forms.Button()
+        Me.comStudentId = New System.Windows.Forms.ComboBox()
+        Me.comClassId = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
-        '
-        'txtStuName
-        '
-        Me.txtStuName.Location = New System.Drawing.Point(199, 77)
-        Me.txtStuName.Name = "txtStuName"
-        Me.txtStuName.Size = New System.Drawing.Size(318, 31)
-        Me.txtStuName.TabIndex = 15
-        '
-        'txtStudentId
-        '
-        Me.txtStudentId.Location = New System.Drawing.Point(199, 40)
-        Me.txtStudentId.Name = "txtStudentId"
-        Me.txtStudentId.Size = New System.Drawing.Size(318, 31)
-        Me.txtStudentId.TabIndex = 14
         '
         'lblClassId
         '
@@ -80,15 +66,33 @@ Partial Class AllocStudentToClass
         Me.btnAdd.Text = "Add"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
+        'comStudentId
+        '
+        Me.comStudentId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.comStudentId.FormattingEnabled = True
+        Me.comStudentId.Location = New System.Drawing.Point(199, 40)
+        Me.comStudentId.Name = "comStudentId"
+        Me.comStudentId.Size = New System.Drawing.Size(319, 33)
+        Me.comStudentId.TabIndex = 29
+        '
+        'comClassId
+        '
+        Me.comClassId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.comClassId.FormattingEnabled = True
+        Me.comClassId.Location = New System.Drawing.Point(199, 77)
+        Me.comClassId.Name = "comClassId"
+        Me.comClassId.Size = New System.Drawing.Size(319, 33)
+        Me.comClassId.TabIndex = 28
+        '
         'AllocStudentToClass
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(593, 243)
+        Me.Controls.Add(Me.comStudentId)
+        Me.Controls.Add(Me.comClassId)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnAdd)
-        Me.Controls.Add(Me.txtStuName)
-        Me.Controls.Add(Me.txtStudentId)
         Me.Controls.Add(Me.lblClassId)
         Me.Controls.Add(Me.lblStudentId)
         Me.Name = "AllocStudentToClass"
@@ -97,11 +101,10 @@ Partial Class AllocStudentToClass
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents txtStuName As TextBox
-    Friend WithEvents txtStudentId As TextBox
     Friend WithEvents lblClassId As Label
     Friend WithEvents lblStudentId As Label
     Friend WithEvents btnCancel As Button
     Friend WithEvents btnAdd As Button
+    Friend WithEvents comStudentId As ComboBox
+    Friend WithEvents comClassId As ComboBox
 End Class

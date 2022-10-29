@@ -22,33 +22,27 @@ Partial Class AddPeriod
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.txtMark = New System.Windows.Forms.TextBox()
-        Me.txtExamYear = New System.Windows.Forms.TextBox()
+        Me.txtTime = New System.Windows.Forms.TextBox()
         Me.lblClassId = New System.Windows.Forms.Label()
         Me.lblTime = New System.Windows.Forms.Label()
-        Me.txtStuName = New System.Windows.Forms.TextBox()
-        Me.txtStudentId = New System.Windows.Forms.TextBox()
         Me.lblDay = New System.Windows.Forms.Label()
         Me.lblId = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.lblSubjectId = New System.Windows.Forms.Label()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnAdd = New System.Windows.Forms.Button()
+        Me.comClassId = New System.Windows.Forms.ComboBox()
+        Me.comSubjectId = New System.Windows.Forms.ComboBox()
+        Me.comPeriodId = New System.Windows.Forms.ComboBox()
+        Me.comDay = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
-        'txtMark
+        'txtTime
         '
-        Me.txtMark.Location = New System.Drawing.Point(179, 141)
-        Me.txtMark.Name = "txtMark"
-        Me.txtMark.Size = New System.Drawing.Size(319, 31)
-        Me.txtMark.TabIndex = 31
-        '
-        'txtExamYear
-        '
-        Me.txtExamYear.Location = New System.Drawing.Point(179, 103)
-        Me.txtExamYear.Name = "txtExamYear"
-        Me.txtExamYear.Size = New System.Drawing.Size(319, 31)
-        Me.txtExamYear.TabIndex = 30
+        Me.txtTime.Enabled = False
+        Me.txtTime.Location = New System.Drawing.Point(179, 103)
+        Me.txtTime.Name = "txtTime"
+        Me.txtTime.Size = New System.Drawing.Size(319, 31)
+        Me.txtTime.TabIndex = 30
         '
         'lblClassId
         '
@@ -68,20 +62,6 @@ Partial Class AddPeriod
         Me.lblTime.TabIndex = 28
         Me.lblTime.Text = "Time:"
         '
-        'txtStuName
-        '
-        Me.txtStuName.Location = New System.Drawing.Point(179, 66)
-        Me.txtStuName.Name = "txtStuName"
-        Me.txtStuName.Size = New System.Drawing.Size(319, 31)
-        Me.txtStuName.TabIndex = 27
-        '
-        'txtStudentId
-        '
-        Me.txtStudentId.Location = New System.Drawing.Point(179, 28)
-        Me.txtStudentId.Name = "txtStudentId"
-        Me.txtStudentId.Size = New System.Drawing.Size(319, 31)
-        Me.txtStudentId.TabIndex = 26
-        '
         'lblDay
         '
         Me.lblDay.AutoSize = True
@@ -99,13 +79,6 @@ Partial Class AddPeriod
         Me.lblId.Size = New System.Drawing.Size(34, 25)
         Me.lblId.TabIndex = 24
         Me.lblId.Text = "ID:"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(179, 178)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(319, 31)
-        Me.TextBox1.TabIndex = 33
         '
         'lblSubjectId
         '
@@ -134,21 +107,59 @@ Partial Class AddPeriod
         Me.btnAdd.Text = "Add"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
+        'comClassId
+        '
+        Me.comClassId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.comClassId.FormattingEnabled = True
+        Me.comClassId.Location = New System.Drawing.Point(179, 141)
+        Me.comClassId.Name = "comClassId"
+        Me.comClassId.Size = New System.Drawing.Size(319, 33)
+        Me.comClassId.TabIndex = 36
+        '
+        'comSubjectId
+        '
+        Me.comSubjectId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.comSubjectId.FormattingEnabled = True
+        Me.comSubjectId.Location = New System.Drawing.Point(179, 178)
+        Me.comSubjectId.Name = "comSubjectId"
+        Me.comSubjectId.Size = New System.Drawing.Size(319, 33)
+        Me.comSubjectId.TabIndex = 37
+        '
+        'comPeriodId
+        '
+        Me.comPeriodId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.comPeriodId.FormattingEnabled = True
+        Me.comPeriodId.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"})
+        Me.comPeriodId.Location = New System.Drawing.Point(179, 27)
+        Me.comPeriodId.Name = "comPeriodId"
+        Me.comPeriodId.Size = New System.Drawing.Size(319, 33)
+        Me.comPeriodId.TabIndex = 38
+        '
+        'comDay
+        '
+        Me.comDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.comDay.FormattingEnabled = True
+        Me.comDay.Items.AddRange(New Object() {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday"})
+        Me.comDay.Location = New System.Drawing.Point(179, 66)
+        Me.comDay.Name = "comDay"
+        Me.comDay.Size = New System.Drawing.Size(319, 33)
+        Me.comDay.TabIndex = 39
+        '
         'AddPeriod
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(593, 358)
+        Me.Controls.Add(Me.comDay)
+        Me.Controls.Add(Me.comPeriodId)
+        Me.Controls.Add(Me.comSubjectId)
+        Me.Controls.Add(Me.comClassId)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnAdd)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.lblSubjectId)
-        Me.Controls.Add(Me.txtMark)
-        Me.Controls.Add(Me.txtExamYear)
+        Me.Controls.Add(Me.txtTime)
         Me.Controls.Add(Me.lblClassId)
         Me.Controls.Add(Me.lblTime)
-        Me.Controls.Add(Me.txtStuName)
-        Me.Controls.Add(Me.txtStudentId)
         Me.Controls.Add(Me.lblDay)
         Me.Controls.Add(Me.lblId)
         Me.Name = "AddPeriod"
@@ -157,17 +168,16 @@ Partial Class AddPeriod
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents txtMark As TextBox
-    Friend WithEvents txtExamYear As TextBox
+    Friend WithEvents txtTime As TextBox
     Friend WithEvents lblClassId As Label
     Friend WithEvents lblTime As Label
-    Friend WithEvents txtStuName As TextBox
-    Friend WithEvents txtStudentId As TextBox
     Friend WithEvents lblDay As Label
     Friend WithEvents lblId As Label
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents lblSubjectId As Label
     Friend WithEvents btnCancel As Button
     Friend WithEvents btnAdd As Button
+    Friend WithEvents comClassId As ComboBox
+    Friend WithEvents comSubjectId As ComboBox
+    Friend WithEvents comPeriodId As ComboBox
+    Friend WithEvents comDay As ComboBox
 End Class
