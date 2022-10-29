@@ -53,12 +53,22 @@ Public Class AddMarks
                     Dim studentId As Integer = comStudentId.SelectedItem
                     Dim subjectId As String = "'" & comSubjectId.SelectedItem.ToString & "'"
 
-                    Dim insertQuery As String = "INSERT INTO marks VALUES (" & studentId & "," & subjectId & "," & examYear & "," & mark & ");"
-                    Form2.run_query(insertQuery)
-                    Form2.table_load("marks")
+                    Dim markData As New SqlDataAdapter(New SqlCommand("SELECT * FROM marks WHERE studentId = " & studentId & " AND subjectId = " & subjectId & " AND examyear = " & examYear & ";", Form2.connection))
+                    Dim datatable As New DataTable()
+                    markData.Fill(datatable)
 
-                    MessageBox.Show("Added New Mark.", "New Mark Added", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    clear()
+                    If Not (datatable.Rows.Count > 0) Then
+                        Dim insertQuery As String = "INSERT INTO marks VALUES (" & studentId & "," & subjectId & "," & examYear & "," & mark & ");"
+                        Form2.run_query(insertQuery)
+                        Form2.table_load("marks")
+
+                        MessageBox.Show("Added New Mark.", "New Mark Added", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        clear()
+                    Else
+                        If comStudentId.SelectedItem.ToString = datatable.Rows(0).Item(0).ToString And comSubjectId.SelectedItem.ToString = datatable.Rows(0).Item(1).ToString And txtExamYear.Text = datatable.Rows(0).Item(2).ToString Then
+                            MessageBox.Show("Mark already exists. Please check if the student ID, subject ID, and Exam year inputted is correct.", "Mark Already Exists", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                        End If
+                    End If
                 End If
             End If
         End If

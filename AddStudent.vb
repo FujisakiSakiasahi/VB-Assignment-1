@@ -8,7 +8,7 @@ Public Class AddStudent
         Me.Close()
     End Sub
 
-    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click ' I have made a grave mistake making so much nested If Else, kill me pls
 
         If String.IsNullOrEmpty(txtStudentId.Text) Or String.IsNullOrEmpty(txtStuName.Text) Or String.IsNullOrEmpty(txtAge.Text) Or String.IsNullOrEmpty(txtYearEnrolled.Text) Then
             MessageBox.Show("One or more fields are empty. Please provide information for these fields.", "Empty Fields", MessageBoxButtons.OK, MessageBoxIcon.Warning)
