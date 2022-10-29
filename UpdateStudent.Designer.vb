@@ -35,9 +35,9 @@ Partial Class UpdateStudent
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
         Me.lblStudentId = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnSearch = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'txtYearEnrolled
@@ -167,15 +167,15 @@ Partial Class UpdateStudent
         Me.Label2.TabIndex = 18
         Me.Label2.Text = "Gender:"
         '
-        'btnAdd
+        'btnUpdate
         '
-        Me.btnAdd.Location = New System.Drawing.Point(111, 208)
-        Me.btnAdd.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(78, 20)
-        Me.btnAdd.TabIndex = 17
-        Me.btnAdd.Text = "Update"
-        Me.btnAdd.UseVisualStyleBackColor = True
+        Me.btnUpdate.Location = New System.Drawing.Point(111, 208)
+        Me.btnUpdate.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(78, 20)
+        Me.btnUpdate.TabIndex = 17
+        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.UseVisualStyleBackColor = True
         '
         'lblStudentId
         '
@@ -187,21 +187,21 @@ Partial Class UpdateStudent
         Me.lblStudentId.TabIndex = 16
         Me.lblStudentId.Text = "Student ID:"
         '
-        'Button1
+        'btnSearch
         '
-        Me.Button1.Location = New System.Drawing.Point(334, 25)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(54, 23)
-        Me.Button1.TabIndex = 32
-        Me.Button1.Text = "Search"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnSearch.Location = New System.Drawing.Point(334, 25)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(54, 23)
+        Me.btnSearch.TabIndex = 32
+        Me.btnSearch.Text = "Search"
+        Me.btnSearch.UseVisualStyleBackColor = True
         '
         'UpdateStudent
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(448, 270)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.txtYearEnrolled)
         Me.Controls.Add(Me.comTeam)
         Me.Controls.Add(Me.Label6)
@@ -215,7 +215,7 @@ Partial Class UpdateStudent
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.btnAdd)
+        Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.lblStudentId)
         Me.Name = "UpdateStudent"
         Me.Text = "Update Student"
@@ -237,7 +237,7 @@ Partial Class UpdateStudent
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents btnAdd As Button
+    Friend WithEvents btnUpdate As Button
     Friend WithEvents lblStudentId As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnSearch As Button
 End Class

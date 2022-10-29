@@ -41,7 +41,7 @@ Public Class AddStudent
                                     ElseIf radFemale.Checked = True Then
                                         gender = "'f'"
                                     End If
-                                    Dim teamColour As String = "'" & comTeam.SelectedItem.ToString & "'"
+                                    Dim teamColour As String = "'" & comTeam.SelectedItem.ToString.ToLower & "'"
 
                                     Dim studentIdData As New SqlDataAdapter(New SqlCommand("SELECT stuId FROM student WHERE stuId = " & studentId & ";", Form2.connection))
                                     Dim datatable As New DataTable()

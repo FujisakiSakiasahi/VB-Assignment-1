@@ -32,11 +32,11 @@ Partial Class DeleteStudent
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
         Me.lblStudentId = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.btnSearch = New System.Windows.Forms.Button()
+        Me.txtGender = New System.Windows.Forms.TextBox()
+        Me.txtTeam = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'txtYearEnrolled
@@ -134,15 +134,15 @@ Partial Class DeleteStudent
         Me.Label2.TabIndex = 18
         Me.Label2.Text = "Gender:"
         '
-        'btnAdd
+        'btnDelete
         '
-        Me.btnAdd.Location = New System.Drawing.Point(111, 208)
-        Me.btnAdd.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(78, 20)
-        Me.btnAdd.TabIndex = 17
-        Me.btnAdd.Text = "Delete"
-        Me.btnAdd.UseVisualStyleBackColor = True
+        Me.btnDelete.Location = New System.Drawing.Point(111, 208)
+        Me.btnDelete.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(78, 20)
+        Me.btnDelete.TabIndex = 17
+        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.UseVisualStyleBackColor = True
         '
         'lblStudentId
         '
@@ -154,39 +154,39 @@ Partial Class DeleteStudent
         Me.lblStudentId.TabIndex = 16
         Me.lblStudentId.Text = "Student ID:"
         '
-        'Button1
+        'btnSearch
         '
-        Me.Button1.Location = New System.Drawing.Point(334, 23)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(54, 23)
-        Me.Button1.TabIndex = 31
-        Me.Button1.Text = "Search"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnSearch.Location = New System.Drawing.Point(334, 23)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(54, 23)
+        Me.btnSearch.TabIndex = 31
+        Me.btnSearch.Text = "Search"
+        Me.btnSearch.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'txtGender
         '
-        Me.TextBox1.Location = New System.Drawing.Point(164, 134)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(224, 23)
-        Me.TextBox1.TabIndex = 32
+        Me.txtGender.Location = New System.Drawing.Point(164, 134)
+        Me.txtGender.Name = "txtGender"
+        Me.txtGender.ReadOnly = True
+        Me.txtGender.Size = New System.Drawing.Size(224, 23)
+        Me.txtGender.TabIndex = 32
         '
-        'TextBox2
+        'txtTeam
         '
-        Me.TextBox2.Location = New System.Drawing.Point(164, 163)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(224, 23)
-        Me.TextBox2.TabIndex = 33
+        Me.txtTeam.Location = New System.Drawing.Point(164, 163)
+        Me.txtTeam.Name = "txtTeam"
+        Me.txtTeam.ReadOnly = True
+        Me.txtTeam.Size = New System.Drawing.Size(224, 23)
+        Me.txtTeam.TabIndex = 33
         '
         'DeleteStudent
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(448, 270)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.txtTeam)
+        Me.Controls.Add(Me.txtGender)
+        Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.txtYearEnrolled)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txtAge)
@@ -197,7 +197,7 @@ Partial Class DeleteStudent
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.btnAdd)
+        Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.lblStudentId)
         Me.Name = "DeleteStudent"
         Me.Text = "Delete Student"
@@ -216,9 +216,9 @@ Partial Class DeleteStudent
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents btnAdd As Button
+    Friend WithEvents btnDelete As Button
     Friend WithEvents lblStudentId As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents btnSearch As Button
+    Friend WithEvents txtGender As TextBox
+    Friend WithEvents txtTeam As TextBox
 End Class
