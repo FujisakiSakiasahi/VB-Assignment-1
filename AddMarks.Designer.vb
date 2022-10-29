@@ -37,67 +37,75 @@ Partial Class AddMarks
         'lblSubjectId
         '
         Me.lblSubjectId.AutoSize = True
-        Me.lblSubjectId.Location = New System.Drawing.Point(56, 87)
+        Me.lblSubjectId.Location = New System.Drawing.Point(39, 57)
+        Me.lblSubjectId.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblSubjectId.Name = "lblSubjectId"
-        Me.lblSubjectId.Size = New System.Drawing.Size(97, 25)
+        Me.lblSubjectId.Size = New System.Drawing.Size(63, 15)
         Me.lblSubjectId.TabIndex = 17
         Me.lblSubjectId.Text = "Subject ID:"
         '
         'lblStudentId
         '
         Me.lblStudentId.AutoSize = True
-        Me.lblStudentId.Location = New System.Drawing.Point(53, 49)
+        Me.lblStudentId.Location = New System.Drawing.Point(37, 29)
+        Me.lblStudentId.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblStudentId.Name = "lblStudentId"
-        Me.lblStudentId.Size = New System.Drawing.Size(100, 25)
+        Me.lblStudentId.Size = New System.Drawing.Size(65, 15)
         Me.lblStudentId.TabIndex = 16
         Me.lblStudentId.Text = "Student ID:"
         '
         'txtMark
         '
-        Me.txtMark.Location = New System.Drawing.Point(180, 159)
+        Me.txtMark.Location = New System.Drawing.Point(126, 109)
+        Me.txtMark.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtMark.Name = "txtMark"
-        Me.txtMark.Size = New System.Drawing.Size(319, 31)
+        Me.txtMark.Size = New System.Drawing.Size(224, 23)
         Me.txtMark.TabIndex = 23
         '
         'txtExamYear
         '
-        Me.txtExamYear.Location = New System.Drawing.Point(180, 121)
+        Me.txtExamYear.Location = New System.Drawing.Point(126, 82)
+        Me.txtExamYear.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtExamYear.Name = "txtExamYear"
-        Me.txtExamYear.Size = New System.Drawing.Size(319, 31)
+        Me.txtExamYear.Size = New System.Drawing.Size(224, 23)
         Me.txtExamYear.TabIndex = 22
         '
         'lblMark
         '
         Me.lblMark.AutoSize = True
-        Me.lblMark.Location = New System.Drawing.Point(97, 162)
+        Me.lblMark.Location = New System.Drawing.Point(68, 111)
+        Me.lblMark.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblMark.Name = "lblMark"
-        Me.lblMark.Size = New System.Drawing.Size(56, 25)
+        Me.lblMark.Size = New System.Drawing.Size(37, 15)
         Me.lblMark.TabIndex = 21
         Me.lblMark.Text = "Mark:"
         '
         'lblExamYear
         '
         Me.lblExamYear.AutoSize = True
-        Me.lblExamYear.Location = New System.Drawing.Point(58, 124)
+        Me.lblExamYear.Location = New System.Drawing.Point(41, 83)
+        Me.lblExamYear.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblExamYear.Name = "lblExamYear"
-        Me.lblExamYear.Size = New System.Drawing.Size(95, 25)
+        Me.lblExamYear.Size = New System.Drawing.Size(64, 15)
         Me.lblExamYear.TabIndex = 20
         Me.lblExamYear.Text = "Exam Year:"
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(337, 231)
+        Me.btnCancel.Location = New System.Drawing.Point(235, 150)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(112, 34)
+        Me.btnCancel.Size = New System.Drawing.Size(78, 20)
         Me.btnCancel.TabIndex = 25
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(129, 231)
+        Me.btnAdd.Location = New System.Drawing.Point(89, 150)
+        Me.btnAdd.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(112, 34)
+        Me.btnAdd.Size = New System.Drawing.Size(78, 20)
         Me.btnAdd.TabIndex = 24
         Me.btnAdd.Text = "Add"
         Me.btnAdd.UseVisualStyleBackColor = True
@@ -106,25 +114,27 @@ Partial Class AddMarks
         '
         Me.comSubjectId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.comSubjectId.FormattingEnabled = True
-        Me.comSubjectId.Location = New System.Drawing.Point(180, 84)
+        Me.comSubjectId.Location = New System.Drawing.Point(126, 55)
+        Me.comSubjectId.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.comSubjectId.Name = "comSubjectId"
-        Me.comSubjectId.Size = New System.Drawing.Size(319, 33)
+        Me.comSubjectId.Size = New System.Drawing.Size(224, 23)
         Me.comSubjectId.TabIndex = 26
         '
         'comStudentId
         '
         Me.comStudentId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.comStudentId.FormattingEnabled = True
-        Me.comStudentId.Location = New System.Drawing.Point(180, 46)
+        Me.comStudentId.Location = New System.Drawing.Point(126, 28)
+        Me.comStudentId.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.comStudentId.Name = "comStudentId"
-        Me.comStudentId.Size = New System.Drawing.Size(319, 33)
+        Me.comStudentId.Size = New System.Drawing.Size(224, 23)
         Me.comStudentId.TabIndex = 27
         '
         'AddMarks
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(579, 301)
+        Me.ClientSize = New System.Drawing.Size(405, 193)
         Me.Controls.Add(Me.comStudentId)
         Me.Controls.Add(Me.comSubjectId)
         Me.Controls.Add(Me.btnCancel)
@@ -135,6 +145,7 @@ Partial Class AddMarks
         Me.Controls.Add(Me.lblExamYear)
         Me.Controls.Add(Me.lblSubjectId)
         Me.Controls.Add(Me.lblStudentId)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "AddMarks"
         Me.Text = "AddMarks"
         Me.ResumeLayout(False)
