@@ -104,6 +104,7 @@ Partial Class AddMarks
         '
         'comSubjectId
         '
+        Me.comSubjectId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.comSubjectId.FormattingEnabled = True
         Me.comSubjectId.Location = New System.Drawing.Point(180, 84)
         Me.comSubjectId.Name = "comSubjectId"
@@ -112,6 +113,7 @@ Partial Class AddMarks
         '
         'comStudentId
         '
+        Me.comStudentId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.comStudentId.FormattingEnabled = True
         Me.comStudentId.Location = New System.Drawing.Point(180, 46)
         Me.comStudentId.Name = "comStudentId"

@@ -14,7 +14,7 @@
                 If txtSName.Text.Length > 30 Then
                     MessageBox.Show("Subject Name can only support up to a maximum of 30 characters.", "Invalid Subject Name", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Else
-                    Dim subjectName As String = txtSName.Text
+                    Dim subjectName As String = "'" & txtSName.Text & "'"
 
                     Dim insertQuery As String = "INSERT INTO subject values (" & subjectId & "," & subjectName & ");"
                     Form2.run_query(insertQuery)
@@ -31,6 +31,7 @@
         txtSName.Text = ""
         txtSubjectId.Text = ""
     End Sub
+
 
 
 End Class

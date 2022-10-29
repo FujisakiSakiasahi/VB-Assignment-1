@@ -32,73 +32,66 @@ Partial Class AllocStudentToClass
         '
         'txtStuName
         '
-        Me.txtStuName.Location = New System.Drawing.Point(139, 57)
-        Me.txtStuName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtStuName.Location = New System.Drawing.Point(199, 77)
         Me.txtStuName.Name = "txtStuName"
-        Me.txtStuName.Size = New System.Drawing.Size(224, 23)
+        Me.txtStuName.Size = New System.Drawing.Size(318, 31)
         Me.txtStuName.TabIndex = 15
         '
         'txtStudentId
         '
-        Me.txtStudentId.Location = New System.Drawing.Point(139, 24)
-        Me.txtStudentId.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtStudentId.Location = New System.Drawing.Point(199, 40)
         Me.txtStudentId.Name = "txtStudentId"
-        Me.txtStudentId.Size = New System.Drawing.Size(224, 23)
+        Me.txtStudentId.Size = New System.Drawing.Size(318, 31)
         Me.txtStudentId.TabIndex = 14
         '
         'lblClassId
         '
         Me.lblClassId.AutoSize = True
-        Me.lblClassId.Location = New System.Drawing.Point(65, 59)
-        Me.lblClassId.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblClassId.Location = New System.Drawing.Point(93, 80)
         Me.lblClassId.Name = "lblClassId"
-        Me.lblClassId.Size = New System.Drawing.Size(51, 15)
+        Me.lblClassId.Size = New System.Drawing.Size(79, 25)
         Me.lblClassId.TabIndex = 13
         Me.lblClassId.Text = "Class ID:"
         '
         'lblStudentId
         '
         Me.lblStudentId.AutoSize = True
-        Me.lblStudentId.Location = New System.Drawing.Point(50, 26)
-        Me.lblStudentId.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblStudentId.Location = New System.Drawing.Point(71, 43)
         Me.lblStudentId.Name = "lblStudentId"
-        Me.lblStudentId.Size = New System.Drawing.Size(65, 15)
+        Me.lblStudentId.Size = New System.Drawing.Size(100, 25)
         Me.lblStudentId.TabIndex = 12
         Me.lblStudentId.Text = "Student ID:"
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(231, 97)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnCancel.Location = New System.Drawing.Point(330, 162)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(78, 20)
+        Me.btnCancel.Size = New System.Drawing.Size(111, 33)
         Me.btnCancel.TabIndex = 17
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(85, 97)
-        Me.btnAdd.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnAdd.Location = New System.Drawing.Point(121, 162)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(78, 20)
+        Me.btnAdd.Size = New System.Drawing.Size(111, 33)
         Me.btnAdd.TabIndex = 16
         Me.btnAdd.Text = "Add"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
-        'AddClass
+        'AllocStudentToClass
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(415, 146)
+        Me.ClientSize = New System.Drawing.Size(593, 243)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.txtStuName)
         Me.Controls.Add(Me.txtStudentId)
         Me.Controls.Add(Me.lblClassId)
         Me.Controls.Add(Me.lblStudentId)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Name = "AddClass"
+        Me.Name = "AllocStudentToClass"
         Me.Text = "Add Student to Class"
         Me.ResumeLayout(False)
         Me.PerformLayout()
