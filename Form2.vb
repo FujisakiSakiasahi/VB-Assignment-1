@@ -252,7 +252,7 @@ Public Class Form2
 
     'for allocate student in class tab / table
     Private Sub classAllocStudent_button_Click(sender As Object, e As EventArgs) Handles classAllocStudent_button.Click
-        Dim formClass As New AddClass
+        Dim formClass As New AllocStudentToClass
         formClass.Show()
     End Sub
 
