@@ -22,8 +22,6 @@ Partial Class AddMarks
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.txtStuName = New System.Windows.Forms.TextBox()
-        Me.txtStudentId = New System.Windows.Forms.TextBox()
         Me.lblSubjectId = New System.Windows.Forms.Label()
         Me.lblStudentId = New System.Windows.Forms.Label()
         Me.txtMark = New System.Windows.Forms.TextBox()
@@ -32,21 +30,9 @@ Partial Class AddMarks
         Me.lblExamYear = New System.Windows.Forms.Label()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnAdd = New System.Windows.Forms.Button()
+        Me.comSubjectId = New System.Windows.Forms.ComboBox()
+        Me.comStudentId = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
-        '
-        'txtStuName
-        '
-        Me.txtStuName.Location = New System.Drawing.Point(180, 84)
-        Me.txtStuName.Name = "txtStuName"
-        Me.txtStuName.Size = New System.Drawing.Size(319, 31)
-        Me.txtStuName.TabIndex = 19
-        '
-        'txtStudentId
-        '
-        Me.txtStudentId.Location = New System.Drawing.Point(180, 46)
-        Me.txtStudentId.Name = "txtStudentId"
-        Me.txtStudentId.Size = New System.Drawing.Size(319, 31)
-        Me.txtStudentId.TabIndex = 18
         '
         'lblSubjectId
         '
@@ -116,19 +102,35 @@ Partial Class AddMarks
         Me.btnAdd.Text = "Add"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
+        'comSubjectId
+        '
+        Me.comSubjectId.FormattingEnabled = True
+        Me.comSubjectId.Location = New System.Drawing.Point(180, 84)
+        Me.comSubjectId.Name = "comSubjectId"
+        Me.comSubjectId.Size = New System.Drawing.Size(319, 33)
+        Me.comSubjectId.TabIndex = 26
+        '
+        'comStudentId
+        '
+        Me.comStudentId.FormattingEnabled = True
+        Me.comStudentId.Location = New System.Drawing.Point(180, 46)
+        Me.comStudentId.Name = "comStudentId"
+        Me.comStudentId.Size = New System.Drawing.Size(319, 33)
+        Me.comStudentId.TabIndex = 27
+        '
         'AddMarks
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(579, 301)
+        Me.Controls.Add(Me.comStudentId)
+        Me.Controls.Add(Me.comSubjectId)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.txtMark)
         Me.Controls.Add(Me.txtExamYear)
         Me.Controls.Add(Me.lblMark)
         Me.Controls.Add(Me.lblExamYear)
-        Me.Controls.Add(Me.txtStuName)
-        Me.Controls.Add(Me.txtStudentId)
         Me.Controls.Add(Me.lblSubjectId)
         Me.Controls.Add(Me.lblStudentId)
         Me.Name = "AddMarks"
@@ -137,9 +139,6 @@ Partial Class AddMarks
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents txtStuName As TextBox
-    Friend WithEvents txtStudentId As TextBox
     Friend WithEvents lblSubjectId As Label
     Friend WithEvents lblStudentId As Label
     Friend WithEvents txtMark As TextBox
@@ -148,4 +147,6 @@ Partial Class AddMarks
     Friend WithEvents lblExamYear As Label
     Friend WithEvents btnCancel As Button
     Friend WithEvents btnAdd As Button
+    Friend WithEvents comSubjectId As ComboBox
+    Friend WithEvents comStudentId As ComboBox
 End Class
