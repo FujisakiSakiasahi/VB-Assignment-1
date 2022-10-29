@@ -27,7 +27,7 @@ Partial Class AddSubject
         Me.lblSName = New System.Windows.Forms.Label()
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.lblSubjectId = New System.Windows.Forms.Label()
-        Me.comSubjectId = New System.Windows.Forms.ComboBox()
+        Me.txtSubjectId = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'txtSName
@@ -73,21 +73,19 @@ Partial Class AddSubject
         Me.lblSubjectId.TabIndex = 27
         Me.lblSubjectId.Text = "Subject ID:"
         '
-        'comSubjectId
+        'txtSubjectId
         '
-        Me.comSubjectId.FormattingEnabled = True
-        Me.comSubjectId.Items.AddRange(New Object() {"MM", "BM", "BI", "SCI", "PJ", "KIM", "FIZ", "BIO", "MT", "SEJ", "PER", "EKO", "AK"})
-        Me.comSubjectId.Location = New System.Drawing.Point(202, 31)
-        Me.comSubjectId.Name = "comSubjectId"
-        Me.comSubjectId.Size = New System.Drawing.Size(319, 33)
-        Me.comSubjectId.TabIndex = 33
+        Me.txtSubjectId.Location = New System.Drawing.Point(202, 31)
+        Me.txtSubjectId.Name = "txtSubjectId"
+        Me.txtSubjectId.Size = New System.Drawing.Size(319, 31)
+        Me.txtSubjectId.TabIndex = 33
         '
         'AddSubject
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(550, 226)
-        Me.Controls.Add(Me.comSubjectId)
+        Me.Controls.Add(Me.txtSubjectId)
         Me.Controls.Add(Me.txtSName)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.lblSName)
@@ -105,5 +103,5 @@ Partial Class AddSubject
     Friend WithEvents lblSName As Label
     Friend WithEvents btnAdd As Button
     Friend WithEvents lblSubjectId As Label
-    Friend WithEvents comSubjectId As ComboBox
+    Friend WithEvents txtSubjectId As TextBox
 End Class
