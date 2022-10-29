@@ -42,17 +42,19 @@ Partial Class StudentAddForm
         'lblStudentId
         '
         Me.lblStudentId.AutoSize = True
-        Me.lblStudentId.Location = New System.Drawing.Point(107, 45)
+        Me.lblStudentId.Location = New System.Drawing.Point(75, 27)
+        Me.lblStudentId.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblStudentId.Name = "lblStudentId"
-        Me.lblStudentId.Size = New System.Drawing.Size(100, 25)
+        Me.lblStudentId.Size = New System.Drawing.Size(65, 15)
         Me.lblStudentId.TabIndex = 0
         Me.lblStudentId.Text = "Student ID:"
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(159, 347)
+        Me.btnAdd.Location = New System.Drawing.Point(111, 208)
+        Me.btnAdd.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(112, 34)
+        Me.btnAdd.Size = New System.Drawing.Size(78, 20)
         Me.btnAdd.TabIndex = 1
         Me.btnAdd.Text = "Add"
         Me.btnAdd.UseVisualStyleBackColor = True
@@ -60,45 +62,50 @@ Partial Class StudentAddForm
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(134, 195)
+        Me.Label2.Location = New System.Drawing.Point(94, 134)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(73, 25)
+        Me.Label2.Size = New System.Drawing.Size(48, 15)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Gender:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(90, 157)
+        Me.Label3.Location = New System.Drawing.Point(63, 108)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(117, 25)
+        Me.Label3.Size = New System.Drawing.Size(78, 15)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Year Enrolled:"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(159, 120)
+        Me.Label4.Location = New System.Drawing.Point(111, 81)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(48, 25)
+        Me.Label4.Size = New System.Drawing.Size(31, 15)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Age:"
         '
         'lblStuName
         '
         Me.lblStuName.AutoSize = True
-        Me.lblStuName.Location = New System.Drawing.Point(78, 83)
+        Me.lblStuName.Location = New System.Drawing.Point(55, 54)
+        Me.lblStuName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblStuName.Name = "lblStuName"
-        Me.lblStuName.Size = New System.Drawing.Size(129, 25)
+        Me.lblStuName.Size = New System.Drawing.Size(86, 15)
         Me.lblStuName.TabIndex = 5
         Me.lblStuName.Text = "Student Name:"
         '
         'radMale
         '
         Me.radMale.AutoSize = True
-        Me.radMale.Location = New System.Drawing.Point(234, 193)
+        Me.radMale.Location = New System.Drawing.Point(164, 133)
+        Me.radMale.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.radMale.Name = "radMale"
-        Me.radMale.Size = New System.Drawing.Size(75, 29)
+        Me.radMale.Size = New System.Drawing.Size(51, 19)
         Me.radMale.TabIndex = 6
         Me.radMale.TabStop = True
         Me.radMale.Text = "Male"
@@ -107,9 +114,10 @@ Partial Class StudentAddForm
         'radFemale
         '
         Me.radFemale.AutoSize = True
-        Me.radFemale.Location = New System.Drawing.Point(315, 193)
+        Me.radFemale.Location = New System.Drawing.Point(220, 133)
+        Me.radFemale.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.radFemale.Name = "radFemale"
-        Me.radFemale.Size = New System.Drawing.Size(93, 29)
+        Me.radFemale.Size = New System.Drawing.Size(63, 19)
         Me.radFemale.TabIndex = 7
         Me.radFemale.TabStop = True
         Me.radFemale.Text = "Female"
@@ -117,40 +125,45 @@ Partial Class StudentAddForm
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(367, 347)
+        Me.btnCancel.Location = New System.Drawing.Point(257, 208)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(112, 34)
+        Me.btnCancel.Size = New System.Drawing.Size(78, 20)
         Me.btnCancel.TabIndex = 8
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
         'txtStudentId
         '
-        Me.txtStudentId.Location = New System.Drawing.Point(234, 42)
+        Me.txtStudentId.Location = New System.Drawing.Point(164, 25)
+        Me.txtStudentId.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtStudentId.Name = "txtStudentId"
-        Me.txtStudentId.Size = New System.Drawing.Size(319, 31)
+        Me.txtStudentId.Size = New System.Drawing.Size(224, 23)
         Me.txtStudentId.TabIndex = 10
         '
         'txtStuName
         '
-        Me.txtStuName.Location = New System.Drawing.Point(234, 80)
+        Me.txtStuName.Location = New System.Drawing.Point(164, 52)
+        Me.txtStuName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtStuName.Name = "txtStuName"
-        Me.txtStuName.Size = New System.Drawing.Size(319, 31)
+        Me.txtStuName.Size = New System.Drawing.Size(224, 23)
         Me.txtStuName.TabIndex = 11
         '
         'txtAge
         '
-        Me.txtAge.Location = New System.Drawing.Point(234, 117)
+        Me.txtAge.Location = New System.Drawing.Point(164, 79)
+        Me.txtAge.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtAge.Name = "txtAge"
-        Me.txtAge.Size = New System.Drawing.Size(319, 31)
+        Me.txtAge.Size = New System.Drawing.Size(224, 23)
         Me.txtAge.TabIndex = 12
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(92, 231)
+        Me.Label6.Location = New System.Drawing.Point(64, 158)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(115, 25)
+        Me.Label6.Size = New System.Drawing.Size(77, 15)
         Me.Label6.TabIndex = 13
         Me.Label6.Text = "Team Colour:"
         '
@@ -159,23 +172,25 @@ Partial Class StudentAddForm
         Me.comTeam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.comTeam.FormattingEnabled = True
         Me.comTeam.Items.AddRange(New Object() {"Red", "Yellow", "Blue", "Green"})
-        Me.comTeam.Location = New System.Drawing.Point(234, 228)
+        Me.comTeam.Location = New System.Drawing.Point(164, 156)
+        Me.comTeam.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.comTeam.Name = "comTeam"
-        Me.comTeam.Size = New System.Drawing.Size(319, 33)
+        Me.comTeam.Size = New System.Drawing.Size(224, 23)
         Me.comTeam.TabIndex = 14
         '
         'txtYearEnrolled
         '
-        Me.txtYearEnrolled.Location = New System.Drawing.Point(234, 154)
+        Me.txtYearEnrolled.Location = New System.Drawing.Point(164, 106)
+        Me.txtYearEnrolled.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtYearEnrolled.Name = "txtYearEnrolled"
-        Me.txtYearEnrolled.Size = New System.Drawing.Size(319, 31)
+        Me.txtYearEnrolled.Size = New System.Drawing.Size(224, 23)
         Me.txtYearEnrolled.TabIndex = 15
         '
         'StudentAddForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(640, 450)
+        Me.ClientSize = New System.Drawing.Size(448, 270)
         Me.Controls.Add(Me.txtYearEnrolled)
         Me.Controls.Add(Me.comTeam)
         Me.Controls.Add(Me.Label6)
@@ -191,6 +206,7 @@ Partial Class StudentAddForm
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.lblStudentId)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "StudentAddForm"
         Me.Text = "Add New Student"
         Me.ResumeLayout(False)

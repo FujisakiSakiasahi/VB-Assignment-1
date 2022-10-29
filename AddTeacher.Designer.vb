@@ -35,23 +35,26 @@ Partial Class AddTeacher
         '
         'txtTeacherName
         '
-        Me.txtTeacherName.Location = New System.Drawing.Point(186, 70)
+        Me.txtTeacherName.Location = New System.Drawing.Point(130, 46)
+        Me.txtTeacherName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtTeacherName.Name = "txtTeacherName"
-        Me.txtTeacherName.Size = New System.Drawing.Size(319, 31)
+        Me.txtTeacherName.Size = New System.Drawing.Size(224, 23)
         Me.txtTeacherName.TabIndex = 26
         '
         'txtTeacherId
         '
-        Me.txtTeacherId.Location = New System.Drawing.Point(186, 32)
+        Me.txtTeacherId.Location = New System.Drawing.Point(130, 19)
+        Me.txtTeacherId.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtTeacherId.Name = "txtTeacherId"
-        Me.txtTeacherId.Size = New System.Drawing.Size(319, 31)
+        Me.txtTeacherId.Size = New System.Drawing.Size(224, 23)
         Me.txtTeacherId.TabIndex = 25
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(310, 180)
+        Me.btnCancel.Location = New System.Drawing.Point(217, 108)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(112, 34)
+        Me.btnCancel.Size = New System.Drawing.Size(78, 20)
         Me.btnCancel.TabIndex = 23
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
@@ -59,17 +62,19 @@ Partial Class AddTeacher
         'lblTeacherName
         '
         Me.lblTeacherName.AutoSize = True
-        Me.lblTeacherName.Location = New System.Drawing.Point(30, 73)
+        Me.lblTeacherName.Location = New System.Drawing.Point(21, 48)
+        Me.lblTeacherName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblTeacherName.Name = "lblTeacherName"
-        Me.lblTeacherName.Size = New System.Drawing.Size(126, 25)
+        Me.lblTeacherName.Size = New System.Drawing.Size(85, 15)
         Me.lblTeacherName.TabIndex = 20
         Me.lblTeacherName.Text = "Teacher Name:"
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(78, 180)
+        Me.btnAdd.Location = New System.Drawing.Point(55, 108)
+        Me.btnAdd.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(112, 34)
+        Me.btnAdd.Size = New System.Drawing.Size(78, 20)
         Me.btnAdd.TabIndex = 16
         Me.btnAdd.Text = "Add"
         Me.btnAdd.UseVisualStyleBackColor = True
@@ -77,18 +82,20 @@ Partial Class AddTeacher
         'lblTeacherId
         '
         Me.lblTeacherId.AutoSize = True
-        Me.lblTeacherId.Location = New System.Drawing.Point(59, 35)
+        Me.lblTeacherId.Location = New System.Drawing.Point(41, 21)
+        Me.lblTeacherId.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblTeacherId.Name = "lblTeacherId"
-        Me.lblTeacherId.Size = New System.Drawing.Size(97, 25)
+        Me.lblTeacherId.Size = New System.Drawing.Size(64, 15)
         Me.lblTeacherId.TabIndex = 15
         Me.lblTeacherId.Text = "Teacher ID:"
         '
         'radFemale
         '
         Me.radFemale.AutoSize = True
-        Me.radFemale.Location = New System.Drawing.Point(269, 108)
+        Me.radFemale.Location = New System.Drawing.Point(186, 73)
+        Me.radFemale.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.radFemale.Name = "radFemale"
-        Me.radFemale.Size = New System.Drawing.Size(93, 29)
+        Me.radFemale.Size = New System.Drawing.Size(63, 19)
         Me.radFemale.TabIndex = 29
         Me.radFemale.TabStop = True
         Me.radFemale.Text = "Female"
@@ -97,9 +104,10 @@ Partial Class AddTeacher
         'radMale
         '
         Me.radMale.AutoSize = True
-        Me.radMale.Location = New System.Drawing.Point(188, 108)
+        Me.radMale.Location = New System.Drawing.Point(130, 73)
+        Me.radMale.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.radMale.Name = "radMale"
-        Me.radMale.Size = New System.Drawing.Size(75, 29)
+        Me.radMale.Size = New System.Drawing.Size(51, 19)
         Me.radMale.TabIndex = 28
         Me.radMale.TabStop = True
         Me.radMale.Text = "Male"
@@ -108,17 +116,18 @@ Partial Class AddTeacher
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(83, 110)
+        Me.Label2.Location = New System.Drawing.Point(56, 74)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(73, 25)
+        Me.Label2.Size = New System.Drawing.Size(48, 15)
         Me.Label2.TabIndex = 27
         Me.Label2.Text = "Gender:"
         '
         'AddTeacher
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(536, 255)
+        Me.ClientSize = New System.Drawing.Size(375, 153)
         Me.Controls.Add(Me.radFemale)
         Me.Controls.Add(Me.radMale)
         Me.Controls.Add(Me.Label2)
@@ -128,6 +137,7 @@ Partial Class AddTeacher
         Me.Controls.Add(Me.lblTeacherName)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.lblTeacherId)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "AddTeacher"
         Me.Text = "Add New Teacher"
         Me.ResumeLayout(False)
