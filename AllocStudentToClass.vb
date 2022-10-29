@@ -21,24 +21,31 @@ Public Class AllocStudentToClass
         Dim datatable As New DataTable()
         stuIdData.Fill(datatable)
 
-        Dim i As Integer = 0
-        Do While i < datatable.Rows.Count
-            comStudentId.Items.Add(datatable.Rows(i).Item(0).ToString)
-            i += 1
-        Loop
-
         Dim classIdData As New SqlDataAdapter(New SqlCommand("SELECT classId FROM class;", Form2.connection))
         Dim datatable2 As New DataTable()
         classIdData.Fill(datatable2)
 
-        Dim j As Integer = 0
-        Do While j < datatable2.Rows.Count
-            comClassId.Items.Add(datatable2.Rows(j).Item(0).ToString)
-            j += 1
-        Loop
+        If Not (datatable.Rows.Count > 0) Then
+            MessageBox.Show("There are no students in the database. Please insert a new student before assigning student to a class.", "Missing Required Data", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Me.Close()
+        ElseIf Not (datatable2.Rows.Count > 0) Then
+            MessageBox.Show("There are no class in the database. Please insert a new class before assigning student to a class.", "Missing Required Data", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Me.Close()
+        Else
+            Dim i As Integer = 0
+            Do While i < datatable.Rows.Count
+                comStudentId.Items.Add(datatable.Rows(i).Item(0).ToString)
+                i += 1
+            Loop
 
-        comStudentId.SelectedIndex = 0
-        comClassId.SelectedIndex = 0
+            Dim j As Integer = 0
+            Do While j < datatable2.Rows.Count
+                comClassId.Items.Add(datatable2.Rows(j).Item(0).ToString)
+                j += 1
+            Loop
+
+            comStudentId.SelectedIndex = 0
+            comClassId.SelectedIndex = 0
+        End If
     End Sub
-
 End Class

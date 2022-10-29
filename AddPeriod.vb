@@ -59,8 +59,9 @@ Public Class AddPeriod
             Case 10
                 txtTime.Text = "12:30"
             Case 11
-                txtTime.Text = "1:30"
+                txtTime.Text = "1:00"
             Case 12
+                txtTime.Text = "1:30"
         End Select
     End Sub
 
@@ -69,28 +70,33 @@ Public Class AddPeriod
         Dim datatable As New DataTable()
         classIdData.Fill(datatable)
 
-        Dim i As Integer = 0
-        Do While i < datatable.Rows.Count
-            comClassId.Items.Add(datatable.Rows(i).Item(0).ToString)
-            i += 1
-        Loop
-
         Dim subjectIdData As New SqlDataAdapter(New SqlCommand("SELECT subjectId FROM subject;", Form2.connection))
         Dim datatable2 As New DataTable()
         subjectIdData.Fill(datatable2)
 
-        Dim j As Integer = 0
-        Do While j < datatable2.Rows.Count
-            comSubjectId.Items.Add(datatable2.Rows(j).Item(0).ToString)
-            j += 1
-        Loop
+        If Not (datatable.Rows.Count > 0) Then
+            MessageBox.Show("There are no class in the database. Please insert a new class before creating period.", "Missing Required Data", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Me.Close()
+        ElseIf Not (datatable2.Rows.Count > 0) Then
+            MessageBox.Show("There are no subject in the database. Please insert a new subject before creating period.", "Missing Required Data", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Me.Close()
+        Else
+            Dim i As Integer = 0
+            Do While i < datatable.Rows.Count
+                comClassId.Items.Add(datatable.Rows(i).Item(0).ToString)
+                i += 1
+            Loop
 
+            Dim j As Integer = 0
+            Do While j < datatable2.Rows.Count
+                comSubjectId.Items.Add(datatable2.Rows(j).Item(0).ToString)
+                j += 1
+            Loop
 
-        comPeriodId.SelectedIndex = 0
-        comDay.SelectedIndex = 0
-        comClassId.SelectedIndex = 0
-        comSubjectId.SelectedIndex = 0
+            comPeriodId.SelectedIndex = 0
+            comDay.SelectedIndex = 0
+            comClassId.SelectedIndex = 0
+            comSubjectId.SelectedIndex = 0
+        End If
     End Sub
-
-    ' remember to change Day, Class ID and Subject Id to dropdown list, with Class ID being normal class id
 End Class
