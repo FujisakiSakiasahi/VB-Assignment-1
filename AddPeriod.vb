@@ -22,12 +22,38 @@ Public Class AddPeriod
         Dim classId As String = "'" & comClassId.SelectedItem.ToString & "'"
         Dim subjectId As String = "'" & comSubjectId.SelectedItem.ToString & "'"
 
-        Dim insertQuery As String = "INSERT INTO period VALUES (" & periodId & "," & day & "," & time & "," & classId & "," & subjectId & ");"
-        Form2.run_query(insertQuery)
-        Form2.table_load("period")
+        Dim periodData As New SqlDataAdapter(New SqlCommand("SELECT * FROM period WHERE periodId = " & periodId & " AND periodDay = " & day & " AND classId = " & classId & " AND subjectId = " & subjectId & ";", Form2.connection))
+        Dim datatable As New DataTable()
+        periodData.Fill(datatable)
 
-        MessageBox.Show("New period created.", "Period created", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
+        If Not (datatable.Rows.Count > 0) Then
+
+            Dim periodData2 As New SqlDataAdapter(New SqlCommand("SELECT * FROM period WHERE periodId = " & periodId & " AND periodDay = " & day & " AND classId = " & classId & ";", Form2.connection))
+            Dim datatable2 As New DataTable()
+            periodData2.Fill(datatable2)
+
+            If Not (datatable2.Rows.Count > 0) Then
+
+                Dim insertQuery As String = "INSERT INTO period VALUES (" & periodId & "," & day & "," & time & "," & classId & "," & subjectId & ");"
+                Form2.run_query(insertQuery)
+                Form2.table_load("period")
+
+                MessageBox.Show("New period created.", "Period created", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            ElseIf comPeriodId.SelectedItem.ToString = datatable2.Rows(0).Item(0).ToString And day.Substring(1, 3) = datatable2.Rows(0).Item(1).ToString And comClassId.SelectedItem.ToString = datatable2.Rows(0).Item(3).ToString Then
+                MessageBox.Show("New period clashing with existing period. Please remove existing period before inserting new period at this specific time.", "Period Already Exists", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            End If
+        Else
+            If comPeriodId.SelectedItem.ToString = datatable.Rows(0).Item(0).ToString And day.Substring(1, 3) = datatable.Rows(0).Item(1).ToString And comClassId.SelectedItem.ToString = datatable.Rows(0).Item(3).ToString And comSubjectId.SelectedItem.ToString = datatable.Rows(0).Item(4).ToString Then
+                MessageBox.Show("Period already exists. Please check if any input is incorrect.", "Period Already Exists", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Else
+                Dim insertQuery As String = "INSERT INTO period VALUES (" & periodId & "," & day & "," & time & "," & classId & "," & subjectId & ");"
+                Form2.run_query(insertQuery)
+                Form2.table_load("period")
+
+                MessageBox.Show("New period created.", "Period created", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+        End If
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
