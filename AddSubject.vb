@@ -1,4 +1,6 @@
-﻿Public Class AddSubject
+﻿Imports System.Data.SqlClient
+
+Public Class AddSubject
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
     End Sub
@@ -14,14 +16,34 @@
                 If txtSName.Text.Length > 30 Then
                     MessageBox.Show("Subject Name can only support up to a maximum of 30 characters.", "Invalid Subject Name", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Else
+
+                    Dim subjectIdData As New SqlDataAdapter(New SqlCommand("SELECT subjectId FROM subject WHERE subjectid = " & subjectId & ";", Form2.connection))
+                    Dim datatable As New DataTable()
+                    subjectIdData.Fill(datatable)
+
                     Dim subjectName As String = "'" & txtSName.Text & "'"
 
-                    Dim insertQuery As String = "INSERT INTO subject values (" & subjectId & "," & subjectName & ");"
-                    Form2.run_query(insertQuery)
-                    Form2.table_load("subject")
+                    If Not (datatable.Rows.Count > 0) Then
+                        Dim insertQuery As String = "INSERT INTO subject values (" & subjectId & "," & subjectName & ");"
+                        Form2.run_query(insertQuery)
+                        Form2.table_load("subject")
 
-                    MessageBox.Show("Added New Subject " & subjectName & ".", "New Subject Added", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    clear()
+                        MessageBox.Show("Added New Subject " & subjectName & ".", "New Subject Added", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        clear()
+                    Else
+                        If txtSubjectId.Text = datatable.Rows(0).Item(0).ToString Then
+                            MessageBox.Show("Subject ID already exists. Please enter a new subject ID.", "Subject ID Already Exists", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                        Else
+                            Dim insertQuery As String = "INSERT INTO subject values (" & subjectId & "," & subjectName & ");"
+                            Form2.run_query(insertQuery)
+                            Form2.table_load("subject")
+
+                            MessageBox.Show("Added New Subject " & subjectName & ".", "New Subject Added", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            clear()
+                        End If
+                    End If
+
+
                 End If
             End If
         End If

@@ -1,4 +1,5 @@
-﻿Public Class AddStudent
+﻿Imports System.Data.SqlClient
+Public Class AddStudent
     Private Sub StudentAddForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         radMale.Checked = True
         comTeam.SelectedIndex = 0
@@ -42,14 +43,29 @@
                                     End If
                                     Dim teamColour As String = "'" & comTeam.SelectedItem.ToString & "'"
 
+                                    Dim studentIdData As New SqlDataAdapter(New SqlCommand("SELECT stuId FROM student WHERE stuId = " & studentId & ";", Form2.connection))
+                                    Dim datatable As New DataTable()
+                                    studentIdData.Fill(datatable)
 
+                                    If Not (datatable.Rows.Count > 0) Then
+                                        Dim insertQuery As String = "INSERT INTO student values (" & studentId & "," & stuName & "," & age & "," & yearEnrolled & "," & gender & "," & teamColour & ");"
+                                        Form2.run_query(insertQuery)
+                                        Form2.table_load("student")
 
-                                    Dim insertQuery As String = "INSERT INTO student values (" & studentId & "," & stuName & "," & age & "," & yearEnrolled & "," & gender & "," & teamColour & ");"
-                                    Form2.run_query(insertQuery)
-                                    Form2.table_load("student")
+                                        MessageBox.Show("Added New Student " & stuName & ".", "New Student Added", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                        clear()
+                                    Else
+                                        If txtStudentId.Text = datatable.Rows(0).Item(0).ToString Then
+                                            MessageBox.Show("Student ID already exists. Please enter a new student ID.", "Student ID Already Exists", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                                        Else
+                                            Dim insertQuery As String = "INSERT INTO student values (" & studentId & "," & stuName & "," & age & "," & yearEnrolled & "," & gender & "," & teamColour & ");"
+                                            Form2.run_query(insertQuery)
+                                            Form2.table_load("student")
 
-                                    MessageBox.Show("Added New Student " & stuName & ".", "New Student Added", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                                    clear()
+                                            MessageBox.Show("Added New Student " & stuName & ".", "New Student Added", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                            clear()
+                                        End If
+                                    End If
                                 End If
                             End If
                         End If
