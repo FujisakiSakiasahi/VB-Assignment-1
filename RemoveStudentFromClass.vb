@@ -17,12 +17,14 @@ Public Class RemoveStudentFromClass
                 comClassId.Items.Add(datatable.Rows(j).Item(0).ToString)
                 j += 1
             Loop
+
+            comClassId.SelectedIndex = 0
         Else
             MessageBox.Show("There are no class in the database. Please insert a new class before assigning student to a class.", "No Class Found", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Me.Close()
         End If
 
-        comClassId.SelectedIndex = 0
+
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
