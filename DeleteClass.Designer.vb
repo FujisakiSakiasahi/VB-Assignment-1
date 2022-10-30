@@ -22,20 +22,20 @@ Partial Class DeleteClass
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.comClassId = New System.Windows.Forms.ComboBox()
         Me.lblClassId = New System.Windows.Forms.Label()
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'ComboBox1
+        'comClassId
         '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(139, 24)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(224, 23)
-        Me.ComboBox1.TabIndex = 0
+        Me.comClassId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.comClassId.FormattingEnabled = True
+        Me.comClassId.Location = New System.Drawing.Point(139, 24)
+        Me.comClassId.Name = "comClassId"
+        Me.comClassId.Size = New System.Drawing.Size(224, 23)
+        Me.comClassId.TabIndex = 0
         '
         'lblClassId
         '
@@ -72,7 +72,7 @@ Partial Class DeleteClass
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.lblClassId)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.comClassId)
         Me.Name = "DeleteClass"
         Me.Text = "Delete Class"
         Me.ResumeLayout(False)
@@ -80,7 +80,7 @@ Partial Class DeleteClass
 
     End Sub
 
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents comClassId As ComboBox
     Friend WithEvents lblClassId As Label
     Friend WithEvents btnDelete As Button
     Friend WithEvents btnCancel As Button

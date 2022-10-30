@@ -24,10 +24,10 @@ Partial Class RemoveStudentFromClass
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.comClassId = New System.Windows.Forms.ComboBox()
+        Me.comStudentId = New System.Windows.Forms.ComboBox()
+        Me.btnRemove = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -48,52 +48,52 @@ Partial Class RemoveStudentFromClass
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Student ID: "
         '
-        'ComboBox1
+        'comClassId
         '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(139, 24)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(224, 23)
-        Me.ComboBox1.TabIndex = 2
+        Me.comClassId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.comClassId.FormattingEnabled = True
+        Me.comClassId.Location = New System.Drawing.Point(139, 24)
+        Me.comClassId.Name = "comClassId"
+        Me.comClassId.Size = New System.Drawing.Size(224, 23)
+        Me.comClassId.TabIndex = 2
         '
-        'ComboBox2
+        'comStudentId
         '
-        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox2.Enabled = False
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(139, 57)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(224, 23)
-        Me.ComboBox2.TabIndex = 3
+        Me.comStudentId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.comStudentId.Enabled = False
+        Me.comStudentId.FormattingEnabled = True
+        Me.comStudentId.Location = New System.Drawing.Point(139, 57)
+        Me.comStudentId.Name = "comStudentId"
+        Me.comStudentId.Size = New System.Drawing.Size(224, 23)
+        Me.comStudentId.TabIndex = 3
         '
-        'Button1
+        'btnRemove
         '
-        Me.Button1.Location = New System.Drawing.Point(85, 97)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Remove"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnRemove.Location = New System.Drawing.Point(85, 97)
+        Me.btnRemove.Name = "btnRemove"
+        Me.btnRemove.Size = New System.Drawing.Size(75, 23)
+        Me.btnRemove.TabIndex = 4
+        Me.btnRemove.Text = "Remove"
+        Me.btnRemove.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnCancel
         '
-        Me.Button2.Location = New System.Drawing.Point(231, 97)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "Cancel"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnCancel.Location = New System.Drawing.Point(231, 97)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(75, 23)
+        Me.btnCancel.TabIndex = 5
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = True
         '
         'RemoveStudentFromClass
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(415, 146)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.btnCancel)
+        Me.Controls.Add(Me.btnRemove)
+        Me.Controls.Add(Me.comStudentId)
+        Me.Controls.Add(Me.comClassId)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "RemoveStudentFromClass"
@@ -105,8 +105,8 @@ Partial Class RemoveStudentFromClass
 
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents comClassId As ComboBox
+    Friend WithEvents comStudentId As ComboBox
+    Friend WithEvents btnRemove As Button
+    Friend WithEvents btnCancel As Button
 End Class

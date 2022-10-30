@@ -24,10 +24,10 @@ Partial Class UpdateClass
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.comClassId = New System.Windows.Forms.ComboBox()
+        Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.comStudentId = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -48,48 +48,49 @@ Partial Class UpdateClass
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Class ID: "
         '
-        'TextBox1
+        'comClassId
         '
-        Me.TextBox1.Location = New System.Drawing.Point(139, 24)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(224, 23)
-        Me.TextBox1.TabIndex = 2
+        Me.comClassId.FormattingEnabled = True
+        Me.comClassId.Location = New System.Drawing.Point(139, 57)
+        Me.comClassId.Name = "comClassId"
+        Me.comClassId.Size = New System.Drawing.Size(224, 23)
+        Me.comClassId.TabIndex = 3
         '
-        'ComboBox1
+        'btnUpdate
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(139, 57)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(224, 23)
-        Me.ComboBox1.TabIndex = 3
+        Me.btnUpdate.Location = New System.Drawing.Point(85, 97)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
+        Me.btnUpdate.TabIndex = 4
+        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnCancel
         '
-        Me.Button1.Location = New System.Drawing.Point(85, 97)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Update"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnCancel.Location = New System.Drawing.Point(231, 97)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(75, 23)
+        Me.btnCancel.TabIndex = 5
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = True
         '
-        'Button2
+        'comStudentId
         '
-        Me.Button2.Location = New System.Drawing.Point(231, 97)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "Cancel"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.comStudentId.FormattingEnabled = True
+        Me.comStudentId.Location = New System.Drawing.Point(139, 24)
+        Me.comStudentId.Name = "comStudentId"
+        Me.comStudentId.Size = New System.Drawing.Size(224, 23)
+        Me.comStudentId.TabIndex = 6
         '
         'UpdateClass
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(415, 146)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.comStudentId)
+        Me.Controls.Add(Me.btnCancel)
+        Me.Controls.Add(Me.btnUpdate)
+        Me.Controls.Add(Me.comClassId)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "UpdateClass"
@@ -101,8 +102,8 @@ Partial Class UpdateClass
 
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents comClassId As ComboBox
+    Friend WithEvents btnUpdate As Button
+    Friend WithEvents btnCancel As Button
+    Friend WithEvents comStudentId As ComboBox
 End Class
