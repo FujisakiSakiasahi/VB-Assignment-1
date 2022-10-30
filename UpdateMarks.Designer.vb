@@ -25,7 +25,7 @@ Partial Class UpdateMarks
         Me.comStudentId = New System.Windows.Forms.ComboBox()
         Me.comSubjectId = New System.Windows.Forms.ComboBox()
         Me.btnCancel = New System.Windows.Forms.Button()
-        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
         Me.txtMark = New System.Windows.Forms.TextBox()
         Me.txtExamYear = New System.Windows.Forms.TextBox()
         Me.lblMark = New System.Windows.Forms.Label()
@@ -64,15 +64,15 @@ Partial Class UpdateMarks
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
-        'btnAdd
+        'btnUpdate
         '
-        Me.btnAdd.Location = New System.Drawing.Point(98, 147)
-        Me.btnAdd.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(78, 20)
-        Me.btnAdd.TabIndex = 34
-        Me.btnAdd.Text = "Update"
-        Me.btnAdd.UseVisualStyleBackColor = True
+        Me.btnUpdate.Location = New System.Drawing.Point(98, 147)
+        Me.btnUpdate.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(78, 20)
+        Me.btnUpdate.TabIndex = 34
+        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.UseVisualStyleBackColor = True
         '
         'txtMark
         '
@@ -138,7 +138,7 @@ Partial Class UpdateMarks
         Me.Controls.Add(Me.comStudentId)
         Me.Controls.Add(Me.comSubjectId)
         Me.Controls.Add(Me.btnCancel)
-        Me.Controls.Add(Me.btnAdd)
+        Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.txtMark)
         Me.Controls.Add(Me.txtExamYear)
         Me.Controls.Add(Me.lblMark)
@@ -155,7 +155,7 @@ Partial Class UpdateMarks
     Friend WithEvents comStudentId As ComboBox
     Friend WithEvents comSubjectId As ComboBox
     Friend WithEvents btnCancel As Button
-    Friend WithEvents btnAdd As Button
+    Friend WithEvents btnUpdate As Button
     Friend WithEvents txtMark As TextBox
     Friend WithEvents txtExamYear As TextBox
     Friend WithEvents lblMark As Label
