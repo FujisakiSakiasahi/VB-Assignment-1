@@ -32,19 +32,19 @@ Partial Class DeleteSubject
         '
         'txtSName
         '
-        Me.txtSName.Location = New System.Drawing.Point(161, 61)
-        Me.txtSName.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.txtSName.Location = New System.Drawing.Point(141, 46)
+        Me.txtSName.Margin = New System.Windows.Forms.Padding(2)
         Me.txtSName.Name = "txtSName"
         Me.txtSName.ReadOnly = True
-        Me.txtSName.Size = New System.Drawing.Size(255, 27)
+        Me.txtSName.Size = New System.Drawing.Size(224, 23)
         Me.txtSName.TabIndex = 38
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(262, 119)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.btnCancel.Location = New System.Drawing.Point(229, 89)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(89, 27)
+        Me.btnCancel.Size = New System.Drawing.Size(78, 20)
         Me.btnCancel.TabIndex = 37
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
@@ -52,19 +52,19 @@ Partial Class DeleteSubject
         'lblSName
         '
         Me.lblSName.AutoSize = True
-        Me.lblSName.Location = New System.Drawing.Point(37, 64)
+        Me.lblSName.Location = New System.Drawing.Point(32, 48)
         Me.lblSName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblSName.Name = "lblSName"
-        Me.lblSName.Size = New System.Drawing.Size(105, 20)
+        Me.lblSName.Size = New System.Drawing.Size(84, 15)
         Me.lblSName.TabIndex = 36
         Me.lblSName.Text = "Subject Name:"
         '
         'btnDelete
         '
-        Me.btnDelete.Location = New System.Drawing.Point(75, 119)
-        Me.btnDelete.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.btnDelete.Location = New System.Drawing.Point(66, 89)
+        Me.btnDelete.Margin = New System.Windows.Forms.Padding(2)
         Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(89, 27)
+        Me.btnDelete.Size = New System.Drawing.Size(78, 20)
         Me.btnDelete.TabIndex = 35
         Me.btnDelete.Text = "Delete"
         Me.btnDelete.UseVisualStyleBackColor = True
@@ -72,34 +72,33 @@ Partial Class DeleteSubject
         'lblSubjectId
         '
         Me.lblSubjectId.AutoSize = True
-        Me.lblSubjectId.Location = New System.Drawing.Point(59, 27)
+        Me.lblSubjectId.Location = New System.Drawing.Point(52, 20)
         Me.lblSubjectId.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblSubjectId.Name = "lblSubjectId"
-        Me.lblSubjectId.Size = New System.Drawing.Size(80, 20)
+        Me.lblSubjectId.Size = New System.Drawing.Size(63, 15)
         Me.lblSubjectId.TabIndex = 34
         Me.lblSubjectId.Text = "Subject ID:"
         '
         'comSubjectId
         '
+        Me.comSubjectId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.comSubjectId.FormattingEnabled = True
-        Me.comSubjectId.Location = New System.Drawing.Point(161, 25)
-        Me.comSubjectId.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.comSubjectId.Location = New System.Drawing.Point(141, 19)
         Me.comSubjectId.Name = "comSubjectId"
-        Me.comSubjectId.Size = New System.Drawing.Size(255, 28)
+        Me.comSubjectId.Size = New System.Drawing.Size(224, 23)
         Me.comSubjectId.TabIndex = 39
         '
         'DeleteSubject
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(440, 181)
+        Me.ClientSize = New System.Drawing.Size(385, 136)
         Me.Controls.Add(Me.comSubjectId)
         Me.Controls.Add(Me.txtSName)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.lblSName)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.lblSubjectId)
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "DeleteSubject"
         Me.Text = "Delete Subject"
         Me.ResumeLayout(False)

@@ -53,7 +53,4 @@ Public Class AddSubject
         txtSName.Text = ""
         txtSubjectId.Text = ""
     End Sub
-
-
-
 End Class
