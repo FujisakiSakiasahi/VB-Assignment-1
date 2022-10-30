@@ -104,7 +104,7 @@ Public Class UpdateStudent
                             ElseIf radFemale.Checked = True Then
                                 gender = "'f'"
                             End If
-                            Dim teamColour As String = "'" & comTeam.SelectedItem.ToString & "'"
+                            Dim teamColour As String = "'" & comTeam.SelectedItem.ToString.ToLower & "'"
 
 
 

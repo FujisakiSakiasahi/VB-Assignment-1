@@ -55,7 +55,7 @@ Public Class AddStudent
                                         MessageBox.Show("Added New Student " & stuName & ".", "New Student Added", MessageBoxButtons.OK, MessageBoxIcon.Information)
                                         clear()
                                     Else
-                                        If txtStudentId.Text = datatable.Rows(0).Item(0).ToString Then
+                                        If CStr(CInt(txtStudentId.Text)) = datatable.Rows(0).Item(0).ToString Then
                                             MessageBox.Show("Student ID already exists. Please enter a new student ID.", "Student ID Already Exists", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                                         Else
                                             Dim insertQuery As String = "INSERT INTO student values (" & studentId & "," & stuName & "," & age & "," & yearEnrolled & "," & gender & "," & teamColour & ");"
