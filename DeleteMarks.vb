@@ -39,6 +39,8 @@ Public Class DeleteMarks
     End Sub
 
     Private Sub comSubjectId_SelectedIndexChanged(sender As Object, e As EventArgs) Handles comSubjectId.SelectedIndexChanged
+        comExamYear.Items.Clear()
+
         Dim da As New SqlDataAdapter(New SqlCommand("SELECT distinct examyear FROM marks where studentId = '" & comStudentId.SelectedItem & "' AND subjectId = '" & comSubjectId.SelectedItem & "';", mainForm.connection))
         Dim datatable As New DataTable()
         da.Fill(datatable)

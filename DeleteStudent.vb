@@ -92,7 +92,7 @@ Public Class DeleteStudent
             mainForm.run_query(insertQuery)
             mainForm.table_load("student")
 
-            MessageBox.Show("Student with student ID" & studentId & "has been deleted.", "Student Information Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Student with student ID " & studentId & " has been deleted.", "Student Information Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information)
             clear()
         End If
     End Sub
