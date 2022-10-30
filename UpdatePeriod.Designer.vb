@@ -27,7 +27,7 @@ Partial Class UpdatePeriod
         Me.comSubjectId = New System.Windows.Forms.ComboBox()
         Me.comClassId = New System.Windows.Forms.ComboBox()
         Me.btnCancel = New System.Windows.Forms.Button()
-        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
         Me.lblSubjectId = New System.Windows.Forms.Label()
         Me.txtTime = New System.Windows.Forms.TextBox()
         Me.lblClassId = New System.Windows.Forms.Label()
@@ -88,15 +88,15 @@ Partial Class UpdatePeriod
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
-        'btnAdd
+        'btnUpdate
         '
-        Me.btnAdd.Location = New System.Drawing.Point(89, 173)
-        Me.btnAdd.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(78, 20)
-        Me.btnAdd.TabIndex = 46
-        Me.btnAdd.Text = "Update"
-        Me.btnAdd.UseVisualStyleBackColor = True
+        Me.btnUpdate.Location = New System.Drawing.Point(89, 173)
+        Me.btnUpdate.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(78, 20)
+        Me.btnUpdate.TabIndex = 46
+        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.UseVisualStyleBackColor = True
         '
         'lblSubjectId
         '
@@ -168,7 +168,7 @@ Partial Class UpdatePeriod
         Me.Controls.Add(Me.comSubjectId)
         Me.Controls.Add(Me.comClassId)
         Me.Controls.Add(Me.btnCancel)
-        Me.Controls.Add(Me.btnAdd)
+        Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.lblSubjectId)
         Me.Controls.Add(Me.txtTime)
         Me.Controls.Add(Me.lblClassId)
@@ -187,7 +187,7 @@ Partial Class UpdatePeriod
     Friend WithEvents comSubjectId As ComboBox
     Friend WithEvents comClassId As ComboBox
     Friend WithEvents btnCancel As Button
-    Friend WithEvents btnAdd As Button
+    Friend WithEvents btnUpdate As Button
     Friend WithEvents lblSubjectId As Label
     Friend WithEvents txtTime As TextBox
     Friend WithEvents lblClassId As Label
