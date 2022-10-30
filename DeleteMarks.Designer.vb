@@ -27,11 +27,11 @@ Partial Class DeleteMarks
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.txtMark = New System.Windows.Forms.TextBox()
-        Me.txtExamYear = New System.Windows.Forms.TextBox()
         Me.lblMark = New System.Windows.Forms.Label()
         Me.lblExamYear = New System.Windows.Forms.Label()
         Me.lblSubjectId = New System.Windows.Forms.Label()
         Me.lblStudentId = New System.Windows.Forms.Label()
+        Me.comExamYear = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'comStudentId
@@ -39,7 +39,7 @@ Partial Class DeleteMarks
         Me.comStudentId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.comStudentId.FormattingEnabled = True
         Me.comStudentId.Location = New System.Drawing.Point(135, 25)
-        Me.comStudentId.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.comStudentId.Margin = New System.Windows.Forms.Padding(2)
         Me.comStudentId.Name = "comStudentId"
         Me.comStudentId.Size = New System.Drawing.Size(224, 23)
         Me.comStudentId.TabIndex = 37
@@ -49,7 +49,7 @@ Partial Class DeleteMarks
         Me.comSubjectId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.comSubjectId.FormattingEnabled = True
         Me.comSubjectId.Location = New System.Drawing.Point(135, 52)
-        Me.comSubjectId.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.comSubjectId.Margin = New System.Windows.Forms.Padding(2)
         Me.comSubjectId.Name = "comSubjectId"
         Me.comSubjectId.Size = New System.Drawing.Size(224, 23)
         Me.comSubjectId.TabIndex = 36
@@ -57,7 +57,7 @@ Partial Class DeleteMarks
         'btnCancel
         '
         Me.btnCancel.Location = New System.Drawing.Point(244, 147)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(78, 20)
         Me.btnCancel.TabIndex = 35
@@ -67,7 +67,7 @@ Partial Class DeleteMarks
         'btnDelete
         '
         Me.btnDelete.Location = New System.Drawing.Point(98, 147)
-        Me.btnDelete.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnDelete.Margin = New System.Windows.Forms.Padding(2)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(78, 20)
         Me.btnDelete.TabIndex = 34
@@ -77,20 +77,11 @@ Partial Class DeleteMarks
         'txtMark
         '
         Me.txtMark.Location = New System.Drawing.Point(135, 106)
-        Me.txtMark.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtMark.Margin = New System.Windows.Forms.Padding(2)
         Me.txtMark.Name = "txtMark"
         Me.txtMark.ReadOnly = True
         Me.txtMark.Size = New System.Drawing.Size(224, 23)
         Me.txtMark.TabIndex = 33
-        '
-        'txtExamYear
-        '
-        Me.txtExamYear.Location = New System.Drawing.Point(135, 79)
-        Me.txtExamYear.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.txtExamYear.Name = "txtExamYear"
-        Me.txtExamYear.ReadOnly = True
-        Me.txtExamYear.Size = New System.Drawing.Size(224, 23)
-        Me.txtExamYear.TabIndex = 32
         '
         'lblMark
         '
@@ -132,17 +123,26 @@ Partial Class DeleteMarks
         Me.lblStudentId.TabIndex = 28
         Me.lblStudentId.Text = "Student ID:"
         '
+        'comExamYear
+        '
+        Me.comExamYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.comExamYear.FormattingEnabled = True
+        Me.comExamYear.Location = New System.Drawing.Point(135, 79)
+        Me.comExamYear.Name = "comExamYear"
+        Me.comExamYear.Size = New System.Drawing.Size(224, 23)
+        Me.comExamYear.TabIndex = 38
+        '
         'DeleteMarks
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(405, 193)
+        Me.Controls.Add(Me.comExamYear)
         Me.Controls.Add(Me.comStudentId)
         Me.Controls.Add(Me.comSubjectId)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.txtMark)
-        Me.Controls.Add(Me.txtExamYear)
         Me.Controls.Add(Me.lblMark)
         Me.Controls.Add(Me.lblExamYear)
         Me.Controls.Add(Me.lblSubjectId)
@@ -159,9 +159,9 @@ Partial Class DeleteMarks
     Friend WithEvents btnCancel As Button
     Friend WithEvents btnDelete As Button
     Friend WithEvents txtMark As TextBox
-    Friend WithEvents txtExamYear As TextBox
     Friend WithEvents lblMark As Label
     Friend WithEvents lblExamYear As Label
     Friend WithEvents lblSubjectId As Label
     Friend WithEvents lblStudentId As Label
+    Friend WithEvents comExamYear As ComboBox
 End Class

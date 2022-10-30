@@ -20,6 +20,8 @@ Public Class UpdateSubject
             For i As Integer = 0 To datatable.Rows.Count - 1
                 comSubjectId.Items.Add(datatable.Rows(i).Item(0))
             Next
+
+            comSubjectId.SelectedIndex = 0
         Else
             MessageBox.Show("There is no subject in the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Me.Close()

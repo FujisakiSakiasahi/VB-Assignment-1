@@ -27,11 +27,11 @@ Partial Class UpdateMarks
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.txtMark = New System.Windows.Forms.TextBox()
-        Me.txtExamYear = New System.Windows.Forms.TextBox()
         Me.lblMark = New System.Windows.Forms.Label()
         Me.lblExamYear = New System.Windows.Forms.Label()
         Me.lblSubjectId = New System.Windows.Forms.Label()
         Me.lblStudentId = New System.Windows.Forms.Label()
+        Me.comExamYear = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'comStudentId
@@ -82,14 +82,6 @@ Partial Class UpdateMarks
         Me.txtMark.Size = New System.Drawing.Size(224, 23)
         Me.txtMark.TabIndex = 33
         '
-        'txtExamYear
-        '
-        Me.txtExamYear.Location = New System.Drawing.Point(135, 79)
-        Me.txtExamYear.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtExamYear.Name = "txtExamYear"
-        Me.txtExamYear.Size = New System.Drawing.Size(224, 23)
-        Me.txtExamYear.TabIndex = 32
-        '
         'lblMark
         '
         Me.lblMark.AutoSize = True
@@ -130,17 +122,26 @@ Partial Class UpdateMarks
         Me.lblStudentId.TabIndex = 28
         Me.lblStudentId.Text = "Student ID:"
         '
+        'comExamYear
+        '
+        Me.comExamYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.comExamYear.FormattingEnabled = True
+        Me.comExamYear.Location = New System.Drawing.Point(135, 79)
+        Me.comExamYear.Name = "comExamYear"
+        Me.comExamYear.Size = New System.Drawing.Size(224, 23)
+        Me.comExamYear.TabIndex = 38
+        '
         'UpdateMarks
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(405, 193)
+        Me.Controls.Add(Me.comExamYear)
         Me.Controls.Add(Me.comStudentId)
         Me.Controls.Add(Me.comSubjectId)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.txtMark)
-        Me.Controls.Add(Me.txtExamYear)
         Me.Controls.Add(Me.lblMark)
         Me.Controls.Add(Me.lblExamYear)
         Me.Controls.Add(Me.lblSubjectId)
@@ -157,9 +158,9 @@ Partial Class UpdateMarks
     Friend WithEvents btnCancel As Button
     Friend WithEvents btnUpdate As Button
     Friend WithEvents txtMark As TextBox
-    Friend WithEvents txtExamYear As TextBox
     Friend WithEvents lblMark As Label
     Friend WithEvents lblExamYear As Label
     Friend WithEvents lblSubjectId As Label
     Friend WithEvents lblStudentId As Label
+    Friend WithEvents comExamYear As ComboBox
 End Class

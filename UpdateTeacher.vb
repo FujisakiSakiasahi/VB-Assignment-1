@@ -12,6 +12,7 @@ Public Class UpdateTeacher
         txtTeacherName.Text = ""
         radMale.Checked = False
         radFemale.Checked = False
+        btnUpdate.Enabled = False
 
         'disable controls
         txtTeacherName.Enabled = False
@@ -57,6 +58,7 @@ Public Class UpdateTeacher
                         txtTeacherName.Enabled = True
                         radMale.Enabled = True
                         radFemale.Enabled = True
+                        btnUpdate.Enabled = True
                     Else
                         'no result
                         Clear()
