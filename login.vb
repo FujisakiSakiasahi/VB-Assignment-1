@@ -23,8 +23,4 @@
         End If
 
     End Sub
-
-    Private Sub username_input_textfield_TextChanged(sender As Object, e As EventArgs) Handles username_input_textfield.TextChanged
-
-    End Sub
 End Class
