@@ -27,10 +27,10 @@ Partial Class DeleteTeacher
         Me.txtTeacherId = New System.Windows.Forms.TextBox()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.lblTeacherName = New System.Windows.Forms.Label()
-        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
         Me.lblTeacherId = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.btnSearch = New System.Windows.Forms.Button()
+        Me.txtTeacherGender = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Label2
@@ -80,15 +80,15 @@ Partial Class DeleteTeacher
         Me.lblTeacherName.TabIndex = 32
         Me.lblTeacherName.Text = "Teacher Name:"
         '
-        'btnAdd
+        'btnDelete
         '
-        Me.btnAdd.Location = New System.Drawing.Point(55, 108)
-        Me.btnAdd.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(75, 23)
-        Me.btnAdd.TabIndex = 31
-        Me.btnAdd.Text = "Delete"
-        Me.btnAdd.UseVisualStyleBackColor = True
+        Me.btnDelete.Location = New System.Drawing.Point(55, 108)
+        Me.btnDelete.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(75, 23)
+        Me.btnDelete.TabIndex = 31
+        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.UseVisualStyleBackColor = True
         '
         'lblTeacherId
         '
@@ -100,36 +100,36 @@ Partial Class DeleteTeacher
         Me.lblTeacherId.TabIndex = 30
         Me.lblTeacherId.Text = "Teacher ID:"
         '
-        'Button1
+        'btnSearch
         '
-        Me.Button1.Location = New System.Drawing.Point(300, 17)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(54, 23)
-        Me.Button1.TabIndex = 39
-        Me.Button1.Text = "Search"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnSearch.Location = New System.Drawing.Point(300, 17)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(54, 23)
+        Me.btnSearch.TabIndex = 39
+        Me.btnSearch.Text = "Search"
+        Me.btnSearch.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'txtTeacherGender
         '
-        Me.TextBox1.Location = New System.Drawing.Point(130, 74)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(224, 23)
-        Me.TextBox1.TabIndex = 40
+        Me.txtTeacherGender.Location = New System.Drawing.Point(130, 74)
+        Me.txtTeacherGender.Name = "txtTeacherGender"
+        Me.txtTeacherGender.ReadOnly = True
+        Me.txtTeacherGender.Size = New System.Drawing.Size(224, 23)
+        Me.txtTeacherGender.TabIndex = 40
         '
         'DeleteTeacher
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(375, 153)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.txtTeacherGender)
+        Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtTeacherName)
         Me.Controls.Add(Me.txtTeacherId)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.lblTeacherName)
-        Me.Controls.Add(Me.btnAdd)
+        Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.lblTeacherId)
         Me.Name = "DeleteTeacher"
         Me.Text = "Delete Teacher"
@@ -142,8 +142,8 @@ Partial Class DeleteTeacher
     Friend WithEvents txtTeacherId As TextBox
     Friend WithEvents btnCancel As Button
     Friend WithEvents lblTeacherName As Label
-    Friend WithEvents btnAdd As Button
+    Friend WithEvents btnDelete As Button
     Friend WithEvents lblTeacherId As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents btnSearch As Button
+    Friend WithEvents txtTeacherGender As TextBox
 End Class

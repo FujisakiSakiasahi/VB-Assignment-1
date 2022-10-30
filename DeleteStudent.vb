@@ -27,7 +27,13 @@ Public Class DeleteStudent
                         txtStuName.Text = datatable.Rows(0).Item(1).ToString
                         txtAge.Text = datatable.Rows(0).Item(2).ToString
                         txtYearEnrolled.Text = datatable.Rows(0).Item(3).ToString
-                        txtGender.Text = datatable.Rows(0).Item(4).ToString
+                        Dim gender As String = = datatable.Rows(0).Item(4).ToString
+                        If gender = "f" Then
+                            txtGender.Text = "Female"
+                        Else
+                            txtGender.Text = "Male"
+                        End If
+
                         txtTeam.Text = datatable.Rows(0).Item(5).ToString
 
                         'enables the controls for editing
@@ -73,7 +79,7 @@ Public Class DeleteStudent
         clear()
     End Sub
 
-    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         Dim proceedDelete As Integer = MessageBox.Show("All data that binds with student with student id " & studentId & " will also be deleted", "Delete Student", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If proceedDelete = 6 Then
             Dim insertQuery As String = "delete from marks where stuId = " & studentId

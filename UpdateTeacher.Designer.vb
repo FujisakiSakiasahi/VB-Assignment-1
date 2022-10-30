@@ -22,7 +22,7 @@ Partial Class UpdateTeacher
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnSearch = New System.Windows.Forms.Button()
         Me.radFemale = New System.Windows.Forms.RadioButton()
         Me.radMale = New System.Windows.Forms.RadioButton()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -30,18 +30,18 @@ Partial Class UpdateTeacher
         Me.txtTeacherId = New System.Windows.Forms.TextBox()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.lblTeacherName = New System.Windows.Forms.Label()
-        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
         Me.lblTeacherId = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'Button1
+        'btnSearch
         '
-        Me.Button1.Location = New System.Drawing.Point(300, 17)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(54, 23)
-        Me.Button1.TabIndex = 49
-        Me.Button1.Text = "Search"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnSearch.Location = New System.Drawing.Point(300, 17)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(54, 23)
+        Me.btnSearch.TabIndex = 49
+        Me.btnSearch.Text = "Search"
+        Me.btnSearch.UseVisualStyleBackColor = True
         '
         'radFemale
         '
@@ -113,15 +113,15 @@ Partial Class UpdateTeacher
         Me.lblTeacherName.TabIndex = 42
         Me.lblTeacherName.Text = "Teacher Name:"
         '
-        'btnAdd
+        'btnUpdate
         '
-        Me.btnAdd.Location = New System.Drawing.Point(55, 108)
-        Me.btnAdd.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(75, 23)
-        Me.btnAdd.TabIndex = 41
-        Me.btnAdd.Text = "Update"
-        Me.btnAdd.UseVisualStyleBackColor = True
+        Me.btnUpdate.Location = New System.Drawing.Point(55, 108)
+        Me.btnUpdate.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
+        Me.btnUpdate.TabIndex = 41
+        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.UseVisualStyleBackColor = True
         '
         'lblTeacherId
         '
@@ -138,7 +138,7 @@ Partial Class UpdateTeacher
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(375, 153)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.radFemale)
         Me.Controls.Add(Me.radMale)
         Me.Controls.Add(Me.Label2)
@@ -146,7 +146,7 @@ Partial Class UpdateTeacher
         Me.Controls.Add(Me.txtTeacherId)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.lblTeacherName)
-        Me.Controls.Add(Me.btnAdd)
+        Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.lblTeacherId)
         Me.Name = "UpdateTeacher"
         Me.Text = "Update Teacher"
@@ -155,7 +155,7 @@ Partial Class UpdateTeacher
 
     End Sub
 
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnSearch As Button
     Friend WithEvents radFemale As RadioButton
     Friend WithEvents radMale As RadioButton
     Friend WithEvents Label2 As Label
@@ -163,6 +163,6 @@ Partial Class UpdateTeacher
     Friend WithEvents txtTeacherId As TextBox
     Friend WithEvents btnCancel As Button
     Friend WithEvents lblTeacherName As Label
-    Friend WithEvents btnAdd As Button
+    Friend WithEvents btnUpdate As Button
     Friend WithEvents lblTeacherId As Label
 End Class
