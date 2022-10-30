@@ -39,7 +39,7 @@ Public Class AddTeacher
                         MessageBox.Show("Added New Teacher " & teacherName & ".", "New Teacher Added", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         clear()
                     Else
-                        If txtTeacherId.Text = datatable.Rows(0).Item(0).ToString Then
+                        If CStr(CInt(txtTeacherId.Text)) = datatable.Rows(0).Item(0).ToString Then
                             MessageBox.Show("Teacher ID already exists. Please enter a new teacher ID.", "Teacher ID Already Exists", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                         Else
                             Dim insertQuery As String = "INSERT INTO teacher values (" & teacherId & "," & teacherName & "," & gender & ");"
