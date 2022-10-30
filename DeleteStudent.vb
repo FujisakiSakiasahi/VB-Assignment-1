@@ -3,7 +3,7 @@ Imports System.Data.SqlClient
 
 Public Class DeleteStudent
     Dim studentId As Integer
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
         'check the student id that will be use for searching
         If String.IsNullOrEmpty(txtStudentId.Text) Then
             MessageBox.Show("'Student ID' field cannot be empty to search.", "Empty Fields", MessageBoxButtons.OK, MessageBoxIcon.Warning)

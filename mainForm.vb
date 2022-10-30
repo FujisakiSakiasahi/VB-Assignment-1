@@ -13,11 +13,6 @@ Public Class mainForm
         connection.Close()
     End Sub
 
-    '
-    Public Sub fnA(a As String)
-        MessageBox.Show(a)
-    End Sub
-
     'Close the entire program
     Private Sub app_close() Handles Me.Closed
         Application.Exit()
