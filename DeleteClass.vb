@@ -39,6 +39,8 @@ Public Class DeleteClass
             For i As Integer = 0 To datatable.Rows.Count - 1
                 comClassId.Items.Add(datatable.Rows(i).Item(0))
             Next
+
+            comClassId.SelectedIndex = 0
         Else
             MessageBox.Show("There is no class in the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Me.Close()
