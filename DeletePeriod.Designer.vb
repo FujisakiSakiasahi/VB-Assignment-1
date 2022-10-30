@@ -25,15 +25,15 @@ Partial Class DeletePeriod
         Me.comDay = New System.Windows.Forms.ComboBox()
         Me.comPeriodId = New System.Windows.Forms.ComboBox()
         Me.btnCancel = New System.Windows.Forms.Button()
-        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
         Me.lblSubjectId = New System.Windows.Forms.Label()
         Me.txtTime = New System.Windows.Forms.TextBox()
         Me.lblClassId = New System.Windows.Forms.Label()
         Me.lblTime = New System.Windows.Forms.Label()
         Me.lblDay = New System.Windows.Forms.Label()
         Me.lblId = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtClassId = New System.Windows.Forms.TextBox()
+        Me.txtSubjectId = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'comDay
@@ -41,10 +41,10 @@ Partial Class DeletePeriod
         Me.comDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.comDay.FormattingEnabled = True
         Me.comDay.Items.AddRange(New Object() {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday"})
-        Me.comDay.Location = New System.Drawing.Point(125, 43)
-        Me.comDay.Margin = New System.Windows.Forms.Padding(2)
+        Me.comDay.Location = New System.Drawing.Point(143, 57)
+        Me.comDay.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.comDay.Name = "comDay"
-        Me.comDay.Size = New System.Drawing.Size(224, 23)
+        Me.comDay.Size = New System.Drawing.Size(255, 28)
         Me.comDay.TabIndex = 51
         '
         'comPeriodId
@@ -52,125 +52,128 @@ Partial Class DeletePeriod
         Me.comPeriodId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.comPeriodId.FormattingEnabled = True
         Me.comPeriodId.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"})
-        Me.comPeriodId.Location = New System.Drawing.Point(125, 16)
-        Me.comPeriodId.Margin = New System.Windows.Forms.Padding(2)
+        Me.comPeriodId.Location = New System.Drawing.Point(143, 21)
+        Me.comPeriodId.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.comPeriodId.Name = "comPeriodId"
-        Me.comPeriodId.Size = New System.Drawing.Size(224, 23)
+        Me.comPeriodId.Size = New System.Drawing.Size(255, 28)
         Me.comPeriodId.TabIndex = 50
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(234, 173)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnCancel.Location = New System.Drawing.Point(267, 231)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(78, 20)
+        Me.btnCancel.Size = New System.Drawing.Size(89, 27)
         Me.btnCancel.TabIndex = 47
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
-        'btnAdd
+        'btnDelete
         '
-        Me.btnAdd.Location = New System.Drawing.Point(89, 173)
-        Me.btnAdd.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(78, 20)
-        Me.btnAdd.TabIndex = 46
-        Me.btnAdd.Text = "Delete"
-        Me.btnAdd.UseVisualStyleBackColor = True
+        Me.btnDelete.Location = New System.Drawing.Point(102, 231)
+        Me.btnDelete.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(89, 27)
+        Me.btnDelete.TabIndex = 46
+        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.UseVisualStyleBackColor = True
         '
         'lblSubjectId
         '
         Me.lblSubjectId.AutoSize = True
-        Me.lblSubjectId.Location = New System.Drawing.Point(44, 129)
+        Me.lblSubjectId.Location = New System.Drawing.Point(50, 172)
         Me.lblSubjectId.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblSubjectId.Name = "lblSubjectId"
-        Me.lblSubjectId.Size = New System.Drawing.Size(63, 15)
+        Me.lblSubjectId.Size = New System.Drawing.Size(80, 20)
         Me.lblSubjectId.TabIndex = 45
         Me.lblSubjectId.Text = "Subject ID:"
         '
         'txtTime
         '
         Me.txtTime.Enabled = False
-        Me.txtTime.Location = New System.Drawing.Point(125, 70)
-        Me.txtTime.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtTime.Location = New System.Drawing.Point(143, 93)
+        Me.txtTime.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.txtTime.Name = "txtTime"
         Me.txtTime.ReadOnly = True
-        Me.txtTime.Size = New System.Drawing.Size(224, 23)
+        Me.txtTime.Size = New System.Drawing.Size(255, 27)
         Me.txtTime.TabIndex = 44
         '
         'lblClassId
         '
         Me.lblClassId.AutoSize = True
-        Me.lblClassId.Location = New System.Drawing.Point(56, 101)
+        Me.lblClassId.Location = New System.Drawing.Point(64, 135)
         Me.lblClassId.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblClassId.Name = "lblClassId"
-        Me.lblClassId.Size = New System.Drawing.Size(51, 15)
+        Me.lblClassId.Size = New System.Drawing.Size(64, 20)
         Me.lblClassId.TabIndex = 43
         Me.lblClassId.Text = "Class ID:"
         '
         'lblTime
         '
         Me.lblTime.AutoSize = True
-        Me.lblTime.Location = New System.Drawing.Point(71, 72)
+        Me.lblTime.Location = New System.Drawing.Point(81, 96)
         Me.lblTime.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblTime.Name = "lblTime"
-        Me.lblTime.Size = New System.Drawing.Size(36, 15)
+        Me.lblTime.Size = New System.Drawing.Size(45, 20)
         Me.lblTime.TabIndex = 42
         Me.lblTime.Text = "Time:"
         '
         'lblDay
         '
         Me.lblDay.AutoSize = True
-        Me.lblDay.Location = New System.Drawing.Point(76, 44)
+        Me.lblDay.Location = New System.Drawing.Point(87, 59)
         Me.lblDay.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblDay.Name = "lblDay"
-        Me.lblDay.Size = New System.Drawing.Size(30, 15)
+        Me.lblDay.Size = New System.Drawing.Size(38, 20)
         Me.lblDay.TabIndex = 41
         Me.lblDay.Text = "Day:"
         '
         'lblId
         '
         Me.lblId.AutoSize = True
-        Me.lblId.Location = New System.Drawing.Point(85, 19)
+        Me.lblId.Location = New System.Drawing.Point(97, 25)
         Me.lblId.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblId.Name = "lblId"
-        Me.lblId.Size = New System.Drawing.Size(21, 15)
+        Me.lblId.Size = New System.Drawing.Size(27, 20)
         Me.lblId.TabIndex = 40
         Me.lblId.Text = "ID:"
         '
-        'TextBox1
+        'txtClassId
         '
-        Me.TextBox1.Location = New System.Drawing.Point(125, 98)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(224, 23)
-        Me.TextBox1.TabIndex = 52
+        Me.txtClassId.Location = New System.Drawing.Point(143, 131)
+        Me.txtClassId.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtClassId.Name = "txtClassId"
+        Me.txtClassId.ReadOnly = True
+        Me.txtClassId.Size = New System.Drawing.Size(255, 27)
+        Me.txtClassId.TabIndex = 52
         '
-        'TextBox2
+        'txtSubjectId
         '
-        Me.TextBox2.Location = New System.Drawing.Point(125, 126)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(224, 23)
-        Me.TextBox2.TabIndex = 53
+        Me.txtSubjectId.Location = New System.Drawing.Point(143, 168)
+        Me.txtSubjectId.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtSubjectId.Name = "txtSubjectId"
+        Me.txtSubjectId.ReadOnly = True
+        Me.txtSubjectId.Size = New System.Drawing.Size(255, 27)
+        Me.txtSubjectId.TabIndex = 53
         '
         'DeletePeriod
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(415, 215)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.ClientSize = New System.Drawing.Size(474, 287)
+        Me.Controls.Add(Me.txtSubjectId)
+        Me.Controls.Add(Me.txtClassId)
         Me.Controls.Add(Me.comDay)
         Me.Controls.Add(Me.comPeriodId)
         Me.Controls.Add(Me.btnCancel)
-        Me.Controls.Add(Me.btnAdd)
+        Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.lblSubjectId)
         Me.Controls.Add(Me.txtTime)
         Me.Controls.Add(Me.lblClassId)
         Me.Controls.Add(Me.lblTime)
         Me.Controls.Add(Me.lblDay)
         Me.Controls.Add(Me.lblId)
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "DeletePeriod"
         Me.Text = "Delete Period"
         Me.ResumeLayout(False)
@@ -181,13 +184,13 @@ Partial Class DeletePeriod
     Friend WithEvents comDay As ComboBox
     Friend WithEvents comPeriodId As ComboBox
     Friend WithEvents btnCancel As Button
-    Friend WithEvents btnAdd As Button
+    Friend WithEvents btnDelete As Button
     Friend WithEvents lblSubjectId As Label
     Friend WithEvents txtTime As TextBox
     Friend WithEvents lblClassId As Label
     Friend WithEvents lblTime As Label
     Friend WithEvents lblDay As Label
     Friend WithEvents lblId As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtClassId As TextBox
+    Friend WithEvents txtSubjectId As TextBox
 End Class
