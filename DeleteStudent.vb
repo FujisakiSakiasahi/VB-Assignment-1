@@ -42,6 +42,7 @@ Public Class DeleteStudent
                         txtYearEnrolled.Enabled = True
                         txtGender.Enabled = True
                         txtTeam.Enabled = True
+                        btnDelete.Enabled = True
                     Else
                         'no result
                         clear()
@@ -69,6 +70,7 @@ Public Class DeleteStudent
         txtYearEnrolled.Enabled = False
         txtGender.Enabled = False
         txtTeam.Enabled = False
+        btnDelete.Enabled = False
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click

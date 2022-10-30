@@ -35,6 +35,7 @@ Public Class DeleteTeacher
                         'enable the controls
                         txtTeacherName.Enabled = True
                         txtTeacherGender.Enabled = True
+                        btnDelete.Enabled = True
                     Else
                         'no result
                         Clear()
@@ -54,7 +55,7 @@ Public Class DeleteTeacher
             Form2.run_query(insertQuery)
             Form2.table_load("teacher")
 
-            MessageBox.Show("Teacher with teacher ID" & teacherId & "has been deleted.", "Teacher Information Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Teacher with teacher ID " & teacherId & " has been deleted.", "Teacher Information Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Clear()
         End If
     End Sub
@@ -72,5 +73,10 @@ Public Class DeleteTeacher
         'disable the controls
         txtTeacherName.Enabled = False
         txtTeacherGender.Enabled = False
+        btnDelete.Enabled = False
+    End Sub
+
+    Private Sub DeleteTeacher_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Clear()
     End Sub
 End Class
