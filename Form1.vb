@@ -6,7 +6,7 @@
         Static count As Integer = 1
 
         'Username and Password Checking
-        If username_input = "" And password_input = "" Then 'the username and password need to be set 
+        If username_input = "admin" And password_input = "admin" Then 'the username and password need to be set 
             'Showing main page form
             Form2.Show()
 
