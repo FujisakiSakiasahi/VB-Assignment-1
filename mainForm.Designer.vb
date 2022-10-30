@@ -79,7 +79,6 @@ Partial Class mainForm
         Me.periodDelete_button = New System.Windows.Forms.Button()
         Me.periodUpdate_button = New System.Windows.Forms.Button()
         Me.periodAdd_button = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.tab_control.SuspendLayout()
         Me.student_tab.SuspendLayout()
         CType(Me.student_table, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -93,7 +92,6 @@ Partial Class mainForm
         CType(Me.marks_table, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         CType(Me.period_table, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tab_control
@@ -730,22 +728,11 @@ Partial Class mainForm
         Me.periodAdd_button.Text = "Add New"
         Me.periodAdd_button.UseVisualStyleBackColor = True
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.VB_Assignment.My.Resources.Resources.unknown
-        Me.PictureBox1.Location = New System.Drawing.Point(1256, 741)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(196, 209)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 20
-        Me.PictureBox1.TabStop = False
-        '
         'mainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1261, 748)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.tab_control)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "mainForm"
@@ -769,7 +756,6 @@ Partial Class mainForm
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         CType(Me.period_table, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -830,5 +816,4 @@ Partial Class mainForm
     Friend WithEvents periodAdd_button As Button
     Friend WithEvents classAddClass_button As Button
     Friend WithEvents classDeleteClass_button As Button
-    Friend WithEvents PictureBox1 As PictureBox
 End Class
