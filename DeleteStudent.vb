@@ -27,7 +27,7 @@ Public Class DeleteStudent
                         txtStuName.Text = datatable.Rows(0).Item(1).ToString
                         txtAge.Text = datatable.Rows(0).Item(2).ToString
                         txtYearEnrolled.Text = datatable.Rows(0).Item(3).ToString
-                        Dim gender As String = = datatable.Rows(0).Item(4).ToString
+                        Dim gender As String = datatable.Rows(0).Item(4).ToString
                         If gender = "f" Then
                             txtGender.Text = "Female"
                         Else
