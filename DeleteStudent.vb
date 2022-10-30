@@ -82,9 +82,9 @@ Public Class DeleteStudent
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         Dim proceedDelete As Integer = MessageBox.Show("All data that binds with student with student id " & studentId & " will also be deleted", "Delete Student", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If proceedDelete = 6 Then
-            Dim insertQuery As String = "delete from marks where stuId = " & studentId
+            Dim insertQuery As String = "delete from marks where studentId = " & studentId
             Form2.run_query(insertQuery)
-            insertQuery = "delete from enrolled where stuId = " & studentId
+            insertQuery = "delete from enrolled where studentId = " & studentId
             Form2.run_query(insertQuery)
             insertQuery = "delete from student where stuId = " & studentId
             Form2.run_query(insertQuery)
