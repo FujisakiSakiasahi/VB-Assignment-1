@@ -76,7 +76,7 @@ Public Class UpdateMarks
             Else
                 Dim studentId As Integer = comStudentId.SelectedItem
                 Dim subjectId As String = "'" & comSubjectId.SelectedItem.ToString & "'"
-                Dim insertQuery As String = "update marks set examyear = " & examYear & ", mark = " & mark & " where studentId = " & studentId & "AND subjectId = " & subjectId & " ;"
+                Dim insertQuery As String = "update marks set mark = " & mark & " where studentId = " & studentId & "AND subjectId = " & subjectId & "AND examyear = " & examYear & " ;"
                 mainForm.run_query(insertQuery)
                 mainForm.table_load("marks")
 

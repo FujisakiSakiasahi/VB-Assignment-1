@@ -50,6 +50,7 @@ Partial Class UpdateClass
         '
         'comClassId
         '
+        Me.comClassId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.comClassId.FormattingEnabled = True
         Me.comClassId.Location = New System.Drawing.Point(139, 57)
         Me.comClassId.Name = "comClassId"
@@ -76,6 +77,7 @@ Partial Class UpdateClass
         '
         'comStudentId
         '
+        Me.comStudentId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.comStudentId.FormattingEnabled = True
         Me.comStudentId.Location = New System.Drawing.Point(139, 24)
         Me.comStudentId.Name = "comStudentId"
