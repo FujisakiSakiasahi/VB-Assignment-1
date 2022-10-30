@@ -8,6 +8,8 @@ Public Class AllocStudentToClass
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Dim studentId As Integer = comStudentId.SelectedItem
         Dim classId As String = "'" & comClassId.SelectedItem.ToString & "'"
+
+        ' retreive data from Database to check if data already exists in the Database
         Dim stuIdAndClassIdData As New SqlDataAdapter(New SqlCommand("Select * FROM enrolled WHERE studentId = " & studentId & "AND classId = " & classId & ";", mainForm.connection))
         Dim datatable As New DataTable()
         stuIdAndClassIdData.Fill(datatable)
@@ -37,6 +39,7 @@ Public Class AllocStudentToClass
     End Sub
 
     Private Sub AllocStudentToClass_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' ' retreive data from Database to be loaded into combo boxes
         Dim stuIdData As New SqlDataAdapter(New SqlCommand("SELECT stuId FROM student;", mainForm.connection))
         Dim datatable As New DataTable()
         stuIdData.Fill(datatable)
@@ -46,12 +49,15 @@ Public Class AllocStudentToClass
         classIdData.Fill(datatable2)
 
         If Not (datatable.Rows.Count > 0) Then
+            ' if no student in database, show error
             MessageBox.Show("There are no students in the database. Please insert a new student before assigning student to a class.", "Missing Required Data", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Me.Close()
         ElseIf Not (datatable2.Rows.Count > 0) Then
+            ' if no class in database, show error
             MessageBox.Show("There are no class in the database. Please insert a new class before assigning student to a class.", "Missing Required Data", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Me.Close()
         Else
+            ' fill data into combo box
             Dim i As Integer = 0
             Do While i < datatable.Rows.Count
                 comStudentId.Items.Add(datatable.Rows(i).Item(0).ToString)
@@ -64,6 +70,7 @@ Public Class AllocStudentToClass
                 j += 1
             Loop
 
+            ' set initial selected values
             comStudentId.SelectedIndex = 0
             comClassId.SelectedIndex = 0
         End If
