@@ -66,10 +66,12 @@ Public Class RemoveStudentFromClass
 
             'enable the combo box
             comStudentId.Enabled = True
+            btnRemove.Enabled = True
             comStudentId.SelectedIndex = 0
         Else
             MessageBox.Show("There are no students in the selected class.", "No Student Found", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             comStudentId.Enabled = False
+            btnRemove.Enabled = False
             comStudentId.Items.Clear()
         End If
     End Sub
