@@ -8,7 +8,7 @@ Public Class DeletePeriod
 
     Private Sub load_PeriodIdComboBox()
         comPeriodId.Items.Clear()
-        Dim da As New SqlDataAdapter(New SqlCommand("SELECT distinct periodId FROM period;", Form2.connection))
+        Dim da As New SqlDataAdapter(New SqlCommand("SELECT distinct periodId FROM period;", mainForm.connection))
         Dim datatable As New DataTable()
         da.Fill(datatable)
 
@@ -55,9 +55,9 @@ Public Class DeletePeriod
         End Select
 
         comDay.Items.Clear()
-        Dim da As New SqlDataAdapter(New SqlCommand("SELECT distinct periodDay FROM period where periodId = " & comPeriodId.SelectedItem & ";", Form2.connection))
+        Dim da As New SqlDataAdapter(New SqlCommand("SELECT distinct periodDay FROM period where periodId = " & comPeriodId.SelectedItem & ";", mainForm.connection))
         Dim datatable As New DataTable()
-        da.Fill(DataTable)
+        da.Fill(datatable)
 
         For i As Integer = 0 To datatable.Rows.Count - 1
             comDay.Items.Add(datatable.Rows(i).Item(0))
@@ -68,7 +68,7 @@ Public Class DeletePeriod
 
     Private Sub comDay_SelectedIndexChanged(sender As Object, e As EventArgs) Handles comDay.SelectedIndexChanged
         comClassId.Items.Clear()
-        Dim data As New SqlDataAdapter(New SqlCommand("SELECT distinct classId FROM period where periodId = " & comPeriodId.SelectedItem & "AND periodDay = '" & comDay.SelectedItem & "' ;", Form2.connection))
+        Dim data As New SqlDataAdapter(New SqlCommand("SELECT distinct classId FROM period where periodId = " & comPeriodId.SelectedItem & "AND periodDay = '" & comDay.SelectedItem & "' ;", mainForm.connection))
         Dim datatable As New DataTable()
         data.Fill(datatable)
 
@@ -80,7 +80,7 @@ Public Class DeletePeriod
     End Sub
 
     Private Sub comClassId_SelectedIndexChanged(sender As Object, e As EventArgs) Handles comClassId.SelectedIndexChanged
-        Dim data As New SqlDataAdapter(New SqlCommand("SELECT subjectId FROM period where periodId = " & comPeriodId.SelectedItem & "AND periodDay = '" & comDay.SelectedItem & "' AND classId = '" & comClassId.SelectedItem & "' ;", Form2.connection))
+        Dim data As New SqlDataAdapter(New SqlCommand("SELECT subjectId FROM period where periodId = " & comPeriodId.SelectedItem & "AND periodDay = '" & comDay.SelectedItem & "' AND classId = '" & comClassId.SelectedItem & "' ;", mainForm.connection))
         Dim datatable As New DataTable()
         data.Fill(datatable)
 
@@ -89,8 +89,8 @@ Public Class DeletePeriod
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         Dim insertQuery As String = "delete from period  where periodId = " & comPeriodId.SelectedItem & "AND periodDay = '" & comDay.SelectedItem & "' AND classId = '" & comClassId.SelectedItem & "' ;"
-        Form2.run_query(insertQuery)
-        Form2.table_load("period")
+        mainForm.run_query(insertQuery)
+        mainForm.table_load("period")
 
         MessageBox.Show("The period " & (comPeriodId.SelectedIndex + 1) & " on " & comDay.SelectedItem & " at " & txtTime.Text & " for class " & comClassId.SelectedItem & "for subject " & txtSubjectId.Text & "has been deleted.", "Period Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information)
         load_PeriodIdComboBox()

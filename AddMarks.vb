@@ -2,11 +2,11 @@
 
 Public Class AddMarks
     Private Sub AddMarks_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim da As New SqlDataAdapter(New SqlCommand("SELECT stuId FROM student;", Form2.connection))
+        Dim da As New SqlDataAdapter(New SqlCommand("SELECT stuId FROM student;", mainForm.connection))
         Dim datatable As New DataTable()
         da.Fill(datatable)
 
-        Dim db As New SqlDataAdapter(New SqlCommand("SELECT subjectId FROM subject;", Form2.connection))
+        Dim db As New SqlDataAdapter(New SqlCommand("SELECT subjectId FROM subject;", mainForm.connection))
         Dim datatable2 As New DataTable()
         db.Fill(datatable2)
 
@@ -53,14 +53,14 @@ Public Class AddMarks
                     Dim studentId As Integer = comStudentId.SelectedItem
                     Dim subjectId As String = "'" & comSubjectId.SelectedItem.ToString & "'"
 
-                    Dim markData As New SqlDataAdapter(New SqlCommand("SELECT * FROM marks WHERE studentId = " & studentId & " AND subjectId = " & subjectId & " AND examyear = " & examYear & ";", Form2.connection))
+                    Dim markData As New SqlDataAdapter(New SqlCommand("SELECT * FROM marks WHERE studentId = " & studentId & " AND subjectId = " & subjectId & " AND examyear = " & examYear & ";", mainForm.connection))
                     Dim datatable As New DataTable()
                     markData.Fill(datatable)
 
                     If Not (datatable.Rows.Count > 0) Then
                         Dim insertQuery As String = "INSERT INTO marks VALUES (" & studentId & "," & subjectId & "," & examYear & "," & mark & ");"
-                        Form2.run_query(insertQuery)
-                        Form2.table_load("marks")
+                        mainForm.run_query(insertQuery)
+                        mainForm.table_load("marks")
 
                         MessageBox.Show("Added New Mark.", "New Mark Added", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         clear()

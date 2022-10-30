@@ -8,7 +8,7 @@
         'Username and Password Checking
         If username_input = "admin" And password_input = "admin" Then 'the username and password need to be set 
             'Showing main page form
-            Form2.Show()
+            mainForm.Show()
 
             'Hiding login page form
             'Need to be test out later

@@ -8,7 +8,7 @@ Public Class DeleteMarks
 
     Private Sub load_StudentIdCombobox()
         comStudentId.Items.Clear()
-        Dim stuIdData As New SqlDataAdapter(New SqlCommand("SELECT distinct studentId FROM marks;", Form2.connection))
+        Dim stuIdData As New SqlDataAdapter(New SqlCommand("SELECT distinct studentId FROM marks;", mainForm.connection))
         Dim datatable As New DataTable()
         stuIdData.Fill(datatable)
 
@@ -27,7 +27,7 @@ Public Class DeleteMarks
     Private Sub comStudentId_SelectedIndexChanged(sender As Object, e As EventArgs) Handles comStudentId.SelectedIndexChanged
         comSubjectId.Items.Clear()
 
-        Dim subIdData As New SqlDataAdapter(New SqlCommand("SELECT distinct subjectId FROM marks where studentId = '" & comStudentId.SelectedItem & "';", Form2.connection))
+        Dim subIdData As New SqlDataAdapter(New SqlCommand("SELECT distinct subjectId FROM marks where studentId = '" & comStudentId.SelectedItem & "';", mainForm.connection))
         Dim datatable As New DataTable()
         subIdData.Fill(datatable)
 
@@ -39,7 +39,7 @@ Public Class DeleteMarks
     End Sub
 
     Private Sub comSubjectId_SelectedIndexChanged(sender As Object, e As EventArgs) Handles comSubjectId.SelectedIndexChanged
-        Dim da As New SqlDataAdapter(New SqlCommand("SELECT distinct examyear FROM marks where studentId = '" & comStudentId.SelectedItem & "' AND subjectId = '" & comSubjectId.SelectedItem & "';", Form2.connection))
+        Dim da As New SqlDataAdapter(New SqlCommand("SELECT distinct examyear FROM marks where studentId = '" & comStudentId.SelectedItem & "' AND subjectId = '" & comSubjectId.SelectedItem & "';", mainForm.connection))
         Dim datatable As New DataTable()
         da.Fill(datatable)
 
@@ -50,7 +50,7 @@ Public Class DeleteMarks
         comExamYear.SelectedIndex = 0
     End Sub
     Private Sub comExamYear_SelectedIndexChanged(sender As Object, e As EventArgs) Handles comExamYear.SelectedIndexChanged
-        Dim da As New SqlDataAdapter(New SqlCommand("SELECT mark FROM marks where studentId = '" & comStudentId.SelectedItem & "' AND subjectId = '" & comSubjectId.SelectedItem & "' AND examyear = " & comExamYear.SelectedItem & ";", Form2.connection))
+        Dim da As New SqlDataAdapter(New SqlCommand("SELECT mark FROM marks where studentId = '" & comStudentId.SelectedItem & "' AND subjectId = '" & comSubjectId.SelectedItem & "' AND examyear = " & comExamYear.SelectedItem & ";", mainForm.connection))
         Dim datatable As New DataTable()
         da.Fill(datatable)
 
@@ -68,8 +68,8 @@ Public Class DeleteMarks
         Dim proceedDelete As Integer = MessageBox.Show("Mark record of student with student id " & studentId & " for subject with subject id " & subjectId & " in year " & year & " will be deleted", "Delete Mark Record", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If proceedDelete = 6 Then
             Dim insertQuery As String = "delete from marks where studentId = '" & studentId & "' AND subjectId = '" & subjectId & "' AND examyear = " & year & " ;"
-            Form2.run_query(insertQuery)
-            Form2.table_load("marks")
+            mainForm.run_query(insertQuery)
+            mainForm.table_load("marks")
 
             MessageBox.Show("Mark record of student with student id " & studentId & " for subject with subject id " & subjectId & " in year " & year & " has been deleted", "Mark Record Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information)
             load_StudentIdCombobox()

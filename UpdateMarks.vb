@@ -8,7 +8,7 @@ Public Class UpdateMarks
 
     Private Sub load_StudentIdCombobox()
         comStudentId.Items.Clear()
-        Dim stuIdData As New SqlDataAdapter(New SqlCommand("SELECT distinct studentId FROM marks;", Form2.connection))
+        Dim stuIdData As New SqlDataAdapter(New SqlCommand("SELECT distinct studentId FROM marks;", mainForm.connection))
         Dim datatable As New DataTable()
         stuIdData.Fill(datatable)
 
@@ -27,7 +27,7 @@ Public Class UpdateMarks
     Private Sub comStudentId_SelectedIndexChanged(sender As Object, e As EventArgs) Handles comStudentId.SelectedIndexChanged
         comSubjectId.Items.Clear()
 
-        Dim subIdData As New SqlDataAdapter(New SqlCommand("SELECT distinct subjectId FROM marks where studentId = '" & comStudentId.SelectedItem & "';", Form2.connection))
+        Dim subIdData As New SqlDataAdapter(New SqlCommand("SELECT distinct subjectId FROM marks where studentId = '" & comStudentId.SelectedItem & "';", mainForm.connection))
         Dim datatable As New DataTable()
         subIdData.Fill(datatable)
 
@@ -39,7 +39,7 @@ Public Class UpdateMarks
     End Sub
 
     Private Sub comSubjectId_SelectedIndexChanged(sender As Object, e As EventArgs) Handles comSubjectId.SelectedIndexChanged
-        Dim da As New SqlDataAdapter(New SqlCommand("SELECT distinct examyear FROM marks where studentId = '" & comStudentId.SelectedItem & "' AND subjectId = '" & comSubjectId.SelectedItem & "';", Form2.connection))
+        Dim da As New SqlDataAdapter(New SqlCommand("SELECT distinct examyear FROM marks where studentId = '" & comStudentId.SelectedItem & "' AND subjectId = '" & comSubjectId.SelectedItem & "';", mainForm.connection))
         Dim datatable As New DataTable()
         da.Fill(datatable)
 
@@ -50,7 +50,7 @@ Public Class UpdateMarks
         comExamYear.SelectedIndex = 0
     End Sub
     Private Sub comExamYear_SelectedIndexChanged(sender As Object, e As EventArgs) Handles comExamYear.SelectedIndexChanged
-        Dim da As New SqlDataAdapter(New SqlCommand("SELECT mark FROM marks where studentId = '" & comStudentId.SelectedItem & "' AND subjectId = '" & comSubjectId.SelectedItem & "' AND examyear = " & comExamYear.SelectedItem & ";", Form2.connection))
+        Dim da As New SqlDataAdapter(New SqlCommand("SELECT mark FROM marks where studentId = '" & comStudentId.SelectedItem & "' AND subjectId = '" & comSubjectId.SelectedItem & "' AND examyear = " & comExamYear.SelectedItem & ";", mainForm.connection))
         Dim datatable As New DataTable()
         da.Fill(datatable)
 
@@ -75,8 +75,8 @@ Public Class UpdateMarks
                 Dim studentId As Integer = comStudentId.SelectedItem
                 Dim subjectId As String = "'" & comSubjectId.SelectedItem.ToString & "'"
                 Dim insertQuery As String = "update marks set examyear = " & examYear & ", mark = " & mark & " where studentId = " & studentId & "AND subjectId = " & subjectId & " ;"
-                Form2.run_query(insertQuery)
-                Form2.table_load("marks")
+                mainForm.run_query(insertQuery)
+                mainForm.table_load("marks")
 
                 MessageBox.Show("Mark record of student with student id " & studentId & " for subject with subject id " & comSubjectId.SelectedItem.ToString & " has been updated", "Mark Record Updated", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If

@@ -17,7 +17,7 @@ Public Class AddSubject
                     MessageBox.Show("Subject Name can only support up to a maximum of 30 characters.", "Invalid Subject Name", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Else
 
-                    Dim subjectIdData As New SqlDataAdapter(New SqlCommand("SELECT subjectId FROM subject WHERE subjectid = " & subjectId & ";", Form2.connection))
+                    Dim subjectIdData As New SqlDataAdapter(New SqlCommand("SELECT subjectId FROM subject WHERE subjectid = " & subjectId & ";", mainForm.connection))
                     Dim datatable As New DataTable()
                     subjectIdData.Fill(datatable)
 
@@ -25,8 +25,8 @@ Public Class AddSubject
 
                     If Not (datatable.Rows.Count > 0) Then
                         Dim insertQuery As String = "INSERT INTO subject values (" & subjectId & "," & subjectName & ");"
-                        Form2.run_query(insertQuery)
-                        Form2.table_load("subject")
+                        mainForm.run_query(insertQuery)
+                        mainForm.table_load("subject")
 
                         MessageBox.Show("Added New Subject " & subjectName & ".", "New Subject Added", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         clear()
@@ -35,8 +35,8 @@ Public Class AddSubject
                             MessageBox.Show("Subject ID already exists. Please enter a new subject ID.", "Subject ID Already Exists", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                         Else
                             Dim insertQuery As String = "INSERT INTO subject values (" & subjectId & "," & subjectName & ");"
-                            Form2.run_query(insertQuery)
-                            Form2.table_load("subject")
+                            mainForm.run_query(insertQuery)
+                            mainForm.table_load("subject")
 
                             MessageBox.Show("Added New Subject " & subjectName & ".", "New Subject Added", MessageBoxButtons.OK, MessageBoxIcon.Information)
                             clear()

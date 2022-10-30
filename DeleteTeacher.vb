@@ -15,7 +15,7 @@ Public Class DeleteTeacher
                 If Not (teacherId >= 1000 And teacherId <= 9999) Then   ' id range checking
                     MessageBox.Show("Teacher ID out of range. Please enter number in range of 1000 - 9999.", "Invalid Teacher ID", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Else
-                    Dim da As SqlDataAdapter = New SqlDataAdapter(New SqlCommand("select * from teacher where teacherId = " & teacherId & " ;", Form2.connection))
+                    Dim da As SqlDataAdapter = New SqlDataAdapter(New SqlCommand("select * from teacher where teacherId = " & teacherId & " ;", mainForm.connection))
                     Dim datatable As New DataTable()
                     da.Fill(datatable)
 
@@ -52,8 +52,8 @@ Public Class DeleteTeacher
         Dim proceedDelete As Integer = MessageBox.Show("All data that binds with teacher with teacher id " & teacherId & " will also be deleted", "Delete Teacher", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If proceedDelete = 6 Then
             Dim insertQuery As String = "delete from teacher where teacherId = " & teacherId
-            Form2.run_query(insertQuery)
-            Form2.table_load("teacher")
+            mainForm.run_query(insertQuery)
+            mainForm.table_load("teacher")
 
             MessageBox.Show("Teacher with teacher ID " & teacherId & " has been deleted.", "Teacher Information Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Clear()

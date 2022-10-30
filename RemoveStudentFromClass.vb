@@ -7,7 +7,7 @@ Public Class RemoveStudentFromClass
         comStudentId.Enabled = False
 
         'load class id
-        Dim classIdData As New SqlDataAdapter(New SqlCommand("SELECT classId FROM class;", Form2.connection))
+        Dim classIdData As New SqlDataAdapter(New SqlCommand("SELECT classId FROM class;", mainForm.connection))
         Dim datatable As New DataTable()
         classIdData.Fill(datatable)
 
@@ -37,8 +37,8 @@ Public Class RemoveStudentFromClass
         Dim proceedDelete As Integer = MessageBox.Show("Student with student ID " & studentId & " will be removed from class with class ID " & classId & ".", "Remove student from class", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If proceedDelete = 6 Then
             Dim insertQuery As String = "delete from enrolled where classId = '" & classId & "'AND studentID = '" & studentId & "' ;"
-            Form2.run_query(insertQuery)
-            Form2.table_load("enrolled")
+            mainForm.run_query(insertQuery)
+            mainForm.table_load("enrolled")
 
             MessageBox.Show("Student with student ID " & studentId & " has been removed from class with class ID " & classId & ".", "Student Removed from Class.", MessageBoxButtons.OK, MessageBoxIcon.Information)
             load_studentList()
@@ -53,7 +53,7 @@ Public Class RemoveStudentFromClass
     Private Sub load_studentList()
         comStudentId.Items.Clear()
 
-        Dim stuIdData As New SqlDataAdapter(New SqlCommand("SELECT studentId FROM enrolled where classId = '" & comClassId.SelectedItem & "' ;", Form2.connection))
+        Dim stuIdData As New SqlDataAdapter(New SqlCommand("SELECT studentId FROM enrolled where classId = '" & comClassId.SelectedItem & "' ;", mainForm.connection))
         Dim datatable As New DataTable()
         stuIdData.Fill(datatable)
 

@@ -9,7 +9,7 @@ Public Class UpdatePeriod
 
     Private Sub load_PeriodIdComboBox()
         comPeriodId.Items.Clear()
-        Dim da As New SqlDataAdapter(New SqlCommand("SELECT distinct periodId FROM period;", Form2.connection))
+        Dim da As New SqlDataAdapter(New SqlCommand("SELECT distinct periodId FROM period;", mainForm.connection))
         Dim datatable As New DataTable()
         da.Fill(datatable)
 
@@ -26,7 +26,7 @@ Public Class UpdatePeriod
     End Sub
 
     Private Sub load_SubjectCombobox()
-        Dim da As New SqlDataAdapter(New SqlCommand("SELECT subjectId FROM subject;", Form2.connection))
+        Dim da As New SqlDataAdapter(New SqlCommand("SELECT subjectId FROM subject;", mainForm.connection))
         Dim datatable As New DataTable()
         da.Fill(datatable)
 
@@ -68,12 +68,12 @@ Public Class UpdatePeriod
         End Select
 
         comDay.Items.Clear()
-        Dim da1 As New SqlDataAdapter(New SqlCommand("SELECT distinct periodDay FROM period where periodId = " & comPeriodId.SelectedItem & ";", Form2.connection))
+        Dim da1 As New SqlDataAdapter(New SqlCommand("SELECT distinct periodDay FROM period where periodId = " & comPeriodId.SelectedItem & ";", mainForm.connection))
         Dim datatable1 As New DataTable()
         da1.Fill(datatable1)
 
         For i As Integer = 0 To datatable1.Rows.Count - 1
-            comDay.Items.Add(DataTable1.Rows(i).Item(0))
+            comDay.Items.Add(datatable1.Rows(i).Item(0))
         Next
 
         comDay.SelectedIndex = 0
@@ -85,7 +85,7 @@ Public Class UpdatePeriod
 
     Private Sub comDay_SelectedIndexChanged(sender As Object, e As EventArgs) Handles comDay.SelectedIndexChanged
         comClassId.Items.Clear()
-        Dim data As New SqlDataAdapter(New SqlCommand("SELECT distinct classId FROM period where periodId = " & comPeriodId.SelectedItem & "AND periodDay = '" & comDay.SelectedItem & "' ;", Form2.connection))
+        Dim data As New SqlDataAdapter(New SqlCommand("SELECT distinct classId FROM period where periodId = " & comPeriodId.SelectedItem & "AND periodDay = '" & comDay.SelectedItem & "' ;", mainForm.connection))
         Dim datatable2 As New DataTable()
         data.Fill(datatable2)
 
@@ -103,8 +103,8 @@ Public Class UpdatePeriod
         Dim subjectId As String = "'" & comSubjectId.SelectedItem & "'"
 
         Dim insertQuery As String = "update period set subjectId = " & subjectId & " where periodId = " & periodId & "AND periodDay = " & day & "AND classId = " & classId & " ;"
-        Form2.run_query(insertQuery)
-        Form2.table_load("period")
+        mainForm.run_query(insertQuery)
+        mainForm.table_load("period")
 
         MessageBox.Show("The subject at period " & periodId & " on " & day & " at " & txtTime.Text & " for class " & classId & "change to " & subjectId, "Period Updated", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub

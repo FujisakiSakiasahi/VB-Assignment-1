@@ -17,7 +17,7 @@ Public Class DeleteStudent
                 Else
                     studentId = txtStudentId.Text
 
-                    Dim da As SqlDataAdapter = New SqlDataAdapter(New SqlCommand("select * from student where stuId = " & studentId & " ;", Form2.connection))
+                    Dim da As SqlDataAdapter = New SqlDataAdapter(New SqlCommand("select * from student where stuId = " & studentId & " ;", mainForm.connection))
                     Dim datatable As New DataTable()
                     da.Fill(datatable)
 
@@ -85,12 +85,12 @@ Public Class DeleteStudent
         Dim proceedDelete As Integer = MessageBox.Show("All data that binds with student with student id " & studentId & " will also be deleted", "Delete Student", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If proceedDelete = 6 Then
             Dim insertQuery As String = "delete from marks where studentId = " & studentId
-            Form2.run_query(insertQuery)
+            mainForm.run_query(insertQuery)
             insertQuery = "delete from enrolled where studentId = " & studentId
-            Form2.run_query(insertQuery)
+            mainForm.run_query(insertQuery)
             insertQuery = "delete from student where stuId = " & studentId
-            Form2.run_query(insertQuery)
-            Form2.table_load("student")
+            mainForm.run_query(insertQuery)
+            mainForm.table_load("student")
 
             MessageBox.Show("Student with student ID" & studentId & "has been deleted.", "Student Information Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information)
             clear()

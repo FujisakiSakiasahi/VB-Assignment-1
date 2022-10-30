@@ -1,9 +1,9 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
-Public Class Form2
+Public Class mainForm
     'Establish connection with the database server
-    'Public connection As New SqlConnection("Server=BRUH-LAPTOP\SQLEXPRESS04 ; Database=SchoolDb ; Integrated Security = TRUE")
-    Public connection As New SqlConnection("Server=localhost\SQLEXPRESS ; Database=SchoolDb ; Integrated Security = TRUE")
+    Public connection As New SqlConnection("Server=BRUH-LAPTOP\SQLEXPRESS04 ; Database=SchoolDb ; Integrated Security = TRUE")
+    'Public connection As New SqlConnection("Server=localhost\SQLEXPRESS ; Database=SchoolDb ; Integrated Security = TRUE")
 
     'function use to run sql query
     Public Sub run_query(query As String)

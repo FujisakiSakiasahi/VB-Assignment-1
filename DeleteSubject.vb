@@ -8,12 +8,12 @@ Public Class DeleteSubject
         Dim proceedSubject As Integer = MessageBox.Show("All data that binds with class with class id " & subjectId & " will also be deleted", "Delete Subject", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If proceedSubject = 6 Then
             Dim insertQuery As String = "delete from marks where subjectId = '" & subjectId & "'"
-            Form2.run_query(insertQuery)
+            mainForm.run_query(insertQuery)
             insertQuery = "delete from period where subjectId = '" & subjectId & "'"
-            Form2.run_query(insertQuery)
+            mainForm.run_query(insertQuery)
             insertQuery = "delete from subject where subjectId = '" & subjectId & "'"
-            Form2.run_query(insertQuery)
-            Form2.table_load("subject")
+            mainForm.run_query(insertQuery)
+            mainForm.table_load("subject")
 
             MessageBox.Show("Subject with subject ID" & subjectId & "has been deleted.", "Subject Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information)
             load_combobox()
@@ -27,7 +27,7 @@ Public Class DeleteSubject
     Private Sub load_combobox()
         comSubjectId.Items.Clear()
 
-        Dim da As New SqlDataAdapter(New SqlCommand("select * from subject", Form2.connection))
+        Dim da As New SqlDataAdapter(New SqlCommand("select * from subject", mainForm.connection))
         Dim datatable As New DataTable()
         da.Fill(datatable)
 
@@ -44,7 +44,7 @@ Public Class DeleteSubject
     End Sub
 
     Private Sub comSubjectId_SelectedIndexChanged(sender As Object, e As EventArgs) Handles comSubjectId.SelectedIndexChanged
-        Dim da As New SqlDataAdapter(New SqlCommand("select * from subject", Form2.connection))
+        Dim da As New SqlDataAdapter(New SqlCommand("select * from subject", mainForm.connection))
         Dim datatable As New DataTable()
         da.Fill(datatable)
 

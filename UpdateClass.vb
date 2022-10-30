@@ -2,11 +2,11 @@
 Imports System.Data.SqlClient
 Public Class UpdateClass
     Private Sub UpdateClass_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim stuIdData As New SqlDataAdapter(New SqlCommand("SELECT studentId FROM enrolled;", Form2.connection))
+        Dim stuIdData As New SqlDataAdapter(New SqlCommand("SELECT studentId FROM enrolled;", mainForm.connection))
         Dim datatable As New DataTable()
         stuIdData.Fill(datatable)
 
-        Dim classIdData As New SqlDataAdapter(New SqlCommand("SELECT classId FROM class;", Form2.connection))
+        Dim classIdData As New SqlDataAdapter(New SqlCommand("SELECT classId FROM class;", mainForm.connection))
         Dim datatable2 As New DataTable()
         classIdData.Fill(datatable2)
 
@@ -41,10 +41,10 @@ Public Class UpdateClass
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         Dim studentId As Integer = comStudentId.SelectedItem
         Dim classId As String = "'" & comClassId.SelectedItem.ToString & "'"
-        Dim stuIdAndClassIdData As New SqlDataAdapter(New SqlCommand("UPDATE enrolled SET classId = " & classId & " where studentId = " & studentId & " ;", Form2.connection))
+        Dim stuIdAndClassIdData As New SqlDataAdapter(New SqlCommand("UPDATE enrolled SET classId = " & classId & " where studentId = " & studentId & " ;", mainForm.connection))
         Dim datatable As New DataTable()
         stuIdAndClassIdData.Fill(datatable)
-        Form2.table_load("enrolled")
+        mainForm.table_load("enrolled")
 
         MessageBox.Show("Student with student ID " & studentId & "has been move to class with class ID " & classId & ".", "Student Detail Updated", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub

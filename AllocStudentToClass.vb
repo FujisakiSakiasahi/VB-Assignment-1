@@ -8,22 +8,22 @@ Public Class AllocStudentToClass
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Dim studentId As Integer = comStudentId.SelectedItem
         Dim classId As String = "'" & comClassId.SelectedItem.ToString & "'"
-        Dim stuIdAndClassIdData As New SqlDataAdapter(New SqlCommand("Select * FROM enrolled WHERE studentId = " & studentId & "AND classId = " & classId & ";", Form2.connection))
+        Dim stuIdAndClassIdData As New SqlDataAdapter(New SqlCommand("Select * FROM enrolled WHERE studentId = " & studentId & "AND classId = " & classId & ";", mainForm.connection))
         Dim datatable As New DataTable()
         stuIdAndClassIdData.Fill(datatable)
 
 
         If Not (datatable.Rows.Count > 0) Then
             ' if there is no existing data that has the same combination of studentId and classId inputted, create new datatable
-            Dim stuIdData As New SqlDataAdapter(New SqlCommand("Select studentId FROM enrolled WHERE studentId = " & studentId & ";", Form2.connection))
+            Dim stuIdData As New SqlDataAdapter(New SqlCommand("Select studentId FROM enrolled WHERE studentId = " & studentId & ";", mainForm.connection))
             Dim datatable2 As New DataTable()
             stuIdData.Fill(datatable2)
 
             If Not (datatable2.Rows.Count > 0) Then
                 ' if studentId does not already exist in the table, create new data
                 Dim insertQuery2 As String = "INSERT INTO enrolled VALUES (" & studentId & "," & classId & ");"
-                Form2.run_query(insertQuery2)
-                Form2.table_load("enrolled")
+                mainForm.run_query(insertQuery2)
+                mainForm.table_load("enrolled")
 
                 MessageBox.Show("Student " & studentId & " has been added to class " & classId & ".", "Student allocated", MessageBoxButtons.OK, MessageBoxIcon.Information)
             ElseIf comStudentId.SelectedItem.ToString = datatable2.Rows(0).Item(0).ToString Then
@@ -37,11 +37,11 @@ Public Class AllocStudentToClass
     End Sub
 
     Private Sub AllocStudentToClass_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim stuIdData As New SqlDataAdapter(New SqlCommand("SELECT stuId FROM student;", Form2.connection))
+        Dim stuIdData As New SqlDataAdapter(New SqlCommand("SELECT stuId FROM student;", mainForm.connection))
         Dim datatable As New DataTable()
         stuIdData.Fill(datatable)
 
-        Dim classIdData As New SqlDataAdapter(New SqlCommand("SELECT classId FROM class;", Form2.connection))
+        Dim classIdData As New SqlDataAdapter(New SqlCommand("SELECT classId FROM class;", mainForm.connection))
         Dim datatable2 As New DataTable()
         classIdData.Fill(datatable2)
 

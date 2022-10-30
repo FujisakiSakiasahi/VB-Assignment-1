@@ -22,22 +22,22 @@ Public Class AddPeriod
         Dim classId As String = "'" & comClassId.SelectedItem.ToString & "'"
         Dim subjectId As String = "'" & comSubjectId.SelectedItem.ToString & "'"
 
-        Dim periodData As New SqlDataAdapter(New SqlCommand("SELECT * FROM period WHERE periodId = " & periodId & " AND periodDay = " & day & " AND classId = " & classId & " AND subjectId = " & subjectId & ";", Form2.connection))
+        Dim periodData As New SqlDataAdapter(New SqlCommand("SELECT * FROM period WHERE periodId = " & periodId & " AND periodDay = " & day & " AND classId = " & classId & " AND subjectId = " & subjectId & ";", mainForm.connection))
         Dim datatable As New DataTable()
         periodData.Fill(datatable)
 
 
         If Not (datatable.Rows.Count > 0) Then
 
-            Dim periodData2 As New SqlDataAdapter(New SqlCommand("SELECT * FROM period WHERE periodId = " & periodId & " AND periodDay = " & day & " AND classId = " & classId & ";", Form2.connection))
+            Dim periodData2 As New SqlDataAdapter(New SqlCommand("SELECT * FROM period WHERE periodId = " & periodId & " AND periodDay = " & day & " AND classId = " & classId & ";", mainForm.connection))
             Dim datatable2 As New DataTable()
             periodData2.Fill(datatable2)
 
             If Not (datatable2.Rows.Count > 0) Then
 
                 Dim insertQuery As String = "INSERT INTO period VALUES (" & periodId & "," & day & "," & time & "," & classId & "," & subjectId & ");"
-                Form2.run_query(insertQuery)
-                Form2.table_load("period")
+                mainForm.run_query(insertQuery)
+                mainForm.table_load("period")
 
                 MessageBox.Show("New period created.", "Period created", MessageBoxButtons.OK, MessageBoxIcon.Information)
             ElseIf comPeriodId.SelectedItem.ToString = datatable2.Rows(0).Item(0).ToString And day.Substring(1, 3) = datatable2.Rows(0).Item(1).ToString And comClassId.SelectedItem.ToString = datatable2.Rows(0).Item(3).ToString Then
@@ -48,8 +48,8 @@ Public Class AddPeriod
                 MessageBox.Show("Period already exists. Please check if any input is incorrect.", "Period Already Exists", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Else
                 Dim insertQuery As String = "INSERT INTO period VALUES (" & periodId & "," & day & "," & time & "," & classId & "," & subjectId & ");"
-                Form2.run_query(insertQuery)
-                Form2.table_load("period")
+                mainForm.run_query(insertQuery)
+                mainForm.table_load("period")
 
                 MessageBox.Show("New period created.", "Period created", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
@@ -92,11 +92,11 @@ Public Class AddPeriod
     End Sub
 
     Private Sub AddPeriod_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim classIdData As New SqlDataAdapter(New SqlCommand("SELECT classId FROM class;", Form2.connection))
+        Dim classIdData As New SqlDataAdapter(New SqlCommand("SELECT classId FROM class;", mainForm.connection))
         Dim datatable As New DataTable()
         classIdData.Fill(datatable)
 
-        Dim subjectIdData As New SqlDataAdapter(New SqlCommand("SELECT subjectId FROM subject;", Form2.connection))
+        Dim subjectIdData As New SqlDataAdapter(New SqlCommand("SELECT subjectId FROM subject;", mainForm.connection))
         Dim datatable2 As New DataTable()
         subjectIdData.Fill(datatable2)
 

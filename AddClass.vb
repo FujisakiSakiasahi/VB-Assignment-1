@@ -8,14 +8,14 @@ Public Class AddClass
             MessageBox.Show("Class ID can only support up to a maximum of 2 characters.", "Invalid Class ID", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
             Dim classId As String = "'" & txtClassId.Text & "'"
-            Dim classIdData As New SqlDataAdapter(New SqlCommand("SELECT classId FROM class WHERE classId = " & classId & ";", Form2.connection))
+            Dim classIdData As New SqlDataAdapter(New SqlCommand("SELECT classId FROM class WHERE classId = " & classId & ";", mainForm.connection))
             Dim datatable As New DataTable()
             classIdData.Fill(datatable)
 
             If Not (datatable.Rows.Count > 0) Then
                 Dim retreiveQuery As String = "INSERT INTO class values (" & classId & ");"
-                Form2.run_query(retreiveQuery)
-                Form2.table_load("class")
+                mainForm.run_query(retreiveQuery)
+                mainForm.table_load("class")
 
                 MessageBox.Show("Added New Class " & classId & ".", "New Class Added", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 clear()
@@ -24,8 +24,8 @@ Public Class AddClass
                     MessageBox.Show("Class ID already exists. Please enter a new class ID.", "Class ID Already Exists", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Else
                     Dim insertQuery As String = "INSERT INTO class values (" & classId & ");"
-                    Form2.run_query(insertQuery)
-                    Form2.table_load("class")
+                    mainForm.run_query(insertQuery)
+                    mainForm.table_load("class")
 
                     MessageBox.Show("Added New Class " & classId & ".", "New Class Added", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     clear()

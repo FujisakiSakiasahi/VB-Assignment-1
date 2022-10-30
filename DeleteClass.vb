@@ -16,12 +16,12 @@ Public Class DeleteClass
         Dim proceedDelete As Integer = MessageBox.Show("All data that binds with class with class id " & classId & " will also be deleted", "Delete Class", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If proceedDelete = 6 Then
             Dim insertQuery As String = "delete from enrolled where classId = '" & classId & "'"
-            Form2.run_query(insertQuery)
+            mainForm.run_query(insertQuery)
             insertQuery = "delete from period where classId = '" & classId & "'"
-            Form2.run_query(insertQuery)
+            mainForm.run_query(insertQuery)
             insertQuery = "delete from class where classId = '" & classId & "'"
-            Form2.run_query(insertQuery)
-            Form2.table_load("enrolled")
+            mainForm.run_query(insertQuery)
+            mainForm.table_load("enrolled")
 
             MessageBox.Show("Class with class ID " & classId & " has been deleted.", "Class Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information)
             load_combobox()
@@ -31,7 +31,7 @@ Public Class DeleteClass
     Private Sub load_combobox()
         comClassId.Items.Clear()
 
-        Dim da As New SqlDataAdapter(New SqlCommand("select * from class", Form2.connection))
+        Dim da As New SqlDataAdapter(New SqlCommand("select * from class", mainForm.connection))
         Dim datatable As New DataTable()
         da.Fill(datatable)
 

@@ -52,15 +52,15 @@ Public Class AddStudent
                                     Dim teamColour As String = "'" & comTeam.SelectedItem.ToString.ToLower & "'"
 
                                     ' retreive data from Database to check if data already exists in the Database
-                                    Dim studentIdData As New SqlDataAdapter(New SqlCommand("SELECT stuId FROM student WHERE stuId = " & studentId & ";", Form2.connection))
+                                    Dim studentIdData As New SqlDataAdapter(New SqlCommand("SELECT stuId FROM student WHERE stuId = " & studentId & ";", mainForm.connection))
                                     Dim datatable As New DataTable()
                                     studentIdData.Fill(datatable)
 
                                     If Not (datatable.Rows.Count > 0) Then
                                         ' if data inputted is not similar to data in database, insert the new data into database
                                         Dim insertQuery As String = "INSERT INTO student values (" & studentId & "," & stuName & "," & age & "," & yearEnrolled & "," & gender & "," & teamColour & ");"
-                                        Form2.run_query(insertQuery)
-                                        Form2.table_load("student")
+                                        mainForm.run_query(insertQuery)
+                                        mainForm.table_load("student")
 
                                         MessageBox.Show("Added New Student " & stuName & ".", "New Student Added", MessageBoxButtons.OK, MessageBoxIcon.Information)
                                         clear()
@@ -70,8 +70,8 @@ Public Class AddStudent
                                             MessageBox.Show("Student ID already exists. Please enter a new student ID.", "Student ID Already Exists", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                                         Else
                                             Dim insertQuery As String = "INSERT INTO student values (" & studentId & "," & stuName & "," & age & "," & yearEnrolled & "," & gender & "," & teamColour & ");"
-                                            Form2.run_query(insertQuery)
-                                            Form2.table_load("student")
+                                            mainForm.run_query(insertQuery)
+                                            mainForm.table_load("student")
 
                                             MessageBox.Show("Added New Student " & stuName & ".", "New Student Added", MessageBoxButtons.OK, MessageBoxIcon.Information)
                                             clear()
