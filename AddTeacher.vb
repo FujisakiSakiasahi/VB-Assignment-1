@@ -8,17 +8,21 @@ Public Class AddTeacher
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        If String.IsNullOrEmpty(txtTeacherName.Text) Or String.IsNullOrEmpty(txtTeacherId.Text) Then ' checking for empty fields
+        If String.IsNullOrEmpty(txtTeacherName.Text) Or String.IsNullOrEmpty(txtTeacherId.Text) Then
+            ' checking for empty fields
             MessageBox.Show("One or more fields are empty. Please provide information for these fields.", "Empty Fields", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
             If IsNumeric(txtTeacherId.Text) = False Then
+                ' checking if input is numeric
                 MessageBox.Show("Teacher ID should not include characters or symbols. Please enter number in range of 1000 - 9999.", "Invalid Teacher ID", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Else
                 Dim teacherId As Integer = txtTeacherId.Text
 
-                If Not (teacherId >= 1000 And teacherId <= 9999) Then   ' id range checking
+                If Not (teacherId >= 1000 And teacherId <= 9999) Then
+                    'teacher id range checking
                     MessageBox.Show("Teacher ID out of range. Please enter number in range of 1000 - 9999.", "Invalid Teacher ID", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Else
+                    ' retreive data from Database to check if data already exists in the Database
                     Dim teacherIdData As New SqlDataAdapter(New SqlCommand("SELECT teacherId FROM teacher WHERE teacherId = " & teacherId & ";", mainForm.connection))
                     Dim datatable As New DataTable()
                     teacherIdData.Fill(datatable)
@@ -32,6 +36,7 @@ Public Class AddTeacher
                     End If
 
                     If Not (datatable.Rows.Count > 0) Then
+                        ' data does not exist in database, insert into database
                         Dim insertQuery As String = "INSERT INTO teacher values (" & teacherId & "," & teacherName & "," & gender & ");"
                         mainForm.run_query(insertQuery)
                         mainForm.table_load("teacher")
@@ -40,6 +45,7 @@ Public Class AddTeacher
                         clear()
                     Else
                         If CStr(CInt(txtTeacherId.Text)) = datatable.Rows(0).Item(0).ToString Then
+                            ' if teacher id already exists in the database, show error
                             MessageBox.Show("Teacher ID already exists. Please enter a new teacher ID.", "Teacher ID Already Exists", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                         Else
                             Dim insertQuery As String = "INSERT INTO teacher values (" & teacherId & "," & teacherName & "," & gender & ");"
@@ -50,8 +56,6 @@ Public Class AddTeacher
                             clear()
                         End If
                     End If
-
-
                 End If
             End If
         End If
