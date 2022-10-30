@@ -62,6 +62,7 @@ Public Class UpdateStudent
                         radMale.Enabled = True
                         radFemale.Enabled = True
                         comTeam.Enabled = True
+                        btnUpdate.Enabled = True
 
                     Else
                         'no result
@@ -137,6 +138,7 @@ Public Class UpdateStudent
         radMale.Enabled = False
         radFemale.Enabled = False
         comTeam.Enabled = False
+        btnUpdate.Enabled = False
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
