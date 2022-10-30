@@ -79,7 +79,6 @@ Partial Class mainForm
         Me.periodDelete_button = New System.Windows.Forms.Button()
         Me.periodUpdate_button = New System.Windows.Forms.Button()
         Me.periodAdd_button = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.tab_control.SuspendLayout()
         Me.student_tab.SuspendLayout()
         CType(Me.student_table, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -93,7 +92,6 @@ Partial Class mainForm
         CType(Me.marks_table, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         CType(Me.period_table, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tab_control
@@ -104,11 +102,10 @@ Partial Class mainForm
         Me.tab_control.Controls.Add(Me.subject_tab)
         Me.tab_control.Controls.Add(Me.TabPage1)
         Me.tab_control.Controls.Add(Me.TabPage2)
-        Me.tab_control.Location = New System.Drawing.Point(17, 20)
-        Me.tab_control.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.tab_control.Location = New System.Drawing.Point(12, 12)
         Me.tab_control.Name = "tab_control"
         Me.tab_control.SelectedIndex = 0
-        Me.tab_control.Size = New System.Drawing.Size(1231, 710)
+        Me.tab_control.Size = New System.Drawing.Size(862, 426)
         Me.tab_control.TabIndex = 1
         '
         'student_tab
@@ -121,11 +118,10 @@ Partial Class mainForm
         Me.student_tab.Controls.Add(Me.student_table)
         Me.student_tab.Controls.Add(Me.studentDelete_button)
         Me.student_tab.Controls.Add(Me.studentUpdate_button)
-        Me.student_tab.Location = New System.Drawing.Point(4, 34)
-        Me.student_tab.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.student_tab.Location = New System.Drawing.Point(4, 24)
         Me.student_tab.Name = "student_tab"
-        Me.student_tab.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.student_tab.Size = New System.Drawing.Size(1223, 672)
+        Me.student_tab.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.student_tab.Size = New System.Drawing.Size(854, 398)
         Me.student_tab.TabIndex = 0
         Me.student_tab.Text = "Student"
         Me.student_tab.UseVisualStyleBackColor = True
@@ -134,10 +130,9 @@ Partial Class mainForm
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(843, 10)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(590, 6)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(134, 32)
+        Me.Label4.Size = New System.Drawing.Size(88, 21)
         Me.Label4.TabIndex = 19
         Me.Label4.Text = "Search for: "
         '
@@ -145,36 +140,34 @@ Partial Class mainForm
         '
         Me.studentSearch_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.studentSearch_comboBox.FormattingEnabled = True
-        Me.studentSearch_comboBox.Location = New System.Drawing.Point(976, 10)
-        Me.studentSearch_comboBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.studentSearch_comboBox.Location = New System.Drawing.Point(683, 6)
         Me.studentSearch_comboBox.Name = "studentSearch_comboBox"
-        Me.studentSearch_comboBox.Size = New System.Drawing.Size(234, 33)
+        Me.studentSearch_comboBox.Size = New System.Drawing.Size(165, 23)
         Me.studentSearch_comboBox.TabIndex = 18
         '
         'Label
         '
         Me.Label.AutoSize = True
         Me.Label.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label.Location = New System.Drawing.Point(124, 10)
-        Me.Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label.Location = New System.Drawing.Point(87, 6)
         Me.Label.Name = "Label"
-        Me.Label.Size = New System.Drawing.Size(97, 32)
+        Me.Label.Size = New System.Drawing.Size(64, 21)
         Me.Label.TabIndex = 17
         Me.Label.Text = "Search: "
         '
         'studentSearch_textBox
         '
-        Me.studentSearch_textBox.Location = New System.Drawing.Point(224, 10)
+        Me.studentSearch_textBox.Location = New System.Drawing.Point(157, 6)
+        Me.studentSearch_textBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.studentSearch_textBox.Name = "studentSearch_textBox"
-        Me.studentSearch_textBox.Size = New System.Drawing.Size(604, 31)
+        Me.studentSearch_textBox.Size = New System.Drawing.Size(424, 23)
         Me.studentSearch_textBox.TabIndex = 16
         '
         'studentAdd_button
         '
-        Me.studentAdd_button.Location = New System.Drawing.Point(9, 10)
-        Me.studentAdd_button.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.studentAdd_button.Location = New System.Drawing.Point(6, 6)
         Me.studentAdd_button.Name = "studentAdd_button"
-        Me.studentAdd_button.Size = New System.Drawing.Size(107, 38)
+        Me.studentAdd_button.Size = New System.Drawing.Size(75, 23)
         Me.studentAdd_button.TabIndex = 11
         Me.studentAdd_button.Text = "Add New"
         Me.studentAdd_button.UseVisualStyleBackColor = True
@@ -182,30 +175,27 @@ Partial Class mainForm
         'student_table
         '
         Me.student_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.student_table.Location = New System.Drawing.Point(124, 57)
-        Me.student_table.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.student_table.Location = New System.Drawing.Point(87, 34)
         Me.student_table.Name = "student_table"
         Me.student_table.RowHeadersWidth = 51
         Me.student_table.RowTemplate.Height = 25
-        Me.student_table.Size = New System.Drawing.Size(1087, 597)
+        Me.student_table.Size = New System.Drawing.Size(761, 358)
         Me.student_table.TabIndex = 10
         '
         'studentDelete_button
         '
-        Me.studentDelete_button.Location = New System.Drawing.Point(9, 107)
-        Me.studentDelete_button.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.studentDelete_button.Location = New System.Drawing.Point(6, 64)
         Me.studentDelete_button.Name = "studentDelete_button"
-        Me.studentDelete_button.Size = New System.Drawing.Size(107, 38)
+        Me.studentDelete_button.Size = New System.Drawing.Size(75, 23)
         Me.studentDelete_button.TabIndex = 13
         Me.studentDelete_button.Text = "Delete"
         Me.studentDelete_button.UseVisualStyleBackColor = True
         '
         'studentUpdate_button
         '
-        Me.studentUpdate_button.Location = New System.Drawing.Point(9, 58)
-        Me.studentUpdate_button.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.studentUpdate_button.Location = New System.Drawing.Point(6, 35)
         Me.studentUpdate_button.Name = "studentUpdate_button"
-        Me.studentUpdate_button.Size = New System.Drawing.Size(107, 38)
+        Me.studentUpdate_button.Size = New System.Drawing.Size(75, 23)
         Me.studentUpdate_button.TabIndex = 12
         Me.studentUpdate_button.Text = "Update"
         Me.studentUpdate_button.UseVisualStyleBackColor = True
@@ -220,11 +210,10 @@ Partial Class mainForm
         Me.teacher_tab.Controls.Add(Me.teacherUpdate_button)
         Me.teacher_tab.Controls.Add(Me.teacherDelete_button)
         Me.teacher_tab.Controls.Add(Me.teacher_table)
-        Me.teacher_tab.Location = New System.Drawing.Point(4, 34)
-        Me.teacher_tab.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.teacher_tab.Location = New System.Drawing.Point(4, 24)
         Me.teacher_tab.Name = "teacher_tab"
-        Me.teacher_tab.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.teacher_tab.Size = New System.Drawing.Size(1223, 672)
+        Me.teacher_tab.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.teacher_tab.Size = New System.Drawing.Size(854, 398)
         Me.teacher_tab.TabIndex = 1
         Me.teacher_tab.Text = "Teacher"
         Me.teacher_tab.UseVisualStyleBackColor = True
@@ -233,20 +222,18 @@ Partial Class mainForm
         '
         Me.teacherSearch_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.teacherSearch_comboBox.FormattingEnabled = True
-        Me.teacherSearch_comboBox.Location = New System.Drawing.Point(976, 10)
-        Me.teacherSearch_comboBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.teacherSearch_comboBox.Location = New System.Drawing.Point(683, 6)
         Me.teacherSearch_comboBox.Name = "teacherSearch_comboBox"
-        Me.teacherSearch_comboBox.Size = New System.Drawing.Size(234, 33)
+        Me.teacherSearch_comboBox.Size = New System.Drawing.Size(165, 23)
         Me.teacherSearch_comboBox.TabIndex = 13
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label9.Location = New System.Drawing.Point(843, 10)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Location = New System.Drawing.Point(590, 6)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(134, 32)
+        Me.Label9.Size = New System.Drawing.Size(88, 21)
         Me.Label9.TabIndex = 12
         Me.Label9.Text = "Search for: "
         '
@@ -254,47 +241,42 @@ Partial Class mainForm
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(124, 10)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(87, 6)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(97, 32)
+        Me.Label1.Size = New System.Drawing.Size(64, 21)
         Me.Label1.TabIndex = 11
         Me.Label1.Text = "Search: "
         '
         'teacherSearch_textBox
         '
-        Me.teacherSearch_textBox.Location = New System.Drawing.Point(224, 10)
-        Me.teacherSearch_textBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.teacherSearch_textBox.Location = New System.Drawing.Point(157, 6)
         Me.teacherSearch_textBox.Name = "teacherSearch_textBox"
-        Me.teacherSearch_textBox.Size = New System.Drawing.Size(604, 31)
+        Me.teacherSearch_textBox.Size = New System.Drawing.Size(424, 23)
         Me.teacherSearch_textBox.TabIndex = 10
         '
         'teacherAdd_button
         '
-        Me.teacherAdd_button.Location = New System.Drawing.Point(9, 10)
-        Me.teacherAdd_button.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.teacherAdd_button.Location = New System.Drawing.Point(6, 6)
         Me.teacherAdd_button.Name = "teacherAdd_button"
-        Me.teacherAdd_button.Size = New System.Drawing.Size(107, 38)
+        Me.teacherAdd_button.Size = New System.Drawing.Size(75, 23)
         Me.teacherAdd_button.TabIndex = 5
         Me.teacherAdd_button.Text = "Add New"
         Me.teacherAdd_button.UseVisualStyleBackColor = True
         '
         'teacherUpdate_button
         '
-        Me.teacherUpdate_button.Location = New System.Drawing.Point(9, 58)
-        Me.teacherUpdate_button.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.teacherUpdate_button.Location = New System.Drawing.Point(6, 35)
         Me.teacherUpdate_button.Name = "teacherUpdate_button"
-        Me.teacherUpdate_button.Size = New System.Drawing.Size(107, 38)
+        Me.teacherUpdate_button.Size = New System.Drawing.Size(75, 23)
         Me.teacherUpdate_button.TabIndex = 6
         Me.teacherUpdate_button.Text = "Update"
         Me.teacherUpdate_button.UseVisualStyleBackColor = True
         '
         'teacherDelete_button
         '
-        Me.teacherDelete_button.Location = New System.Drawing.Point(9, 107)
-        Me.teacherDelete_button.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.teacherDelete_button.Location = New System.Drawing.Point(6, 64)
         Me.teacherDelete_button.Name = "teacherDelete_button"
-        Me.teacherDelete_button.Size = New System.Drawing.Size(107, 38)
+        Me.teacherDelete_button.Size = New System.Drawing.Size(75, 23)
         Me.teacherDelete_button.TabIndex = 7
         Me.teacherDelete_button.Text = "Delete"
         Me.teacherDelete_button.UseVisualStyleBackColor = True
@@ -302,12 +284,11 @@ Partial Class mainForm
         'teacher_table
         '
         Me.teacher_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.teacher_table.Location = New System.Drawing.Point(124, 57)
-        Me.teacher_table.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.teacher_table.Location = New System.Drawing.Point(87, 34)
         Me.teacher_table.Name = "teacher_table"
         Me.teacher_table.RowHeadersWidth = 51
         Me.teacher_table.RowTemplate.Height = 25
-        Me.teacher_table.Size = New System.Drawing.Size(1087, 597)
+        Me.teacher_table.Size = New System.Drawing.Size(761, 358)
         Me.teacher_table.TabIndex = 1
         '
         'class_tab
@@ -322,30 +303,27 @@ Partial Class mainForm
         Me.class_tab.Controls.Add(Me.classUpdate_button)
         Me.class_tab.Controls.Add(Me.classRemoveStudent_button)
         Me.class_tab.Controls.Add(Me.class_table)
-        Me.class_tab.Location = New System.Drawing.Point(4, 34)
-        Me.class_tab.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.class_tab.Location = New System.Drawing.Point(4, 24)
         Me.class_tab.Name = "class_tab"
-        Me.class_tab.Size = New System.Drawing.Size(1223, 672)
+        Me.class_tab.Size = New System.Drawing.Size(854, 398)
         Me.class_tab.TabIndex = 2
         Me.class_tab.Text = "Class"
         Me.class_tab.UseVisualStyleBackColor = True
         '
         'classAddClass_button
         '
-        Me.classAddClass_button.Location = New System.Drawing.Point(9, 10)
-        Me.classAddClass_button.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.classAddClass_button.Location = New System.Drawing.Point(6, 6)
         Me.classAddClass_button.Name = "classAddClass_button"
-        Me.classAddClass_button.Size = New System.Drawing.Size(107, 38)
+        Me.classAddClass_button.Size = New System.Drawing.Size(75, 23)
         Me.classAddClass_button.TabIndex = 15
         Me.classAddClass_button.Text = "Add Class"
         Me.classAddClass_button.UseVisualStyleBackColor = True
         '
         'classDeleteClass_button
         '
-        Me.classDeleteClass_button.Location = New System.Drawing.Point(9, 58)
-        Me.classDeleteClass_button.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.classDeleteClass_button.Location = New System.Drawing.Point(6, 35)
         Me.classDeleteClass_button.Name = "classDeleteClass_button"
-        Me.classDeleteClass_button.Size = New System.Drawing.Size(107, 38)
+        Me.classDeleteClass_button.Size = New System.Drawing.Size(75, 23)
         Me.classDeleteClass_button.TabIndex = 14
         Me.classDeleteClass_button.Text = "Delete Class"
         Me.classDeleteClass_button.UseVisualStyleBackColor = True
@@ -354,10 +332,9 @@ Partial Class mainForm
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label10.Location = New System.Drawing.Point(843, 10)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Location = New System.Drawing.Point(590, 6)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(134, 32)
+        Me.Label10.Size = New System.Drawing.Size(88, 21)
         Me.Label10.TabIndex = 13
         Me.Label10.Text = "Search for: "
         '
@@ -365,57 +342,51 @@ Partial Class mainForm
         '
         Me.classSearch_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.classSearch_comboBox.FormattingEnabled = True
-        Me.classSearch_comboBox.Location = New System.Drawing.Point(976, 10)
-        Me.classSearch_comboBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.classSearch_comboBox.Location = New System.Drawing.Point(683, 6)
         Me.classSearch_comboBox.Name = "classSearch_comboBox"
-        Me.classSearch_comboBox.Size = New System.Drawing.Size(234, 33)
+        Me.classSearch_comboBox.Size = New System.Drawing.Size(165, 23)
         Me.classSearch_comboBox.TabIndex = 12
         '
         'classSearch_textBox
         '
-        Me.classSearch_textBox.Location = New System.Drawing.Point(224, 10)
-        Me.classSearch_textBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.classSearch_textBox.Location = New System.Drawing.Point(157, 6)
         Me.classSearch_textBox.Name = "classSearch_textBox"
-        Me.classSearch_textBox.Size = New System.Drawing.Size(604, 31)
+        Me.classSearch_textBox.Size = New System.Drawing.Size(424, 23)
         Me.classSearch_textBox.TabIndex = 11
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(124, 10)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(87, 6)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(97, 32)
+        Me.Label2.Size = New System.Drawing.Size(64, 21)
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "Search: "
         '
         'classAllocStudent_button
         '
-        Me.classAllocStudent_button.Location = New System.Drawing.Point(9, 107)
-        Me.classAllocStudent_button.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.classAllocStudent_button.Location = New System.Drawing.Point(6, 64)
         Me.classAllocStudent_button.Name = "classAllocStudent_button"
-        Me.classAllocStudent_button.Size = New System.Drawing.Size(107, 38)
+        Me.classAllocStudent_button.Size = New System.Drawing.Size(75, 23)
         Me.classAllocStudent_button.TabIndex = 5
         Me.classAllocStudent_button.Text = "Allocate Student"
         Me.classAllocStudent_button.UseVisualStyleBackColor = True
         '
         'classUpdate_button
         '
-        Me.classUpdate_button.Location = New System.Drawing.Point(9, 155)
-        Me.classUpdate_button.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.classUpdate_button.Location = New System.Drawing.Point(6, 93)
         Me.classUpdate_button.Name = "classUpdate_button"
-        Me.classUpdate_button.Size = New System.Drawing.Size(107, 38)
+        Me.classUpdate_button.Size = New System.Drawing.Size(75, 23)
         Me.classUpdate_button.TabIndex = 6
         Me.classUpdate_button.Text = "Update"
         Me.classUpdate_button.UseVisualStyleBackColor = True
         '
         'classRemoveStudent_button
         '
-        Me.classRemoveStudent_button.Location = New System.Drawing.Point(9, 203)
-        Me.classRemoveStudent_button.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.classRemoveStudent_button.Location = New System.Drawing.Point(6, 122)
         Me.classRemoveStudent_button.Name = "classRemoveStudent_button"
-        Me.classRemoveStudent_button.Size = New System.Drawing.Size(107, 38)
+        Me.classRemoveStudent_button.Size = New System.Drawing.Size(75, 23)
         Me.classRemoveStudent_button.TabIndex = 7
         Me.classRemoveStudent_button.Text = "Remove Student"
         Me.classRemoveStudent_button.UseVisualStyleBackColor = True
@@ -423,12 +394,11 @@ Partial Class mainForm
         'class_table
         '
         Me.class_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.class_table.Location = New System.Drawing.Point(124, 57)
-        Me.class_table.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.class_table.Location = New System.Drawing.Point(87, 34)
         Me.class_table.Name = "class_table"
         Me.class_table.RowHeadersWidth = 51
         Me.class_table.RowTemplate.Height = 25
-        Me.class_table.Size = New System.Drawing.Size(1087, 597)
+        Me.class_table.Size = New System.Drawing.Size(761, 358)
         Me.class_table.TabIndex = 1
         '
         'subject_tab
@@ -441,10 +411,9 @@ Partial Class mainForm
         Me.subject_tab.Controls.Add(Me.subjectUpdate_button)
         Me.subject_tab.Controls.Add(Me.subjectDelete_button)
         Me.subject_tab.Controls.Add(Me.subject_table)
-        Me.subject_tab.Location = New System.Drawing.Point(4, 34)
-        Me.subject_tab.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.subject_tab.Location = New System.Drawing.Point(4, 24)
         Me.subject_tab.Name = "subject_tab"
-        Me.subject_tab.Size = New System.Drawing.Size(1223, 672)
+        Me.subject_tab.Size = New System.Drawing.Size(854, 398)
         Me.subject_tab.TabIndex = 3
         Me.subject_tab.Text = "Subject"
         Me.subject_tab.UseVisualStyleBackColor = True
@@ -453,68 +422,61 @@ Partial Class mainForm
         '
         Me.subjectSearch_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.subjectSearch_comboBox.FormattingEnabled = True
-        Me.subjectSearch_comboBox.Location = New System.Drawing.Point(976, 10)
-        Me.subjectSearch_comboBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.subjectSearch_comboBox.Location = New System.Drawing.Point(683, 6)
         Me.subjectSearch_comboBox.Name = "subjectSearch_comboBox"
-        Me.subjectSearch_comboBox.Size = New System.Drawing.Size(234, 33)
+        Me.subjectSearch_comboBox.Size = New System.Drawing.Size(165, 23)
         Me.subjectSearch_comboBox.TabIndex = 13
         '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label11.Location = New System.Drawing.Point(843, 10)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label11.Location = New System.Drawing.Point(590, 6)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(134, 32)
+        Me.Label11.Size = New System.Drawing.Size(88, 21)
         Me.Label11.TabIndex = 12
         Me.Label11.Text = "Search for: "
         '
         'subjectSearch_textBox
         '
-        Me.subjectSearch_textBox.Location = New System.Drawing.Point(224, 10)
-        Me.subjectSearch_textBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.subjectSearch_textBox.Location = New System.Drawing.Point(157, 6)
         Me.subjectSearch_textBox.Name = "subjectSearch_textBox"
-        Me.subjectSearch_textBox.Size = New System.Drawing.Size(604, 31)
+        Me.subjectSearch_textBox.Size = New System.Drawing.Size(424, 23)
         Me.subjectSearch_textBox.TabIndex = 11
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(124, 10)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(87, 6)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(90, 32)
+        Me.Label3.Size = New System.Drawing.Size(60, 21)
         Me.Label3.TabIndex = 10
         Me.Label3.Text = "Search:"
         '
         'subjectAdd_button
         '
-        Me.subjectAdd_button.Location = New System.Drawing.Point(9, 10)
-        Me.subjectAdd_button.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.subjectAdd_button.Location = New System.Drawing.Point(6, 6)
         Me.subjectAdd_button.Name = "subjectAdd_button"
-        Me.subjectAdd_button.Size = New System.Drawing.Size(107, 38)
+        Me.subjectAdd_button.Size = New System.Drawing.Size(75, 23)
         Me.subjectAdd_button.TabIndex = 5
         Me.subjectAdd_button.Text = "Add New"
         Me.subjectAdd_button.UseVisualStyleBackColor = True
         '
         'subjectUpdate_button
         '
-        Me.subjectUpdate_button.Location = New System.Drawing.Point(9, 58)
-        Me.subjectUpdate_button.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.subjectUpdate_button.Location = New System.Drawing.Point(6, 35)
         Me.subjectUpdate_button.Name = "subjectUpdate_button"
-        Me.subjectUpdate_button.Size = New System.Drawing.Size(107, 38)
+        Me.subjectUpdate_button.Size = New System.Drawing.Size(75, 23)
         Me.subjectUpdate_button.TabIndex = 6
         Me.subjectUpdate_button.Text = "Update"
         Me.subjectUpdate_button.UseVisualStyleBackColor = True
         '
         'subjectDelete_button
         '
-        Me.subjectDelete_button.Location = New System.Drawing.Point(9, 107)
-        Me.subjectDelete_button.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.subjectDelete_button.Location = New System.Drawing.Point(6, 64)
         Me.subjectDelete_button.Name = "subjectDelete_button"
-        Me.subjectDelete_button.Size = New System.Drawing.Size(107, 38)
+        Me.subjectDelete_button.Size = New System.Drawing.Size(75, 23)
         Me.subjectDelete_button.TabIndex = 7
         Me.subjectDelete_button.Text = "Delete"
         Me.subjectDelete_button.UseVisualStyleBackColor = True
@@ -522,12 +484,11 @@ Partial Class mainForm
         'subject_table
         '
         Me.subject_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.subject_table.Location = New System.Drawing.Point(124, 57)
-        Me.subject_table.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.subject_table.Location = New System.Drawing.Point(87, 34)
         Me.subject_table.Name = "subject_table"
         Me.subject_table.RowHeadersWidth = 51
         Me.subject_table.RowTemplate.Height = 25
-        Me.subject_table.Size = New System.Drawing.Size(1087, 597)
+        Me.subject_table.Size = New System.Drawing.Size(761, 358)
         Me.subject_table.TabIndex = 1
         '
         'TabPage1
@@ -540,11 +501,10 @@ Partial Class mainForm
         Me.TabPage1.Controls.Add(Me.marksDelete_button)
         Me.TabPage1.Controls.Add(Me.marksUpdate_button)
         Me.TabPage1.Controls.Add(Me.marksAdd_button)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 34)
-        Me.TabPage1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 24)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TabPage1.Size = New System.Drawing.Size(1223, 672)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage1.Size = New System.Drawing.Size(854, 398)
         Me.TabPage1.TabIndex = 4
         Me.TabPage1.Text = "Marks"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -553,10 +513,9 @@ Partial Class mainForm
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label8.Location = New System.Drawing.Point(843, 10)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(590, 6)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(134, 32)
+        Me.Label8.Size = New System.Drawing.Size(88, 21)
         Me.Label8.TabIndex = 7
         Me.Label8.Text = "Search for: "
         '
@@ -564,68 +523,61 @@ Partial Class mainForm
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label7.Location = New System.Drawing.Point(124, 10)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(87, 6)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(97, 32)
+        Me.Label7.Size = New System.Drawing.Size(64, 21)
         Me.Label7.TabIndex = 6
         Me.Label7.Text = "Search: "
         '
         'marks_table
         '
         Me.marks_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.marks_table.Location = New System.Drawing.Point(124, 57)
-        Me.marks_table.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.marks_table.Location = New System.Drawing.Point(87, 34)
         Me.marks_table.Name = "marks_table"
         Me.marks_table.RowHeadersWidth = 62
         Me.marks_table.RowTemplate.Height = 25
-        Me.marks_table.Size = New System.Drawing.Size(1087, 597)
+        Me.marks_table.Size = New System.Drawing.Size(761, 358)
         Me.marks_table.TabIndex = 5
         '
         'marksSearch_comboBox
         '
         Me.marksSearch_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.marksSearch_comboBox.FormattingEnabled = True
-        Me.marksSearch_comboBox.Location = New System.Drawing.Point(976, 10)
-        Me.marksSearch_comboBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.marksSearch_comboBox.Location = New System.Drawing.Point(683, 6)
         Me.marksSearch_comboBox.Name = "marksSearch_comboBox"
-        Me.marksSearch_comboBox.Size = New System.Drawing.Size(234, 33)
+        Me.marksSearch_comboBox.Size = New System.Drawing.Size(165, 23)
         Me.marksSearch_comboBox.TabIndex = 4
         '
         'marksSearch_textBox
         '
-        Me.marksSearch_textBox.Location = New System.Drawing.Point(224, 10)
-        Me.marksSearch_textBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.marksSearch_textBox.Location = New System.Drawing.Point(157, 6)
         Me.marksSearch_textBox.Name = "marksSearch_textBox"
-        Me.marksSearch_textBox.Size = New System.Drawing.Size(604, 31)
+        Me.marksSearch_textBox.Size = New System.Drawing.Size(424, 23)
         Me.marksSearch_textBox.TabIndex = 3
         '
         'marksDelete_button
         '
-        Me.marksDelete_button.Location = New System.Drawing.Point(9, 107)
-        Me.marksDelete_button.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.marksDelete_button.Location = New System.Drawing.Point(6, 64)
         Me.marksDelete_button.Name = "marksDelete_button"
-        Me.marksDelete_button.Size = New System.Drawing.Size(107, 38)
+        Me.marksDelete_button.Size = New System.Drawing.Size(75, 23)
         Me.marksDelete_button.TabIndex = 2
         Me.marksDelete_button.Text = "Delete"
         Me.marksDelete_button.UseVisualStyleBackColor = True
         '
         'marksUpdate_button
         '
-        Me.marksUpdate_button.Location = New System.Drawing.Point(9, 58)
-        Me.marksUpdate_button.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.marksUpdate_button.Location = New System.Drawing.Point(6, 35)
         Me.marksUpdate_button.Name = "marksUpdate_button"
-        Me.marksUpdate_button.Size = New System.Drawing.Size(107, 38)
+        Me.marksUpdate_button.Size = New System.Drawing.Size(75, 23)
         Me.marksUpdate_button.TabIndex = 1
         Me.marksUpdate_button.Text = "Update"
         Me.marksUpdate_button.UseVisualStyleBackColor = True
         '
         'marksAdd_button
         '
-        Me.marksAdd_button.Location = New System.Drawing.Point(9, 10)
-        Me.marksAdd_button.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.marksAdd_button.Location = New System.Drawing.Point(6, 6)
         Me.marksAdd_button.Name = "marksAdd_button"
-        Me.marksAdd_button.Size = New System.Drawing.Size(107, 38)
+        Me.marksAdd_button.Size = New System.Drawing.Size(75, 23)
         Me.marksAdd_button.TabIndex = 0
         Me.marksAdd_button.Text = "Add New"
         Me.marksAdd_button.UseVisualStyleBackColor = True
@@ -640,52 +592,47 @@ Partial Class mainForm
         Me.TabPage2.Controls.Add(Me.periodDelete_button)
         Me.TabPage2.Controls.Add(Me.periodUpdate_button)
         Me.TabPage2.Controls.Add(Me.periodAdd_button)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 34)
-        Me.TabPage2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 24)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TabPage2.Size = New System.Drawing.Size(1223, 672)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage2.Size = New System.Drawing.Size(854, 398)
         Me.TabPage2.TabIndex = 5
         Me.TabPage2.Text = "Period"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
         'periodSearch_textBox
         '
-        Me.periodSearch_textBox.Location = New System.Drawing.Point(224, 10)
-        Me.periodSearch_textBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.periodSearch_textBox.Location = New System.Drawing.Point(157, 6)
         Me.periodSearch_textBox.Name = "periodSearch_textBox"
-        Me.periodSearch_textBox.Size = New System.Drawing.Size(604, 31)
+        Me.periodSearch_textBox.Size = New System.Drawing.Size(424, 23)
         Me.periodSearch_textBox.TabIndex = 7
         '
         'period_table
         '
         Me.period_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.period_table.Location = New System.Drawing.Point(124, 57)
-        Me.period_table.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.period_table.Location = New System.Drawing.Point(87, 34)
         Me.period_table.Name = "period_table"
         Me.period_table.RowHeadersWidth = 62
         Me.period_table.RowTemplate.Height = 25
-        Me.period_table.Size = New System.Drawing.Size(1087, 597)
+        Me.period_table.Size = New System.Drawing.Size(761, 358)
         Me.period_table.TabIndex = 6
         '
         'periodSearch_comboBox
         '
         Me.periodSearch_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.periodSearch_comboBox.FormattingEnabled = True
-        Me.periodSearch_comboBox.Location = New System.Drawing.Point(976, 10)
-        Me.periodSearch_comboBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.periodSearch_comboBox.Location = New System.Drawing.Point(683, 6)
         Me.periodSearch_comboBox.Name = "periodSearch_comboBox"
-        Me.periodSearch_comboBox.Size = New System.Drawing.Size(234, 33)
+        Me.periodSearch_comboBox.Size = New System.Drawing.Size(165, 23)
         Me.periodSearch_comboBox.TabIndex = 5
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label6.Location = New System.Drawing.Point(843, 10)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(590, 6)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(134, 32)
+        Me.Label6.Size = New System.Drawing.Size(88, 21)
         Me.Label6.TabIndex = 4
         Me.Label6.Text = "Search for: "
         '
@@ -693,60 +640,45 @@ Partial Class mainForm
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.Location = New System.Drawing.Point(124, 10)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(87, 6)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(97, 32)
+        Me.Label5.Size = New System.Drawing.Size(64, 21)
         Me.Label5.TabIndex = 3
         Me.Label5.Text = "Search: "
         '
         'periodDelete_button
         '
-        Me.periodDelete_button.Location = New System.Drawing.Point(9, 107)
-        Me.periodDelete_button.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.periodDelete_button.Location = New System.Drawing.Point(6, 64)
         Me.periodDelete_button.Name = "periodDelete_button"
-        Me.periodDelete_button.Size = New System.Drawing.Size(107, 38)
+        Me.periodDelete_button.Size = New System.Drawing.Size(75, 23)
         Me.periodDelete_button.TabIndex = 2
         Me.periodDelete_button.Text = "Delete"
         Me.periodDelete_button.UseVisualStyleBackColor = True
         '
         'periodUpdate_button
         '
-        Me.periodUpdate_button.Location = New System.Drawing.Point(9, 58)
-        Me.periodUpdate_button.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.periodUpdate_button.Location = New System.Drawing.Point(6, 35)
         Me.periodUpdate_button.Name = "periodUpdate_button"
-        Me.periodUpdate_button.Size = New System.Drawing.Size(107, 38)
+        Me.periodUpdate_button.Size = New System.Drawing.Size(75, 23)
         Me.periodUpdate_button.TabIndex = 1
         Me.periodUpdate_button.Text = "Update"
         Me.periodUpdate_button.UseVisualStyleBackColor = True
         '
         'periodAdd_button
         '
-        Me.periodAdd_button.Location = New System.Drawing.Point(9, 10)
-        Me.periodAdd_button.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.periodAdd_button.Location = New System.Drawing.Point(6, 6)
         Me.periodAdd_button.Name = "periodAdd_button"
-        Me.periodAdd_button.Size = New System.Drawing.Size(107, 38)
+        Me.periodAdd_button.Size = New System.Drawing.Size(75, 23)
         Me.periodAdd_button.TabIndex = 0
         Me.periodAdd_button.Text = "Add New"
         Me.periodAdd_button.UseVisualStyleBackColor = True
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(1256, 741)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(196, 209)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 20
-        Me.PictureBox1.TabStop = False
-        '
         'mainForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1261, 748)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.ClientSize = New System.Drawing.Size(883, 449)
         Me.Controls.Add(Me.tab_control)
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "mainForm"
         Me.Text = "School Database"
         Me.tab_control.ResumeLayout(False)
@@ -768,7 +700,6 @@ Partial Class mainForm
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         CType(Me.period_table, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -829,5 +760,4 @@ Partial Class mainForm
     Friend WithEvents periodAdd_button As Button
     Friend WithEvents classAddClass_button As Button
     Friend WithEvents classDeleteClass_button As Button
-    Friend WithEvents PictureBox1 As PictureBox
 End Class
